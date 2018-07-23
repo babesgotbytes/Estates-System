@@ -7,7 +7,7 @@
     <title>The  System</title>
     <link rel="stylesheet" href="bootstrap1/css/bootstrap.min.css">
     <link rel="stylesheet"  href="bootstrap1/css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="main.css">
     <!-- <script type="text/javascript"> -->
         <!-- $(document).ready(function(){ -->
             <!-- $('.carousel-inner').carousel({ -->
