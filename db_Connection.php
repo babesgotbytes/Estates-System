@@ -27,7 +27,7 @@ class Db_Connect{
 // 709c92e07a364fe38a4b16eb7f0ee1309b10e031
 
         //the name of the database as it will be agreed on
-        $this->dbName ="EUCOSSA";
+        $this->dbName ="PROJECT";
 
         //recommended character set for PDO connection and queries
         $this->charset="utf8mb4";

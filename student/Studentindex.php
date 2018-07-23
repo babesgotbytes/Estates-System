@@ -3,7 +3,7 @@
 
 	if(!isset($_SESSION['username'])){
 
-			header('location: loginpage.php');
+			header('location: StudentLoginpage.php');
 
 	}else{	
 ?>
@@ -15,10 +15,10 @@
 <body>
 	<h1>Welcome <?php echo $_SESSION['username'];?></h1>
 
-	<a href="resetPasswordPage.php">Reset password</a><br><br>
+	<a href="StudentResetPasswordPage.php">Reset password</a><br><br>
 
-	<a href="logout.php">Log out</a><br><br>
-    <form action="loggedIn.php" method="post">
+	<a href="StudentLogout.php">Log out</a><br><br>
+    <form action="StudentLoggedIn.php" method="post">
     <input type=submit value="Delete Account" name="deleteAccount"/>
     
     </form>
