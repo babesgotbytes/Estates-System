@@ -27,7 +27,7 @@
         <ul style="">
             <li><a href="Project.php" classstyle="color: #cccccc;">Home</a></li>
             <li style="color: #cccccc;"><a href="About.php" style="color: #cccccc;">About</a></li>
-            <li style="color: #cccccc;"><a href="#" style="color: #cccccc;">Services</a></li>
+            <li style="color: #cccccc;"><a href="services.html" style="color: #cccccc;">Services</a></li>
             <li style="color: #cccccc;"><a href="#" style="color: #cccccc;">Contact</a></li>
             <li>
                 <div class="dropdown">
