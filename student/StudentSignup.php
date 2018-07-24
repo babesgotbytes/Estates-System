@@ -11,13 +11,12 @@ private $pwd;//password of the user
 private $c_pwd;//just to confirm the password from form
 private $hashed_pwd;//the hashed password
 private $hashed_c_pwd;//the hashed confirm password
-private $time;
-private $regNo;//time of account creation ... system generated 
-
+private $time;//time of account creation ... system generated 
+private $regno;//registration number or worker number from form
 
 //constructor with all parameters... MUST Be Public
 
-public function __construct($username,$email,$pwd,$c_pwd,$hashed_pwd,$hashed_c_pwd,$time){
+public function __construct($username,$email,$pwd,$c_pwd,$hashed_pwd,$hashed_c_pwd,$time,$regno){
 
 
 
@@ -28,16 +27,16 @@ public function __construct($username,$email,$pwd,$c_pwd,$hashed_pwd,$hashed_c_p
 	$this->hashed_pwd=$hashed_pwd;
 	$this->hashed_c_pwd=$hashed_c_pwd;
 	$this->time=$time;
+	$this->regno=$regno;
 
 }
 //to verify if the email entered by user is alredy used
-private function userNameTaken($username){
+private function userNameTaken($user){
 
-	$this->username=$username;
 
 	$query="SELECT * FROM PROJECT.student WHERE name=?";
 	$pre=$this->connect()->prepare($query);
-	$pre->execute([$this->username]);
+	$pre->execute([$user]);
 	$rows=$pre->rowCount();
  
 	if ($rows>0) {
@@ -49,32 +48,26 @@ private function userNameTaken($username){
 }
 
 //method that creates the Account with all Parameters as use in construtor
-public function createNewAccount($username,$email,$pwd,$c_pwd,$hashed_pwd,$hashed_c_pwd,$time){
-	$this->username=$username;
-	$this->email=$email;
-	$this->pwd=$pwd;
-	$this->c_pwd=$c_pwd;
-	$this->hashed_pwd=$hashed_pwd;
-	$this->hashed_c_pwd=$hashed_c_pwd;
-	$this->time=$time;
-
+public function createNewAccount(){
+$errors = new NewAccount($this->username,$this->email,$this->pwd,$this->c_pwd,$this->hashed_pwd,$this->hashed_c_pwd,$this->time,$this->regno);
 //pattern of a valid email to be used in preg_match
 	$pattern="/^[a-z0-9-_]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i";
 
 	//verify if the passwords has more than 8 characters
-    if(strlen($pwd)<8){
+    if(strlen($this->pwd)<8){
         echo "<script> alert('Password should be a minimum of 8 characters')</script>";
-        echo "<script>window.open('StudentResetPasswordPage.php','_self')</script>";}
+        echo "<script>window.open('StudentSignupPage.php','_self')</script>";
+    }
         else
 
 	//verify if the passwords match
 
-	if (!$this->userNameTaken($this->username)) {
+	if ($errors->userNameTaken($this->username)==false) {
 		if(password_verify($this->pwd,password_hash($this->pwd,PASSWORD_DEFAULT)) != password_verify($this->c_pwd,password_hash($this->c_pwd,PASSWORD_DEFAULT))){
 
 			//javascript code to alert incase passwords do not match
 				echo "<script>alert('Password Do Not Match')</script>";
-				echo "<script>window.open('StudentSignup.php','_self')</script>";
+				echo "<script>window.open('StudentSignupPage.php','_self')</script>";
 				exit();
 	
 		}else
@@ -83,7 +76,7 @@ public function createNewAccount($username,$email,$pwd,$c_pwd,$hashed_pwd,$hashe
 		if(!preg_match($pattern, $this->email)){
 
 				echo "<script>alert('Invalid Email')</script>";
-				echo "<script>window.open('StudentSignup.php','_self')</script>";
+				echo "<script>window.open('StudentSignupPage.php','_self')</script>";
 				exit();
 
 		}
@@ -92,7 +85,7 @@ public function createNewAccount($username,$email,$pwd,$c_pwd,$hashed_pwd,$hashe
 
 			//insertion query
 
-			$insert="INSERT INTO PROJECT.student(name,email,pwd,day) VALUES ('$this->username','$this->email','$this->hashed_pwd','$this->time')";
+			$insert="INSERT INTO PROJECT.student(name,regno,email,pwd,day) VALUES ('$this->username','$this->regno','$this->email','$this->hashed_pwd','$this->time')";
 
 			//calls connect method in dtabbase connection class and execute the query
 			$insert_results=$this->connect()->exec($insert);
@@ -140,15 +133,17 @@ if(isset($_POST['submit'])){
 	$regNo=$_POST['ID'];
 	$inpwd=$_POST['password'];
 	$inc_pwd=$_POST['confirm-password'];
+	//$regno=$_POST['regno'];
 
-    if(($inusername=="")||($inemail=="")||($inpwd=="")|| ($inc_pwd=="")){
+     if(($inusername=="")||($inemail=="")||($inpwd=="")|| ($inc_pwd=="") || ($regNo=="")){
 
 
-        echo "<script>alert('All fields are required')</script>";
-        echo "<script>window.open('StudentSignupPage.php','_self')</script>";
-        exit();
+         echo "<script>alert('All fields are required')</script>";
+         echo "<script>window.open('StudentSignupPage.php','_self')</script>";
+         exit();
 
-    }
+     }
+     
 
 	//hash and salt the passwords
 	$hashedPwd = password_hash($inpwd,PASSWORD_DEFAULT);
@@ -158,8 +153,9 @@ if(isset($_POST['submit'])){
 	$timeCreated=getTheCurrentDate();
 
 //create the class object and pass in the constructer values in their order
-	$myAccount = new NewAccount($inusername,$inemail,$inpwd,$inc_pwd,$hashedPwd,$hashedinc_Pwd,$timeCreated);
+	//$username,$email,$pwd,$c_pwd,$hashed_pwd,$hashed_c_pwd,$time,$regno
+	$myAccount = new NewAccount($inusername,$inemail,$inpwd,$inc_pwd,$hashedPwd,$hashedinc_Pwd,$timeCreated,$regNo);
 
 //call to the method that create user and pass in values from the html form
-	$myAccount->createNewAccount($inusername,$inemail,$inpwd,$inc_pwd,$hashedPwd,$hashedinc_Pwd,$timeCreated);
+	$myAccount->createNewAccount();
 }
