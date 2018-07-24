@@ -33,7 +33,7 @@
         </div>
     </div>
         </br></br>
-        <input class="btn btn-info" type="Submit" name="login" value ="sign in"></br>
+        <input class="btn btn-info" type="Submit" name="StudentLogin" value ="sign in"></br>
 
 	</form>
     

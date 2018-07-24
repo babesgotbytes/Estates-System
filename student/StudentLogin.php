@@ -88,7 +88,7 @@ class getUsers extends Db_Connect{
 	}
  }
 
-if(isset($_POST['login'])){
+if(isset($_POST['StudentLogin'])){
 
 	$username=$_POST['username'];
 	$pass=$_POST['password'];
