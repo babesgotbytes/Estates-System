@@ -52,14 +52,14 @@ class getUsers extends Db_Connect{
 							$dehash=password_verify($this->pass,$dbpass);
 
 							//if it does not match
-							if($dehash==false){
+							if(!$dehash){
 
 										//echo some error and open the login window
 									echo "<script>alert('Password Incorrect')</script>";
 									echo "<script>window.open('StudentLoginpage.php','_self')</script>";
 							}
 							else
-								if($dehash==true){
+								if($dehash){
 
 									//if passwords match
 
