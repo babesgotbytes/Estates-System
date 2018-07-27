@@ -7,7 +7,7 @@
     <title>The  System</title>
     <link rel="stylesheet" href="bootstrap1/css/bootstrap.min.css">
     <link rel="stylesheet"  href="bootstrap1/css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="main.css">
     <!-- <script type="text/javascript"> -->
         <!-- $(document).ready(function(){ -->
             <!-- $('.carousel-inner').carousel({ -->
@@ -25,13 +25,13 @@
     <nav>
         <a href="#" id="menu-icon"></a>
         <ul style="">
-            <li><a href="Project.php" classstyle="color: #cccccc;">Home</a></li>
-            <li style="color: #cccccc;"><a href="About.php" style="color: #cccccc;">About</a></li>
-            <li style="color: #cccccc;"><a href="#" style="color: #cccccc;">Services</a></li>
-            <li style="color: #cccccc;"><a href="#" style="color: #cccccc;">Contact</a></li>
+            <li><a href="Project.php" style="color: #cccccc; font-size: 25px;">Home</a></li>
+            <li><a href="About.php" style="color: #cccccc;font-size: 25px;">About</a></li>
+            <li style="color: #cccccc;"><a href="services.html" style="color: #cccccc;font-size: 25px;">Services</a></li>
+            <li style="color: #cccccc;"><a href="#" style="color: #cccccc;font-size: 25px;">Contact</a></li>
             <li>
                 <div class="dropdown">
-    <a class=" dropdown-toggle" style="color: #cccccc;" href="" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class=" dropdown-toggle" style="color: #cccccc;font-size: 25px;" href="" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Login
     </a>
     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2" style="background-color: #000000;">
@@ -93,8 +93,8 @@
 <div style="margin-top: 80px; height: 400px; width:400px; margin-left: 50px;">
 <div class="">
     <h1 style="color: #b2b2ff;"><b>The Estates</b></h1>
-   <p style="color:#cccccc;font-size: 16px;">We love estate,its one of the most important departments in egerton in that it deals with the renovation of all the university resources.It therefore needs better management system for its purpose to be felt by everbody within the university.  </p></li>
-   <p style="color: #cccccc; font-size: 16px">A group of software developers by the name babesgotbytes which are four beautiful and hardworking kenyan ladies decided to make the dream of estate management system a reality.As soon as you sign in to the system you will see for yourself,try it today and we promise you will like it unless you have a problem</p>
+   <p style="color:#cccccc;font-size: 20px;">We love estate,its one of the most important departments in egerton in that it deals with the renovation of all the university resources.It therefore needs better management system for its purpose to be felt by everbody within the university.  </p></li>
+   <p style="color: #cccccc; font-size: 20px">A group of software developers by the name babesgotbytes which are four beautiful and hardworking kenyan ladies decided to make the dream of estate management system a reality.As soon as you sign in to the system you will see for yourself,try it today and we promise you will like it unless you have a problem</p>
 
 </div>
 </div>
@@ -106,7 +106,7 @@
 
     <img src="pics/signboard.jpg" width="300px" height="300px"/>
     <h1 style="color: #b2b2ff;">The Estates department</h1>
-    <p style="color: #cccccc;">
+    <p style="color: #cccccc;font-size:19px;">
       It is a department in Egerton university concerned with renovation and maintainance of the university
         facilities,resources and properties.This happens when students or those operating at various sections
         in the university make a report concerning any faulty property or facility that
@@ -116,14 +116,14 @@
 
     <img src="pics/IMG_20180614_141935.jpg" width="300px" height="300px"/>
           <h1 style="color: #b2b2ff;">The Department location</h1>
-            <p style="color: #cccccc;">The estate department is located by the road leading to the student centre from pavilion just opposite the transport
+            <p style="color: #cccccc;font-size: 19px;">The estate department is located by the road leading to the student centre from pavilion just opposite the transport
                 department besides the procurement department.</p>
     </div>
     <div class="col-sm-12 col-md-4 col-lg-4">
 
     <img src="pics/office.jpg" width="960px" height="479px"/>
         <h1 style="color: #b2b2ff;">Visitation and Consultation</h1>
-        <p style="color: #cccccc;">We urge students and those operating at various sections in the university to make a visit to the department to
+        <p style="color: #cccccc;font-size: 19px;">We urge students and those operating at various sections in the university to make a visit to the department to
             check it out and learn more about the department and its operation.</p>
     </div>
 </div>
@@ -150,7 +150,7 @@
 
     <img src="pics/carpentry.jpg" width="960px" height="300px"/>
     <h1 style="color: #b2b2ff;">Carpentry,Joinery ,Locksmith Sub-department</h1>
-    <p style="color: #cccccc;">
+    <p style="color: #cccccc;font-size: 19px;">
         It is a department in Egerton university concerned with renovation and maintainance of the university
         facilities,resources and properties.This happens when students or those operating at various sections
         in the university make a report concerning any faulty property or facility that
@@ -163,14 +163,14 @@
 
     <img src="pics/masonry.jpg" width="960px" height="300px"/>
     <h1 style="color: #b2b2ff;">Masonry  and Grounds Sub-department</h1>
-    <p style="color: #cccccc;">The estate department is located by the road leading to the student centre from pavilion just opposite the transport
+    <p style="color: #cccccc;font-size: 19px;">The estate department is located by the road leading to the student centre from pavilion just opposite the transport
         department besides the procurement department.</p>
 </div>
     <div class="col-sm-12 col-md-4 col-lg-4">
 
         <img src="pics/mechanical.jpg" width="960px" height="300px"/>
     <h1 style="color: #b2b2ff;">Mechanical Sub-department</h1>
-    <p style="color: #cccccc;">We urge students and those operating at various sections in the university to make a visit to the department to
+    <p style="color: #cccccc;font-size: 19px;">We urge students and those operating at various sections in the university to make a visit to the department to
         check it out and learn more about the department and its operation.</p>
 </div>
 </div>
