@@ -72,7 +72,7 @@ class getUsers extends Db_Connect{
 							
 							//show some success nofication and open the index window
 							//echo "<script>alert('Login Successful')</script>";
-							header("Location: index.php?msg=logged in Successfully");
+							header("Location: Managerindex.php?msg=logged in Successfully");
 
 							}
 					}

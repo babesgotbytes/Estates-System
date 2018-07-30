@@ -41,7 +41,7 @@
 
 	</form>
     
-    Storekeeper Registration?<a href="StoreKeeperSignupPage.php">Sign Up</a>
+    new to estates?<a href="ManagerSignupPage.php">Sign Up</a>
 
 </div>
 <!-- </div> -->
