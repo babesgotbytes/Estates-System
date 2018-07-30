@@ -11,41 +11,31 @@
 <html>
 <head>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css">
-	<title>Home Page</title>
+    <link rel="stylesheet" href="css/manager.css">
+	<title>Manager's Page</title>
 </head>
 <body>
-	<h1>Welcome <?php echo $_SESSION['username'];?></h1>
-	<header>
+  <header>
  	<link rel="stylesheet" href="style.css" type="text/css"/>
  	<meta name="viewport" content="width=device-width initial-scale=1">
- 	<div id="brand"> Estate department university portal</div>
- </header>
+ 
+  
+    <div style="float: left; padding:20px 20px 0 30px;font-size: 40px; color:#cccccc;">
+            The Estates
+    </div>
+    <nav>
+        <a href="#" id="menu-icon"></a>
+        <ul style="">
+            <li><a href="Project.php" style="color: #cccccc; font-size: 25px;">View reports</a></li>
+            <li><a href="About.php" style="color: #cccccc;font-size: 25px;">Renovations</li>
+            <li style="color: #cccccc;"><a href="services.html" style="color: #cccccc;font-size: 25px;">SignUp Storekeeper</a></li>
+            <li style="color: #cccccc;"><a href="ManagerLogout.php" style="color: #cccccc;font-size: 25px;">logout</a></li>
+             </ul>
+    </nav>
+
+</header>
  <body>
- 	<input type="checkbox" id="menuToggle">
- 	<label for="menuToggle" class="menu-icon">&#9776</label>
-
-<div id="profile">
-   <div id="header">
-   	</div>
-   	<nav class="menu">
-      <ul>
-   		<li><a href="#">Profile</a></li>
-   		<li><a href="#">Make report</a></li>
-   		<li><a href="#">Renovations</a></li>
-   		<li><a href="#">Make Complain</a></li>
-   		<li><a href="ManagerLogout.php">Log out</a></li>
-   	</ul>
-</nav>
-   	</div>
-</div>
-</body>
-
-	<a href="ManagerResetPasswordPage.php">Reset password</a><br><br>
-    <form action="ManagerLoggedIn.php" method="post">
-    <input type=submit value="Delete Account" name="deleteAccount"/>
-    
-    </form>
+ 	
 </body>
 </html>
 
