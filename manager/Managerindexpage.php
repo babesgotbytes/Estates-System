@@ -21,14 +21,14 @@
  
   
     <div style="float: left; padding:20px 20px 0 30px;font-size: 40px; color:#cccccc;">
-            The Estates
+      Welcome <?php echo $_SESSION['username'];?>
     </div>
     <nav>
         <a href="#" id="menu-icon"></a>
         <ul style="">
             <li><a href="Project.php" style="color: #cccccc; font-size: 25px;">View reports</a></li>
             <li><a href="About.php" style="color: #cccccc;font-size: 25px;">Renovations</li>
-            <li style="color: #cccccc;"><a href="services.html" style="color: #cccccc;font-size: 25px;">SignUp Storekeeper</a></li>
+            <li style="color: #cccccc;"><a href="StoreKeeperSignupPage.php" style="color: #cccccc;font-size: 25px;">SignUp Storekeeper</a></li>
             <li style="color: #cccccc;"><a href="ManagerLogout.php" style="color: #cccccc;font-size: 25px;">logout</a></li>
              </ul>
     </nav>
