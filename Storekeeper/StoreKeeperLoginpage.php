@@ -40,7 +40,7 @@
 
 	</form>
     
-    New to Estates?<a href="StoreKeeperSignupPage.php">Sign Up</a>
+
 
 </div>
 
