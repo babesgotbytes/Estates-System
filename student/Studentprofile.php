@@ -1,12 +1,14 @@
 <?php
+include_once 'db_Connection.php';
 
 session_start();
+$name=$_SESSION['username'];
+
 if(!isset($_SESSION['username'])){
 
 			header('location: StudentLoginpage.php');
 
 	}else{ 
-
 ?>
 
 <!DOCTYPE html>
