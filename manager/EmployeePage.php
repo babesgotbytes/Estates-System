@@ -5,11 +5,13 @@
 	<style type="text/css">
 	table{
 		border-collapse: collapse;
-		width: 100%;
+		width: 70%;
 		color: #d96459;
 		font-family: monospace;
 		font-size: 25px;
 		text-align: left;
+		margin-left: 10%;
+	
 	}
 	th{
 		background-color: #000000;
@@ -19,7 +21,9 @@
 </style>
 </head>
 <body>
-	<table>
+	<div>
+	<h1 style="margin-left: 30%;">Estate Department Employees:</h1>
+	<table id="tab">
 		<tr>
 			<th>Name</th>
 			<th>PhoneNumber</th>
@@ -46,6 +50,29 @@
 		$conn-> close();
 		?>
 	</table>
+	
 
 </body>
+<script type="text/javascript">
+	$('#tab').ready( function(){
+		 $('td').attr("class", 'cells');
+		  $(.cells).click(function (event) {
+            emp_status.val = "ASSIGNED";
+
+        });
+
+	});
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
 </html>
