@@ -21,7 +21,7 @@
 </style>
 </head>
 <body>
-	<div>
+	<div style="">
 	<h1 style="margin-left: 30%;">Estate Department Employees:</h1>
 	<table id="tab">
 		<tr>
@@ -64,7 +64,6 @@
 	
 
 </body>
-</html>
 <?php  
 if(isset($_POST['submit'])){
 
@@ -89,7 +88,7 @@ if(isset($_POST['submit'])){
 	}
 	
 	// Attempt insert query execution
-	$sql = "UPDATE employees set emp_status ='ASSIGNED' WHERE empID =2";
+	$sql = "UPDATE employees set emp_status ='ASSIGNED' WHERE empID = ";
 	if(mysqli_query($conn, $sql)) {
 		echo "updated successfully";
 	} else {
@@ -100,4 +99,7 @@ if(isset($_POST['submit'])){
 	mysqli_close($conn);
 	}
 }
+
 ?>
+</div>
+</html>
