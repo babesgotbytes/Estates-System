@@ -40,6 +40,8 @@
    		<li><a href="#">Make report</a></li>
    		<li><a href="#">Renovations</a></li>
    		<li><a href="#">Make Complain</a></li>
+      <li><a href="StudentResetPasswordPage.php">Reset password</a></li>
+
    		<li><a href="StudentLogout.php">Log out</a></li>
    	</ul>
 </nav>

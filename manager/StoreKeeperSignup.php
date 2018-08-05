@@ -73,7 +73,7 @@ public function createNewAccount($username,$email,$pwd,$c_pwd,$hashed_pwd,$hashe
 
 			//javascript code to alert incase passwords do not match
 				echo "<script>alert('Password Do Not Match')</script>";
-				echo "<script>window.open('StoreKeeperSignup.php','_self')</script>";
+				echo "<script>window.open('StoreKeeperSignupPage.php','_self')</script>";
 				exit();
 	
 		}else
@@ -82,7 +82,7 @@ public function createNewAccount($username,$email,$pwd,$c_pwd,$hashed_pwd,$hashe
 		if(!preg_match($pattern, $this->email)){
 
 				echo "<script>alert('Invalid Email')</script>";
-				echo "<script>window.open('StoreKeeperSignup.php','_self')</script>";
+				echo "<script>window.open('StoreKeeperSignupPage.php','_self')</script>";
 				exit();
 
 		}
@@ -99,13 +99,13 @@ public function createNewAccount($username,$email,$pwd,$c_pwd,$hashed_pwd,$hashe
 
 			//notify success in account creation...Java Script
 			echo"<script>alert('Account Created Sucessfully')</script>";
-			echo"<script>window.open('StoreKeeperLoginpage.php','_self')</script>;";
+			echo"<script>window.open('Storekeeper/StoreKeeperLoginpage.php')</script>;";
 
 
 		}
 	}else{
 	echo "<script>alert('The user Name is taken')</script>";
-	echo "<script>window.open('StoreKeeperSignup.php','_self')</script>";
+	echo "<script>window.open('StoreKeeperSignupPage.php','_self')</script>";
 	exit();
 }
 

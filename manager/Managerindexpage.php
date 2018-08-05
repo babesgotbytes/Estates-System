@@ -28,18 +28,16 @@
         <ul style="">
             <li><a href="Project.php" style="color: #cccccc; font-size: 25px;">View reports</a></li>
             <li><a href="About.php" style="color: #cccccc;font-size: 25px;">Renovations</li>
-<<<<<<< HEAD
             <li style="color: #cccccc;"><a href="StoreKeeperSignupPage.php" style="color: #cccccc;font-size: 25px;">SignUp Storekeeper</a></li>
             <li style="color: #cccccc;"><a href="../Storekeeper/StoreKeeperSignupPage.php" style="color: #cccccc;font-size: 25px;">SignUp Storekeeper</a></li>
              <li><a href="EmployeePage.php" style="color: #cccccc;font-size: 25px;">Assign work</li>
 
 
-=======
 
             <li style="color: #cccccc;"><a href="../Storekeeper/StoreKeeperSignupPage.php" style="color: #cccccc;font-size: 25px;">SignUp Storekeeper</a></li>
              <li><a href="EmployeePage.php" style="color: #cccccc;font-size: 25px;">Assign work</li>
+                <li><a href="ManagerResetPasswordPage.php" style="color: #cccccc;font-size: 25px;">Reset password</li>
 
->>>>>>> 22867603303c817d7d844f0a711b1c95397ddb97
             <li style="color: #cccccc;"><a href="ManagerLogout.php" style="color: #cccccc;font-size: 25px;">logout</a></li>
              </ul>
     </nav>
