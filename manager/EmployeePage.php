@@ -50,9 +50,7 @@
 		$conn-> close();
 		?>
 	</table>
-	
-
-</body>
+	</body>
 <script type="text/javascript">
 	$('#tab').ready( function(){
 		 $('td').attr("class", 'cells');
@@ -64,15 +62,4 @@
 	});
 	
 </script>
-
-
-
-
-
-
-
-
-
-
-
 </html>

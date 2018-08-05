@@ -21,10 +21,10 @@ class Db_Connect{
 
         //password of the database please write the password of your user on your local server coz we are not using  the same server
 
-      //  $this->userPass="hackEd56";
+    
 
         $this->userPass="";
-// 709c92e07a364fe38a4b16eb7f0ee1309b10e031
+
 
         //the name of the database as it will be agreed on
         $this->dbName ="PROJECT";
