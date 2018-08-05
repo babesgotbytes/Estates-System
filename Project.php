@@ -90,7 +90,7 @@
   </a>
 </div>
 </div>
-<div style="margin-top: 80px; height: 400px; width:400px; margin-left: 50px;">
+<div style="margin-top: 80px; height: 380px; width:380px; margin-left: 50px;">
 <div class="">
     <h1 style="color: #b2b2ff;"><b>The Estates</b></h1>
    <p style="color:#cccccc;font-size: 20px;">We love estate,its one of the most important departments in egerton in that it deals with the renovation of all the university resources.It therefore needs better management system for its purpose to be felt by everbody within the university.  </p></li>
