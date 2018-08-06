@@ -61,6 +61,20 @@
 		$conn-> close();
 		?>
 	</table>
+
+	</body>
+<!-- <script type="text/javascript">
+	$('#tab').ready( function(){
+		 $('td').attr("class", 'cells');
+		  $(.cells).click(function (event) {
+            emp_status.val = "ASSIGNED";
+
+        });
+
+	});
+	
+</script> -->
+
 	
 
 </body>
@@ -88,7 +102,7 @@ if(isset($_POST['submit'])){
 	}
 	
 	// Attempt insert query execution
-     $sql = "UPDATE employees SET emp_status = 'ASSIGNED' ";
+     $sql = "UPDATE employees SET emp_status = '$results' ";
 	if(mysqli_query($conn, $sql)) {
 		echo "updated successfully";
 	}
@@ -102,4 +116,8 @@ if(isset($_POST['submit'])){
 	}
 
 }
+
 ?>
+</div>
+
+</html>

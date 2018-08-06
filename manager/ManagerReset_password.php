@@ -42,7 +42,7 @@ class resetPass extends Db_Connect{
                 $update_run=$this->connect()->prepare($update);
                 $update_run->execute([password_hash($new_pass,PASSWORD_DEFAULT),$email,$username]);
                 // echo "<script> alert('Password changed successfully')</script>";
-                header("Location: index.php?msg=Password updates successfully");
+                header("Location: Managerindexpage.php?msg=Password updates successfully");
             }
 
 //=======
@@ -55,13 +55,13 @@ class resetPass extends Db_Connect{
 				$update_run=$this->connect()->prepare($update);
 		       $update_run->execute([password_hash($new_pass,PASSWORD_DEFAULT),$email,$username]);
 		      // echo "<script> alert('Password changed successfully')</script>";
-		       header("Location: index.php?msg=Password updates successfully");
+		       header("Location: Managerindexpage.php?msg=Password updates successfully");
 				}
 //>>>>>>> 93858fdbd0c313d1ae354a5d7a12b96003928814
 			}
 			
 		}else{
-			echo "<script> alert('Enter correct innitial password')</script>";
+			echo "<script> alert('Enter correct initial password')</script>";
 			echo "<script>window.open('ManagerResetPasswordPage.php','_self')</script>";
 			exit();
 

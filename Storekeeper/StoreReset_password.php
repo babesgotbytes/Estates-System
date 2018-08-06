@@ -30,39 +30,39 @@ class resetPass extends Db_Connect{
 		if (password_verify($this->pass,$row['pwd'])) {
 			if ($new_pass !=$con_new_pass) {
 			echo "<script> alert('Passwords dont match')</script>";
-			echo "<script>window.open('StoreKeeperResetPasswordPage.php','_self')</script>";
+			echo "<script>window.open('StoreResetPasswordPage.php','_self')</script>";
 			     exit();
 			}else{
 //<<<<<<< HEAD
             if(strlen($new_pass)<8){
                 echo "<script> alert('Password should be a minimum of 8 characters')</script>";
-                echo "<script>window.open('StoreKeeperResetPasswordPage.php','_self')</script>";
+                echo "<script>window.open('StoreResetPasswordPage.php','_self')</script>";
             }else{
                 $update="UPDATE PROJECT.storekeeper set pwd=? where email=? and name=?";//the database and table goes here
                 $update_run=$this->connect()->prepare($update);
                 $update_run->execute([password_hash($new_pass,PASSWORD_DEFAULT),$email,$username]);
                 // echo "<script> alert('Password changed successfully')</script>";
-                header("Location: index.php?msg=Password updates successfully");
+                header("Location: StoreKeeperindex.php?msg=Password updates successfully");
             }
 
 //=======
 
 				if (strlen($new_pass)<8) {
 			echo "<script> alert('Password must be atleast 8 characters')</script>";
-			echo "<script>window.open('StoreKeeperResetPasswordPage.php','_self')</script>";
+			echo "<script>window.open('StoreResetPasswordPage.php','_self')</script>";
 				}else{
 				$update="UPDATE PROJECT.storekeeper set pwd=? where email=? and name=?";//the database and table goes here
 				$update_run=$this->connect()->prepare($update);
 		       $update_run->execute([password_hash($new_pass,PASSWORD_DEFAULT),$email,$username]);
 		      // echo "<script> alert('Password changed successfully')</script>";
-		       header("Location: index.php?msg=Password updates successfully");
+		       header("Location: StoreKeeperindex.php?msg=Password updates successfully");
 				}
 //>>>>>>> 93858fdbd0c313d1ae354a5d7a12b96003928814
 			}
 			
 		}else{
 			echo "<script> alert('Enter correct innitial password')</script>";
-			echo "<script>window.open('StoreKeeperResetPasswordPage.php','_self')</script>";
+			echo "<script>window.open('StoreResetPasswordPage.php','_self')</script>";
 			exit();
 
 		}
@@ -104,7 +104,7 @@ class resetPass extends Db_Connect{
 			if(!preg_match($pattern, $email)){
 
 					echo "<script> alert('Invalid Email')</script>";
-					echo "<script>window.open('StorKeeperReset_password.php','_self')</script>";
+					echo "<script>window.open('StoreReset_password.php','_self')</script>";
 			}else{
 
 
@@ -116,7 +116,7 @@ class resetPass extends Db_Connect{
 			if($row<1){
 
 				echo "<script> alert('Email Not Found')</script>";
-				echo "<script>window.open('StoreKeeperReset_password.php','_self')</script>";
+				echo "<script>window.open('StoreReset_password.php','_self')</script>";
 				exit();
 
 			}else
@@ -125,7 +125,7 @@ class resetPass extends Db_Connect{
 				{
 
 							echo "<script> alert('Passwords Do Not Match')</script>";
-						echo "<script>window.open('StoreKeeperReset_password.php','_self')</script>";
+						echo "<script>window.open('StoreReset_password.php','_self')</script>";
 						exit();
 
 				}else

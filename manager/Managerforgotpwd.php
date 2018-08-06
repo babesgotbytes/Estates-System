@@ -12,11 +12,10 @@ class ForgotPass extends Db_Connect{
 
 	}
 
-	protected function getUserEmail($email){
+	protected function getUserEmail(){
 
 		//to verify if the email entered by user is alredy used
 
-	$this->email=$email;
 
 	$pattern="/^[a-z0-9-_]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i";
 
@@ -39,14 +38,36 @@ class ForgotPass extends Db_Connect{
 		return $this->email;
 	}else{
 
-		echo "<script>alert('Email Not Found')</script>";
-		echo "<script>window.open('Managerforgotpwdpage.php','_self')</script>";
-		exit();
-
-		
+		return false;
 		}
 
 	}
+}
+
+
+public function senCodeToEmail(){
+
+$getmail = ForgotPass($this->email);
+if($getmail->getUserEmail()==true){
+
+		echo "<script>alert('Invalid Mail Format')</script>";
+		echo "<script>window.open('Managerforgotpwdpage.php','_self')</script>";
+
+}
+
+else
+if($getmail->getUserEmail()!=$this->email){
+
+		echo "<script>alert('Email not found')</script>";
+		echo "<script>window.open('Managerforgotpwdpage.php','_self')</script>";
+
+}
+else
+if($getmail->getUserEmail()==$this->email){
+
+	
+}
+
 }
 
 //destruction method
@@ -58,7 +79,7 @@ public function __destruct(){
 
 //added this class on the same file  coz we cannot send form  action on 2 different pages
 
-class ConfirmMail extends ForgotPass {
+class SendCode extends ForgotPass {
 
 		private $email;
 
