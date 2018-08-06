@@ -88,18 +88,18 @@ if(isset($_POST['submit'])){
 	}
 	
 	// Attempt insert query execution
-	$sql = "UPDATE employees set emp_status ='ASSIGNED' WHERE empID = ";
+     $sql = "UPDATE employees SET emp_status = 'ASSIGNED' ";
 	if(mysqli_query($conn, $sql)) {
 		echo "updated successfully";
-	} else {
+	}
+
+	else {
 		echo "Error." . mysqli_error($conn);
 	}
  
 	//Close connection
 	mysqli_close($conn);
 	}
-}
 
+}
 ?>
-</div>
-</html>
