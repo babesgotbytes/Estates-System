@@ -3,8 +3,9 @@
 	<head>
 		<title></title>
 		<style></style>
- <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
 	</head>
 	<body class="container">
     <div id="main" style="margin-left:40px; margin-right: 40px; margin-top: 150px; margin-bottom: 100px;height: 500px; width: 400px;">
@@ -27,6 +28,22 @@
  </form>
 </body>
 <script>
+	$(document).ready (function(){
+
+		function load_unseen_notification(view =''){
+			$.ajax({
+               url:"fetch.php",
+               method:"POST",
+               data:{view:view},
+               dataType:"json",
+               success:function (data)
+
+			})
+
+		}
+	}
+
+		)
 	
 </script>
 
