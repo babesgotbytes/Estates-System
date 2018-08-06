@@ -10,8 +10,8 @@
 		        <div style="height: 80px; width: 80px; margin-bottom: 10px; margin-left: 80px">
         <img src="logo.jpg"/>
         </div>
-		<h2>Student Registration</h2><br><br>
-<form id="signup_form" method="POST" action="ManagerSignup.php">
+		<h2>StoreKeeper Registration</h2><br><br>
+<form id="signup_form" method="POST" action="StoreKeeperSignup.php">
 	<div class="row">
         <div class="form-group">
 	<label>Name:</label><br>
@@ -28,17 +28,17 @@
 	 <div class="form-group">
 		<label>Password:</label><br>
 	<div class="col-sm-10">
-        <input class="form-control" id="exampleInputPassword" type="password" name="password" placeholder="password" required>
+        <input class="form-control" id="exampleInputPassword" type="password" name="password" placeholder="password" autocomplete="off" required>
        </div>
 </div>
 	 <div class="form-group">
 		<label>Confirm password:</label><br>
 <div class="col-sm-10">
-        <input class="form-control" id="exampleInputPassword" type="password" name="confirm-password" placeholder="confirm password" required>
+        <input class="form-control" id="exampleInputPassword" type="password" name="confirm-password" placeholder="confirm password"  autocomplete="off" required>
        </div>
 </div><br><br>
 	<input class="btn btn-info" type="Submit" name="submit" value ="sign Up"></br>
-    </div>
+
 </form>
 </body>
 </html>

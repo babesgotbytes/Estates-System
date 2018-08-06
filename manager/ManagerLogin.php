@@ -59,7 +59,7 @@ class getUsers extends Db_Connect{
 
 										//echo some error and open the login window
 									echo "<script>alert('Username or Password Incorrect')</script>";
-									echo "<script>window.open('ManagerLogin.php','_self')</script>";
+									echo "<script>window.open('ManagerLoginpage.php','_self')</script>";
 							}
 							elseif($dehash==true){
 
