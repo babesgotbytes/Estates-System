@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13fde98f-ba3d-43fa-a956-d2263ff4d992" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manager/AddEmployee.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manager/AddEmployee1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manager/update_employee_status.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student/application.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student/axios/axios.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manager/EmployeePage.php" afterPath="$PROJECT_DIR$/manager/EmployeePage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manager/ManagerReset_password.php" afterPath="$PROJECT_DIR$/manager/ManagerReset_password.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/Studentindex.php" afterPath="$PROJECT_DIR$/student/Studentindex.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/student/Notification.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/Studentindexpage.php" afterPath="$PROJECT_DIR$/student/Studentindexpage.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/Studentprofile.php" afterPath="$PROJECT_DIR$/student/Studentprofile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/db_Connection.php" afterPath="$PROJECT_DIR$/student/db_Connection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/Studentreport.php" afterPath="$PROJECT_DIR$/student/Studentreport.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,8 +20,8 @@
       <file leaf-file-name="Studentprofile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/student/Studentprofile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="108" column="58" lean-forward="true" selection-start-line="108" selection-start-column="58" selection-end-line="108" selection-end-column="58" />
+            <state relative-caret-position="249">
+              <caret line="109" column="58" lean-forward="true" selection-start-line="109" selection-start-column="58" selection-end-line="109" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -117,8 +109,13 @@
         <entry file="file://$PROJECT_DIR$/student/Studentindexpage.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="589">
-              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-              <folding />
+              <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#a#0;n#li#4;n#ul#0;n#div#2;n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#a#0;n#li#4;n#ul#0;n#div#2;n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#a#1;n#li#4;n#ul#0;n#div#2;n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#a#1;n#li#4;n#ul#0;n#div#2;n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,6 +154,7 @@
         <option value="$PROJECT_DIR$/manager/AddEmployee1.php" />
         <option value="$PROJECT_DIR$/manager/AddEmployee.php" />
         <option value="$PROJECT_DIR$/manager/EmployeePage.php" />
+        <option value="$PROJECT_DIR$/student/Studentindexpage.php" />
       </list>
     </option>
   </component>
@@ -328,12 +326,12 @@
       <workItem from="1533525822319" duration="1543000" />
       <workItem from="1533601017639" duration="12400000" />
       <workItem from="1533670751284" duration="10908000" />
-      <workItem from="1533693959414" duration="11984000" />
+      <workItem from="1533693959414" duration="12574000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37452000" />
+    <option name="totallyTimeSpent" value="38042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="0" />
@@ -790,8 +788,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/student/Studentprofile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="108" column="58" lean-forward="true" selection-start-line="108" selection-start-column="58" selection-end-line="108" selection-end-column="58" />
+        <state relative-caret-position="249">
+          <caret line="109" column="58" lean-forward="true" selection-start-line="109" selection-start-column="58" selection-end-line="109" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -873,8 +871,13 @@
     <entry file="file://$PROJECT_DIR$/student/Studentindexpage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
-          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
+          <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#4;n#ul#0;n#div#2;n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#a#0;n#li#4;n#ul#0;n#div#2;n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#1;n#li#4;n#ul#0;n#div#2;n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#a#1;n#li#4;n#ul#0;n#div#2;n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

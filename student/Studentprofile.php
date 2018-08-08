@@ -30,6 +30,7 @@ if(!isset($_SESSION['username'])){
 <body id="body-bg">
 	<div class="container" style=" background-color:#fff;margin-top:20px; margin-bottom:20px; width:1200px; height:640px";>
 		<?php echo $name;?>
+<<<<<<< HEAD
 	<button class='btn btn-danger' style='float:right; margin-top:20px;'>Logout</button>
     
     <br><br><br><br>
@@ -132,6 +133,15 @@ if(!isset($_SESSION['username'])){
 
 </div>
     </form>
+=======
+	<button class='btn btn-outline-success' style='float:right; margin-top:20px;'>Logout</button>
+    </div>
+    <?php 
+     $user = new User;
+     echo $user->getAllUsers();
+    ?>
+
+>>>>>>> 5142e82d9a8bd5402834a872a7809fc50bc90728
 </body>
 
 <!--<script type="application/javascript" src="jQuery/jquery-2.2.4.min.js"></script>-->

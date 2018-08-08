@@ -11,6 +11,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<title>Home Page</title>
   <style>
   body{margin:0;}
@@ -61,10 +62,17 @@
       <li><a href="#">Renovations</a></li>
       <li><a href="Studentreport.php">Make report</a></li>
       <li class="dropdown">
+<<<<<<< HEAD
  
       <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspoup="true" aria-expanded="false">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
       <div class="dropdown-menu" aria-labelledby="dropdown-toggle"></div>
+=======
+      <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge">7</span></a>
+      <div class="dropdown-menu">
+>>>>>>> 5142e82d9a8bd5402834a872a7809fc50bc90728
       <ul class="dropdown-menu">
+        <a class="dropdown-item" href="#">report1</a>
+        <a class="dropdown-item" href="#">report1</a>
         <a class="dropdown-item" href="#">report1</a>
       </ul>
  
@@ -74,6 +82,9 @@
       </div>
    	</div>
   </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 	
