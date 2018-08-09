@@ -18,7 +18,7 @@ if (!isset($_SESSION['username'])) {
         <div style="height: 80px; width: 80px; margin-bottom: 10px; margin-left: 80px">
             <img src="logo.jpg"/>
         </div>
-        <h2>Manager Reset Password</h2><br><br>
+        <h2>Student Reset Password</h2><br><br>
         <form method="POST" action="StudentReset_password.php">
             <div class="row">
                 <div class="form-group">
