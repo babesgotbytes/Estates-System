@@ -11,7 +11,7 @@ class Db_Connect{
 //Doesn't require Constructor
 
 //connection method which is protected meaning it will be visible to classes that extend  to the method
-    protected function connect(){
+    public function connect(){
 
     	//name of the server....currently its my localhost
         $this->serverName="127.0.0.1";
@@ -27,7 +27,7 @@ class Db_Connect{
 // 709c92e07a364fe38a4b16eb7f0ee1309b10e031
 
         //the name of the database as it will be agreed on
-        $this->dbName ="PROJECT";
+        $this->dbName ="project";
 
         //recommended character set for PDO connection and queries
         $this->charset="utf8mb4";
@@ -37,7 +37,7 @@ class Db_Connect{
 
         try {
         		//dynamic source data.. used for PDO connections
-                $dsn= "mysql:host".$this->serverName.";dbname".$this->dbName.";charset".$this->charset;
+                $dsn= "mysql:host=".$this->serverName.";dbname=".$this->dbName.";charset".$this->charset;
 
                 //create a PDO connection
                 $pdo_conn= new PDO($dsn, $this->userName, $this->userPass);
