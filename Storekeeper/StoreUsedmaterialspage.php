@@ -63,7 +63,7 @@
    	</div>
   </div>
 
-<form action="StoreUsedmaterials.php" method="GET">
+<form action="StoreUsedMaterials.php" method="GET">
   
   <div class="row" style="margin-left:400px; margin-right: 400px; margin-top: 150px; margin-bottom: 100px;">
    <div class="form-group">
@@ -76,7 +76,7 @@
    <div class="form-group">
     <label>Date to </label><br>
   <div class="col-sm-10">
-        <input class="form-control" id="exampleInputDateto" type="date" name="from" required>
+        <input class="form-control" id="exampleInputDateto" type="date" name="to" required>
        </div>
 </div><br><br>
       <input class="btn btn-info" type="Submit" name="assign" value ="Assign">

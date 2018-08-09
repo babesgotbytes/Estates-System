@@ -57,15 +57,7 @@
       <li class="dropdown">
       <li> <a href="notificationpage.php" >Notifications <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge">7</span></a>
 
-      <div class="dropdown-menu">
-      <ul class="dropdown-menu">
-        <a class="dropdown-item" href="#">report1</a>
-        <a class="dropdown-item" href="#">report1</a>
-        <a class="dropdown-item" href="#">report1</a>
-      </ul>
- 
-     </li>
-      <li><a href="StoreKeeperindex.php">Home</a></li>
+       <li><a href="StoreKeeperindex.php">Home</a></li>
    	</ul>
       </div>
    	</div>

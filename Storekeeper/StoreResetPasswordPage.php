@@ -40,8 +40,12 @@ if (!isset($_SESSION['username'])) {
   .nav ul li a:hover{color: #7EF9FF;}
   </style>
     </head>
-    <body class="container-fluid">
-    
+<body class="container-fluid">
+  <h1> </h1>
+  <header>
+  <link rel="stylesheet" href="style.css" type="text/css"/>
+ </header>
+ <body>
 
 <div id="header">
    <div id="headerContent" >

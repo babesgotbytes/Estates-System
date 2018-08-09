@@ -42,9 +42,9 @@ class Repairs extends Db_Connect{
 
 		$verify = new Repairs($this->emp_id,$this->qnty,$this->mtrl_nm,$this->dept_nm);
 
-			if($verify->getEmployee($this->emp_id)!=true){
+			if($verify->getEmployee($this->emp_id)==true){
 
-						echo "<script>alert('Employee you want to assign doesn't exist')</script>";
+						echo "<script>alert('Employee you want to assign doesnt exist')</script>";
 						echo "<script>window.open('StoreAssignMaterialspage.php','_self')</script>";
 
 			}
