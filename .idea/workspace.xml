@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13fde98f-ba3d-43fa-a956-d2263ff4d992" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Storekeeper/StoreAssignMaterials.php" afterPath="$PROJECT_DIR$/Storekeeper/StoreAssignMaterials.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Storekeeper/StoreAssignMaterialspage.php" afterPath="$PROJECT_DIR$/Storekeeper/StoreAssignMaterialspage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Storekeeper/StoreResetPasswordPage.php" afterPath="$PROJECT_DIR$/Storekeeper/StoreResetPasswordPage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Storekeeper/StoreUsedMaterials.php" afterPath="$PROJECT_DIR$/Storekeeper/StoreUsedMaterials.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Storekeeper/StoreUsedmaterialspage.php" afterPath="$PROJECT_DIR$/Storekeeper/StoreUsedmaterialspage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Storekeeper/db_Connection.php" afterPath="$PROJECT_DIR$/Storekeeper/db_Connection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student/Studentindexpage.php" afterPath="$PROJECT_DIR$/student/Studentindexpage.php" />
-    </list>
+    <list default="true" id="13fde98f-ba3d-43fa-a956-d2263ff4d992" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -281,12 +272,12 @@
       <workItem from="1533670751284" duration="10908000" />
       <workItem from="1533693959414" duration="12574000" />
       <workItem from="1533838875795" duration="3421000" />
-      <workItem from="1533844231561" duration="621000" />
+      <workItem from="1533844231561" duration="726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42084000" />
+    <option name="totallyTimeSpent" value="42189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="0" />
