@@ -30,7 +30,7 @@
   .nav ul li a:hover{color: #7EF9FF;}
   </style>
 </head>
-<body>
+<body class="container-fluid">
 	<h1> </h1>
 	<header>
  	<link rel="stylesheet" href="style.css" type="text/css"/>

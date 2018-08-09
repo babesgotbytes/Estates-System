@@ -81,7 +81,7 @@
 				if($errors->getMaterials($this->mtrlnm,$this->deptnm)==true){
 
 						echo "<script>alert('The Material You want to add already exists')</script>";
-						echo "<script>window.open('StoreAddMaterialspage.php')</script>";
+						echo "<script>window.open('StoreAddMaterialspage.php','_self')</script>";
 
 				}
 

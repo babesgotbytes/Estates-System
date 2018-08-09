@@ -5,7 +5,7 @@
 	 <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="container-fluid">
 	<form method="Post" action="StoreKeeperforgotpwd.php">
 		<div style="margin-left: 400px; margin-right:400px;">
 		<div class="form-group" >

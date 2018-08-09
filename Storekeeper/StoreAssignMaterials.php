@@ -42,10 +42,10 @@ class Repairs extends Db_Connect{
 
 		$verify = new Repairs($this->emp_id,$this->qnty,$this->mtrl_nm,$this->dept_nm);
 
-			if($verify->getEmployee($this->emp_id)==true){
+			if($verify->getEmployee($this->emp_id)!=true){
 
 						echo "<script>alert('Employee you want to assign doesn't exist')</script>";
-						echo "<script>window.open('StoreAssignMaterialspage.php')</script>";
+						echo "<script>window.open('StoreAssignMaterialspage.php','_self')</script>";
 
 			}
 
@@ -58,7 +58,7 @@ class Repairs extends Db_Connect{
 					if($rungetMtrl->rowCount()<1){
 
 						echo "<script>alert('Material doesnt exist in the selected department')</script>";
-						echo "<script>window.open('StoreAssignMaterialspage.php')</script>";
+						echo "<script>window.open('StoreAssignMaterialspage.php','_self')</script>";
 					}else
 						{
 
@@ -72,9 +72,9 @@ class Repairs extends Db_Connect{
 								if($availableQnty < $this->qnty){
 
 
-									echo "<script>alert('The Quantity Assigned exceeds the available quantity of the departement')</script>";
+									echo "<script>alert('The quantity Assigned exceeds the available quantity of the department')</script>";
 
-									echo "<script>window.open('StoreAssignMaterialspage.php')</script>";
+									echo "<script>window.open('StoreAssignMaterialspage.php','_self')</script>";
 
 								}else{
 
@@ -97,15 +97,15 @@ class Repairs extends Db_Connect{
 								else
 								{
 
-									echo "<script>alert('Unableto Update')</script>";
-									echo "<script>window.open('StoreAssignMaterialspage.php')</script>";
+									echo "<script>alert('Unable to Update')</script>";
+									echo "<script>window.open('StoreAssignMaterialspage.php','_self')</script>";
 								}
 
 						}else
 						{
 
 							echo "<script>alert('Unable to Update Quantity')</script>";
-						echo "<script>window.open('StoreAssignMaterialspage.php')</script>";
+						echo "<script>window.open('StoreAssignMaterialspage.php','_self')</script>";
 						}
 
 					}

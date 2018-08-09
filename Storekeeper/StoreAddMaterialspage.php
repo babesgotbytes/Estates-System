@@ -36,7 +36,7 @@
 	<header>
  	<link rel="stylesheet" href="style.css" type="text/css"/>
  </header>
- <body>
+ <body class="container-fluid">
 
 <div id="header">
    <div id="headerContent" >
@@ -86,15 +86,15 @@
                     <option value="" disabled selected>--Please choose--</option>
                     <option value="mechanical">  mechanical </option>
                     <option value="welding & fabrication">welding & fabrication</option>
-                    <option value="Dept_name">signwriting,glazing,painting & decoration</option>
-                    <option value="Dept_name">masonry and grounds</option>
-                    <option value="Dept_name">carpentry,joinery & locksmith</option>
-                    <option value="Dept_name">electrical and refrigeration</option>
+                    <option value="signwriting,glazing,painting & decoration">signwriting,glazing,painting & decoration</option>
+                    <option value="masonry and grounds">masonry and grounds</option>
+                    <option value="carpentry,joinery & locksmith">carpentry,joinery & locksmith</option>
+                    <option value="electrical and refrigeration">electrical and refrigeration</option>
 
                 </select>
             </div>
    <br><br>
-  <input class="btn btn-info" type="Submit" name="add" value ="Add" style="margin-right: 80px">
+  <input class="btn btn-info" type="Submit" name="add" value ="Add" style="margin-right: 100px">
    <input class="btn btn-info" type="Submit" name="update" value ="Update">
  </div>
   </form>

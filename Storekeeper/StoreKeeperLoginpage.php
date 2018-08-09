@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="container">
+<body class="container-fluid">
     <div id="main" style="margin-left:400px; margin-right: 400px; margin-top: 150px; margin-bottom: 100px;">
                 <div style="height: 80px; width: 80px; margin-bottom: 10px; margin-left: 80px">
         <img src="logo.jpg"/>

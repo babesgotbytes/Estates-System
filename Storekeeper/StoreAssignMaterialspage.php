@@ -37,7 +37,7 @@
 	<header>
  	<link rel="stylesheet" href="style.css" type="text/css"/>
  </header>
- <body>
+ <body class="container-fluid">
 
 <div id="header">
    <div id="headerContent" >

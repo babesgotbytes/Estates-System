@@ -9,12 +9,11 @@ if (!isset($_SESSION['username'])) {
     <!DOCTYPE html>
     <html>
     <head>
-        <title></title>
+        <title>reset password</title>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
-         <style>
-  body{margin:0;}
-  <style>
+        
+ <style>
   body{margin:0;}
   .header{
     width: 100%;
@@ -41,7 +40,7 @@ if (!isset($_SESSION['username'])) {
   .nav ul li a:hover{color: #7EF9FF;}
   </style>
     </head>
-    <body class="container">
+    <body class="container-fluid">
     
 
 <div id="header">
@@ -71,10 +70,8 @@ if (!isset($_SESSION['username'])) {
 
 
     <div id="main" style="margin-left:400px; margin-right:200px; margin-top: 150px;">
-        <div style="height: 80px; width: 80px; margin-bottom: 10px; margin-left: 80px">
-            <img src="logo.jpg"/>
-        </div>
-        <h2>StoreKeeper Reset Password</h2><br>
+
+        <h3>StoreKeeper Reset Password</h3><br>
         <form method="POST" action="StoreReset_password.php">
             <div class="row">
                 <div class="form-group">
