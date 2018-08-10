@@ -6,7 +6,7 @@
 	<style type="text/css">
 	table{
 		border-collapse: collapse;
-		width: 70%;
+		width: 90%;
 		color: #d96459;
 		font-family: monospace;
 		font-size: 25px;
@@ -26,9 +26,11 @@
 	<h2 style="font-family: 'Bookman Old Style';margin-left: 10%;">Estate Department Employees:</h2>
         <br><br><br>
 	<table id="tab">
+
 		<tr>
-<!--			<th>No.</th>-->
-			<th>Name</th>
+            <th>No.</th>
+            <th>Name</th>
+            <th>empID</th>
 			<th>PhoneNumber</th>
 			<th>Email</th>
 			<th>Status</th>
@@ -48,7 +50,9 @@
 
 
                 <tr>
+                    <td> <?php echo $i; ?></td>
                     <td> <?php echo $row['empName']; ?></td>
+                    <td><?php echo $row['empID']; ?></td>
                     <td> <?php echo $row['phone']; ?></td>
                     <td> <?php echo $row['email']; ?></td>
                     <td> <?php echo $row['emp_status']; ?></td>
@@ -73,7 +77,6 @@
     </div>
 <a href="AddEmployee.php" style="font-family: 'Arial Black';font-size: 18px; float: right;">Add Employee</a>
 
-	</body>
 <!-- <script type="text/javascript">
 	$('#tab').ready( function(){
 		 $('td').attr("class", 'cells');
@@ -88,46 +91,7 @@
 <script src="../student/axios/axios.min.js"></script>
 <script>
     function updateStatus(id, status) {
-//           $.ajax({+
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//               method: 'post',
-//               url: 'update_employee_status.php',
-//               success: function (data) {
-//
-//               }
-//           })
         axios.get('update_employee_status.php?id='+ id +'&status='+status)
             .then(function (data) {
                 console.log(data.data);

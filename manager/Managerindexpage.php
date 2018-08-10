@@ -32,6 +32,19 @@
              <li><a href="EmployeePage.php" style="color: #cccccc;font-size: 25px;">Assign work</li>
 
                 <li><a href="ManagerResetPasswordPage.php" style="color: #cccccc;font-size: 25px;">Reset password</li>
+            <li class="dropdown">
+
+
+                <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown" style="font-size: 23px;">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge">7</span></a>
+                <div class="dropdown-menu">
+
+                    <ul class="dropdown-menu">
+                        <a class="dropdown-item" href="#">report1</a>
+                        <a class="dropdown-item" href="#">report1</a>
+                        <a class="dropdown-item" href="#">report1</a>
+                    </ul>
+
+            </li>
 
             <li style="color: #cccccc;"><a href="ManagerLogout.php" style="color: #cccccc;font-size: 25px;">logout</a></li>
              </ul>

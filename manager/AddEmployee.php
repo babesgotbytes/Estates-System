@@ -23,7 +23,7 @@
 <label style="font-family: 'Arial Narrow';font-size: 18px">PhoneNo:</label>
 <input type="text" name="Phone" class="form-control" autocomplete="off" required>
 <label style="font-family: 'Arial Narrow';font-size: 18px">EmpEmail:</label>
-<input type="text"   name="Email" class="form-control"  autocomplete="off" required>
+<input type="email"   name="Email" class="form-control"  autocomplete="off" required>
     <br><br>
     <button type="submit" class="btn btn-primary" name="submit" value="Submit" style="margin-top: 25px"> Submit</button>
 
