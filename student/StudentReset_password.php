@@ -42,7 +42,7 @@ class resetPass extends Db_Connect{
                 $update_run=$this->connect()->prepare($update);
                 $update_run->execute([password_hash($new_pass,PASSWORD_DEFAULT),$email,$username]);
                 // echo "<script> alert('Password changed successfully')</script>";
-                header("Location: index.php?msg=Password updates successfully");
+                header("Location: Studentindex.php?msg=Password updates successfully");
             }
 
 //=======
@@ -61,7 +61,7 @@ class resetPass extends Db_Connect{
 			}
 			
 		}else{
-			echo "<script> alert('Enter correct innitial password')</script>";
+			echo "<script> alert('Enter correct initial password')</script>";
 			echo "<script>window.open('StudentResetPasswordPage.php','_self')</script>";
 			exit();
 

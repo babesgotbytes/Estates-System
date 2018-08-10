@@ -9,16 +9,73 @@ if (!isset($_SESSION['username'])) {
     <!DOCTYPE html>
     <html>
     <head>
-        <title></title>
+        <title>reset password</title>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
+        
+ <style>
+  body{margin:0;}
+  .header{
+    width: 100%;
+    height: auto;
+    background-color: #7285A5;
+    padding-top: 24px;
+  }
+  .nav{
+     height:40px;
+     background:#111E6C;
+  }
+  .nav ul{
+    margin: 0;
+    padding: 0;
+  }
+  .nav ul li{ list-style: none; }
+  .nav ul li a{
+    text-decoration: none;
+    float: right;
+    display: block;
+    padding: 10px 20px;
+    color: white;
+  }
+  .nav ul li a:hover{color: #7EF9FF;}
+  </style>
     </head>
-    <body class="container">
-    <div id="main" style="margin-left:400px; margin-right: 400px; margin-top: 150px; margin-bottom: 100px;">
-        <div style="height: 80px; width: 80px; margin-bottom: 10px; margin-left: 80px">
-            <img src="logo.jpg"/>
-        </div>
-        <h2>StoreKeeper Reset Password</h2><br><br>
+<body class="container-fluid">
+  <h1> </h1>
+  <header>
+  <link rel="stylesheet" href="style.css" type="text/css"/>
+ </header>
+ <body>
+
+<div id="header">
+   <div id="headerContent" >
+    </div>
+     <div class="navbar-header">
+ 
+     <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
+ 
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="StoreKeeperLogout.php">Log out</a></li>
+      <li><a style="color:blue" href="StoreResetPasswordPage.php">reset password</a></li>
+      <li><a href="StoreUsedmaterialspage.php">used materials</a></li>
+      <li><a  href="StoreAssignMaterialspage.php">assign materials</a></li>
+      <li><a href="StoreAddMaterialspage.php">add materials</a></li>
+      <li class="dropdown">
+      <li> <a href="notificationpage.php" >Notifications <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge">7</span></a>
+ 
+     </li>
+      <li><a  href="StoreKeeperindex.php">Home</a></li>
+    </ul>
+      </div>
+    </div>
+  </div>
+
+
+    <div id="main" style="margin-left:400px; margin-right:200px; margin-top: 150px;">
+
+        <h3>StoreKeeper Reset Password</h3><br>
         <form method="POST" action="StoreReset_password.php">
             <div class="row">
                 <div class="form-group">
@@ -55,6 +112,7 @@ if (!isset($_SESSION['username'])) {
                 </div><br><br>
                 <input class="btn btn-info" type="Submit" name="update" value ="Reset"></br>
             </div>
+        </div>
         </form>
     </body>
     </html>

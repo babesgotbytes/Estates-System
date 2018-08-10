@@ -10,7 +10,7 @@
 		        <div style="height: 80px; width: 80px; margin-bottom: 10px; margin-left: 80px">
         <img src="logo.jpg"/>
         </div>
-		<h2>Student Registration</h2><br><br>
+		<h2>Manager Registration</h2><br><br>
 <form id="signup_form" method="POST" action="ManagerSignup.php">
 	<div class="row">
         <div class="form-group">

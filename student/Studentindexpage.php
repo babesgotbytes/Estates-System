@@ -63,6 +63,12 @@
       <li><a href="Studentprofile.php">Make report</a></li>
       <li class="dropdown">
 
+<<<<<<< HEAD
+=======
+ 
+      <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspoup="true" aria-expanded="false">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+      <div class="dropdown-menu" aria-labelledby="dropdown-toggle"></div>
+>>>>>>> 4179d4c0b285296115af0bd75587dfcbde6ab7db
 
       <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge">7</span></a>
       <div class="dropdown-menu">
