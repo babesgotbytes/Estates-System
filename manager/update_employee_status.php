@@ -23,6 +23,10 @@
 
     if (mysqli_query($conn, $sql)) {
         echo "success";
+
+
+        //fetch jobs
+                //asign job
     } else {
         echo "Error." . mysqli_error($conn);
     }

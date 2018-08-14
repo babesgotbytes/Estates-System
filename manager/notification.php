@@ -1,28 +1,51 @@
-
-
 <?php
-require_once Studentprofile.php;
+require_once 'db_Connection.php';
 
-if(isset($_POST["view"])) {
+
+
+function getNotifications()
+{
     $connect = mysqli_connect("localhost", "root", "", "project");
-
-    $sql = "SELECT * FROM PROJECT.notification ORDER BY Id DESC LIMIT 5";
-    $result = mysqli_query($connect, $sql);
-    $output = '';
-    if (mysqli_num_rows > 0) {
-        while ($row = mysqli_fetch_array($result)) {
-            $output .= '<li><a href="#" >$Message</a></li>';
-        }
-    } else {
-        $output .= '<li><a href="#" >No Notification found</a></li>';
-
+    if(!$connect){
+        die("connection failed");
     }
-    $sql_1 = "SELECT * PROJECT.notification WHERE notify_status =0";
-    $result_1 = mysqli_query($connect, $sql_1);
-    $count = mysqli_num_rows($result_1);
-    $data = array('notifiaction' => $output,
-        'unseen_notifiction' => $count);
+    $sql = "SELECT * from notification where notify_status='0' ";
+    $result = mysqli_query($connect, $sql);
+    $data=[];
+    if (mysqli_num_rows($result) > 0) {
+        $index =0;
+        while ($row = mysqli_fetch_assoc($result)) {
+            $record =array();
+            $record['id'] = $row['Id'];
+            $record['message'] = $row['message'];
+            $record['date'] = $row['day'];
+            $data[$index] = $record;
+            $index++;
+        }
+    }
 
+//    mysqli_close($connect);
+    return ($data);
+}
+
+function markAsRead(){
+     if (isset($_REQUEST['id'])){
+        $id = $_REQUEST['id'];
+         $connect = mysqli_connect("localhost", "root", "", "project");
+         if(!$connect){
+             die("connection failed");
+         }
+         $sql = "update notification set notify_status='1' WHERE  id = '". $id ."'";
+         $result =mysqli_query($connect,$sql);
+         if(mysqli_num_rows($result) > 0){
+             echo "record updated";
+         }else{
+             echo  "failed";
+         }
+     }
 
 }
+
+markAsRead();
+
 ?>
