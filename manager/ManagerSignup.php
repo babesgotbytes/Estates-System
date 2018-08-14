@@ -95,8 +95,7 @@ class NewAccount extends Db_Connect{
 					}else
 
 					{
-
-								$insert="INSERT INTO PROJECT.manager(name,email,pwd,day) VALUES ('$this->username','$this->email','$hashed_pwd','$this->time')";
+					    $insert="INSERT INTO PROJECT.manager(name,email,pwd,day) VALUES ('$this->username','$this->email','$hashed_pwd','$this->time')";
 
 					 			//calls connect method in dtabbase connection class and execute the query
 								$insert_results=$this->connect()->exec($insert);

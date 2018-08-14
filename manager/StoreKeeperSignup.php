@@ -60,8 +60,13 @@ class NewAccount extends Db_Connect{
 
         if(!preg_match($pattern, $email)){
 
+
             return true;
         }else{
+
+			//notify success in account creation...Java Script
+			echo"<script>alert('Account Created Sucessfully')</script>";
+			echo"<script>window.open('../Storekeeper/StoreKeeperLoginpage.php')</script>;";
 
             return false;
         }

@@ -18,7 +18,7 @@
   .header{
     width: 100%;
     height: auto;
-    background-color: #7285A5;
+    background-color: #0056b3;
     padding-top: 24px;
   }
   .nav{
@@ -51,23 +51,23 @@
    <div id="headerContent" >
    	</div>
      <div class="navbar-header">
- 
-     <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
- 
+
+     <a class="navbar-brand" style="color: white" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
+
     </div>
    	<div class="nav">
       <ul>
    		<li><a href="StudentLogout.php">Log out</a></li>
-      <li><a href="#">Make Complain</a></li>
-      <li><a href="#">Renovations</a></li>
-      <li><a href="Studentreport.php">Make report</a></li>
+   <li><a href="StudentResetPasswordPage.php">Reset password</a></li>
+      <li><a href="../manager/WorkStatus.php">Renovations</a></li>
+      <li><a href="StudentMakereport.php">Make report</a></li>
       <li class="dropdown">
 
- 
-      <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspoup="true" aria-expanded="false">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+
       <div class="dropdown-menu" aria-labelledby="dropdown-toggle"></div>
 
-      <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge">7</span></a>
+
+      <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge"></span></a>
       <div class="dropdown-menu">
 
       <ul class="dropdown-menu">
@@ -75,9 +75,9 @@
         <a class="dropdown-item" href="#">report1</a>
         <a class="dropdown-item" href="#">report1</a>
       </ul>
- 
+
      </li>
-     <li><a href="Studentprofile.php">Profile</a></li>
+    <li><a href="Studentprofile.php">Profile</a></li>
    	</ul>
       </div>
    	</div>
@@ -87,10 +87,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
-	
+
 </body>
 </html>
 
 <?php }?>
 
- 
+

@@ -1,5 +1,5 @@
 <?php
-include_once "AddEmployee.php";
+include_once "db_Connection.php";
 class AddEmployee1 extends  Db_Connect
 {
     private $empname;
@@ -9,11 +9,11 @@ class AddEmployee1 extends  Db_Connect
     /**
      * AddEmployee constructor.
      */
-    public function __construct($empname, $phone, $email)
+    public function __construct($emname, $phon, $ema)
     {
-        $this->empname = $empname;
-        $this->phone = $phone;
-        $this->email = $email;
+        $this->empname = $emname;
+        $this->phone = $phon;
+        $this->email = $ema;
     }
 
     /**
@@ -22,10 +22,10 @@ class AddEmployee1 extends  Db_Connect
     public function addEmployee()
     {
 
-        $addEmp = new Application($this->empname, $this->phone, $this->email);
+        $addEmp = new AddEmployee1($this->empname, $this->phone, $this->email);
 
         $sql = "INSERT INTO PROJECT.employees(empName,phone,email) VALUES ('$this->empname','$this->phone','$this->email')";
-        $insert_data = $this->connect()->exec($sql);
+         $this->connect()->exec($sql);
         header("Location:EmployeePage.php?msg=submitted successfully");
 
     }
@@ -43,6 +43,7 @@ class AddEmployee1 extends  Db_Connect
 
 
             $add_emp = new AddEmployee1( $empN, $PhoneNo, $EmpEmail);
+            $add_emp->addEmployee();
         }
 
 
