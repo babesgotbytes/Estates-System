@@ -44,7 +44,7 @@
        </div>
 </div><br><br>
 	<input class="btn btn-info" type="Submit" name="submit" value ="sign Up"></br>
-
+    </div>
 </form>
 </body>
 </html>
