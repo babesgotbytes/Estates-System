@@ -64,8 +64,15 @@
       <li class="dropdown">
 
 
+<<<<<<< HEAD
+=======
+ 
+      
+      <div class="dropdown-menu" aria-labelledby="dropdown-toggle"></div>
+>>>>>>> cc99d1ed7e4a720ac583abd0b1022e2b4c80476e
 
-      <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge">7</span></a>
+
+      <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge"></span></a>
       <div class="dropdown-menu">
 
       <ul class="dropdown-menu">
