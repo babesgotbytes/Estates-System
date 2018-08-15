@@ -66,7 +66,7 @@ class NewAccount extends Db_Connect{
 
 			//notify success in account creation...Java Script
 			echo"<script>alert('Account Created Sucessfully')</script>";
-			echo"<script>window.open('../Storekeeper/StoreKeeperLoginpage.php')</script>;";
+			echo"<script>window.open('StoreKeeperSignPage.php')</script>;";
 
             return false;
         }
@@ -108,7 +108,7 @@ class NewAccount extends Db_Connect{
 
                     //notify success in account creation...Java Script
                     echo"<script>alert('Account Created Sucessfully')</script>";
-                    echo"<script>window.open('StudentLoginpage.php','_self')</script>;";
+                    echo"<script>window.open('StoreKeeperLoginpage.php','_self')</script>;";
 
                 }
 
@@ -124,16 +124,15 @@ if(isset($_POST['submit'])){
 
     $inusername=$_POST['username'];
     $inemail=$_POST['email'];
-    $regNo=$_POST['ID'];
+   // $regNo=$_POST['ID'];
     $inpwd=$_POST['password'];
     $inc_pwd=$_POST['confirm-password'];
-    //$regno=$_POST['regno'];
 
-    if(($inusername=="")||($inemail=="")||($inpwd=="")|| ($inc_pwd=="") || ($regNo=="")){
+    if(($inusername=="")||($inemail=="")||($inpwd=="")|| ($inc_pwd=="") ){
 
 
         echo "<script>alert('All fields are required')</script>";
-        echo "<script>window.open('StudentSignupPage.php','_self')</script>";
+        echo "<script>window.open('StoreKeeperSignupPage.php','_self')</script>";
         exit();
 
     }
@@ -147,8 +146,8 @@ if(isset($_POST['submit'])){
     $timeCreated= date('Y-m-d');
 
     //create the class object and pass in the constructer values in their order
-    //$username,$email,$pwd,$c_pwd,$hashed_pwd,$hashed_c_pwd,$time,$regno
-    $myAccount = new NewAccount($inusername,$inemail,$inpwd,$inc_pwd,$timeCreated,$regNo);
+    //$username,$email,$pwd,$c_pwd,$hashed_pwd,$hashed_c_pwd,$time
+    $myAccount = new NewAccount($inusername,$inemail,$inpwd,$inc_pwd,$timeCreated);
 
 // //call to the method that create user and pass in values from the html form
     $myAccount->createNewAccount($hashedPwd);
