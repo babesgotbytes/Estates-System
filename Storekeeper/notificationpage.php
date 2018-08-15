@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 	<title>Home Page</title>
   <style>
@@ -52,12 +55,36 @@
       <li><a href="StoreUsedmaterialspage.php">used materials</a></li>
       <li><a href="StoreAssignMaterialspage.php">assign materials</a></li>
       <li><a href="StoreAddMaterialspage.php">add materials</a></li>
-      <li> <a style="color:blue" href="notificationpage.php" >Notifications <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge">7</span></a>
-      
- 
-     </li>
+      <li class="dropdown">
+       <a style="color:blue" href="notificationpage.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:90px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span>Notifications<span class="badge"></span></a>
+       
+      </li>
       <li><a href="StoreKeeperindex.php">Home</a></li>
+     </ul>
+    </div>
+   </nav>
+   
+      
    	</ul>
       </div>
    	</div>
   </div>
+
+   <form method="post" id="comment_form">
+    <div class="form-group">
+     <label>Enter Subject</label>
+     <input type="text" name="subject" id="subject" class="form-control">
+    </div>
+    <div class="form-group">
+     <label>Enter Comment</label>
+     <textarea name="comment" id="comment" class="form-control" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+     <input type="submit" name="post" id="post" class="btn btn-info" value="Post" />
+    </div>
+   </form>
+   
+  </div>
+</body>
+</body>
+</html>

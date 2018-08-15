@@ -13,26 +13,73 @@ if(!isset($_SESSION['username'])){
 	else{
 ?>
 
-<!DOCTYPE html>
-<html>
-<Head>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <style>
+            body{margin:0;}
+            .header{
+                width: 100%;
+                height: auto;
+                background-color: #0056b3;
+                padding-top: 24px;
+            }
+            .nav{
+                height:40px;
+                background:#111E6C;
+            }
+            .nav ul{
+                margin: 0;
+                padding: 0;
+            }
+            .nav ul li{ list-style: none; }
+            .nav ul li a{
+                text-decoration: none;
+                float: right;
+                display: block;
+                padding: 10px 20px;
+                color: white;
+            }
+            .nav ul li a:hover{color: #7EF9FF;}
+        </style>
+    </head>
+<h1> </h1>
+<header>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</header>
 
-	<title>Profile page</title>
-<style type="text/css">
-	  #body-bg
-	  {
-	  background-color: #efefef;
-      }	
-</style>
-</Head>
+<div id="header">
+    <div id="headerContent" >
+    </div>
+    <div class="navbar-header">
 
-<body id="body-bg">
-	<div class="container" style=" background-color:#fff;margin-top:20px; margin-bottom:20px; width:1200px; height:640px";>
-		<?php echo $name;?>
-	<button class='btn btn-danger' style='float:right; margin-top:20px;'>Logout</button>
-    
-    <br><br><br><br>
+        <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
+
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="StudentLogout.php">Log out</a></li>
+            <li><a  href="StudentResetPasswordPage.php">Reset password</a></li>
+            <li><a href="../manager/WorkStatus.php">Renovations</a></li>
+            <li><a style="color: #0056b3" href="StudentMakereport.php">Make report</a></li>
+            <li><a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge"></span></a>
+
+
+            </li>
+            <li><a href="Studentprofile.php">Profile</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+
+</head>
+<body class="container-fluid" style="background-color:#f6f6f6;" id="body-bg">
+	<div class="container" style="margin-top:20px; margin-bottom:20px; margin-left:400px;width:1200px; height:640px";>
+
+    <br>
         <form  id="appication-form" action="application.php" method="POST">
 
         <div class="row">
@@ -47,7 +94,7 @@ if(!isset($_SESSION['username'])){
                     <option value="games_sector">Games Sesctor</option>
                     <option value="anycategory">Any Other</option>
 
-                </select><br><br>
+                </select><br>
 
             </div>
 
@@ -117,7 +164,7 @@ if(!isset($_SESSION['username'])){
             <div class="form-group col-md-4">
 
 
-                <button type="submit" class="btn btn-primary" name="submit" value="Submit" style="margin-top: 25px"> Submit</button>
+                <button type="submit" class="btn " name="submit" value="Submit" style="margin-top: 25px;background-color: #0056b3; width: 100px;margin-left: 100px;"> Submit</button>
 
 
             </div>

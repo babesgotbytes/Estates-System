@@ -43,7 +43,7 @@
 		if($conn-> connect_error){
             die("Connection failed:". $conn-> connect_error);
         }
-                    $sql = "SELECT categoryName, propertyName,damage,status,Day FROM PROJECT.app";
+                    $sql = "SELECT categoryName, propertyName,damage,status,Day FROM PROJECT.app WHERE ";
                     $result = $conn->query($sql);
 
 
