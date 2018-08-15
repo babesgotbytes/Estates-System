@@ -1,61 +1,101 @@
 <?php
-	session_start();
+    session_start();
 
-	if(!isset($_SESSION['username'])){
+    if(!isset($_SESSION['username'])){
 
-			header('location: ManagerLoginpage.php');
+            header('location: ManagerLoginpage.php');
 
-	}else{	
+    }else{  
 ?>
 <!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="css/manager.css">
-	<title>Manager's Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Home Page</title>
+  <style>
+  body{margin:0;}
+  .header{
+    width: 100%;
+    height: auto;
+    background-color: #7285A5;
+    padding-top: 24px;
+  }
+  .nav{
+     height:40px;
+     background:#111E6C;
+  }
+  .nav ul{
+    margin: 0;
+    padding: 0;
+  }
+  .nav ul li{ list-style: none; }
+  .nav ul li a{
+    text-decoration: none;
+    float: right;
+    display: block;
+    padding: 10px 20px;
+    color: white;
+  }
+  .nav ul li a:hover{color: #7EF9FF;}
+  </style>
 </head>
 <body>
-  <header>
- 	<link rel="stylesheet" href="style.css" type="text/css"/>
- 	<meta name="viewport" content="width=device-width initial-scale=1">
- 
-  
-    <div style="float: left; padding:20px 20px 0 30px;font-size: 40px; color:#cccccc;">
-      Welcome <?php echo $_SESSION['username'];?>
-    </div>
-    <nav>
-        <a href="#" id="menu-icon"></a>
-        <ul style="">
-            <li><a href="Project.php" style="color: #cccccc; font-size: 25px;">View reports</a></li>
-            <li><a href="About.php" style="color: #cccccc;font-size: 25px;">Renovations</li>
-            <li style="color: #cccccc;"><a href="StoreKeeperSignupPage.php" style="color: #cccccc;font-size: 25px;">SignUp Storekeeper</a></li>
-             <li><a href="EmployeePage.php" style="color: #cccccc;font-size: 25px;">Assign work</li>
-
-                <li><a href="ManagerResetPasswordPage.php" style="color: #cccccc;font-size: 25px;">Reset password</li>
-            <li class="dropdown">
-
-
-                <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown" style="font-size: 23px;">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge">7</span></a>
-                <div class="dropdown-menu">
-
-                    <ul class="dropdown-menu">
-                        <a class="dropdown-item" href="#">report1</a>
-                        <a class="dropdown-item" href="#">report1</a>
-                        <a class="dropdown-item" href="#">report1</a>
-                    </ul>
-
-            </li>
-
-            <li style="color: #cccccc;"><a href="ManagerLogout.php" style="color: #cccccc;font-size: 25px;">logout</a></li>
-             </ul>
-    </nav>
-
-</header>
+    <h1> </h1>
+    <header>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+ </header>
  <body>
- 	
+
+<div id="header">
+   <div id="headerContent" >
+    </div>
+     <div class="navbar-header">
+ 
+     <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
+ 
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="StudentLogout.php">Log out</a></li>
+      <li><a href="StoreKeeperSignupPage.php">Register Storekeeper</a></li>
+      <li><a href="EmployeePage.php">Assign work</a></li>
+      <li><a href="About.php">Renovations</a></li>
+      <li class="dropdown">
+
+
+ 
+      
+      <div class="dropdown-menu" aria-labelledby="dropdown-toggle"></div>
+
+
+      <a href="nofication.php" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge"></span></a>
+      <div class="dropdown-menu">
+
+      <ul class="dropdown-menu">
+        <a class="dropdown-item" href="#">report1</a>
+        <a class="dropdown-item" href="#">report1</a>
+        <a class="dropdown-item" href="#">report1</a>
+      </ul>
+ 
+     </li>
+     <li><a href="Project.php">View reports</a></li>
+    </ul>
+      </div>
+    </div>
+  </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+    
 </body>
 </html>
 
 <?php }?>
+
+ 
+
 
  

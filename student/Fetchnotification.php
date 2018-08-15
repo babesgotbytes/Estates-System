@@ -44,7 +44,7 @@ else{
     $output .= '<li><a href="#" class="text-bold text-italic">No Noti Found</a></li>';
 }
  
-$status_query = "SELECT * FROM report WHERE report_status=0";
+$status_query = "SELECT * FROM report WHERE repoert_status=0";
 $result_query = mysqli_query($run_query, $status_query);
 $count = mysqli_num_rows($result_query);
  
@@ -56,6 +56,4 @@ $data = array(
 echo json_encode($data);
 }
 ?>
-
-
 
