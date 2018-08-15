@@ -99,7 +99,7 @@ public function createNewAccount($username,$email,$pwd,$c_pwd,$hashed_pwd,$hashe
 
 			//notify success in account creation...Java Script
 			echo"<script>alert('Account Created Sucessfully')</script>";
-			echo"<script>window.open('Storekeeper/StoreKeeperLoginpage.php')</script>;";
+			echo"<script>window.open('../Storekeeper/StoreKeeperLoginpage.php')</script>;";
 
 
 		}
