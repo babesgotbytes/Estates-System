@@ -1,4 +1,6 @@
+
 <?php
+include 'db_Connection.php';
 	session_start();
 
 	if(!isset($_SESSION['username'])){
@@ -41,6 +43,7 @@
   </style>
 </head>
 <body>
+
 	<h1> </h1>
 	<header>
  	<link rel="stylesheet" href="style.css" type="text/css"/>
@@ -58,28 +61,23 @@
    	<div class="nav">
       <ul>
    		<li><a href="StudentLogout.php">Log out</a></li>
+      <li><a href="#">Make Complain</a></li>
    <li><a href="StudentResetPasswordPage.php">Reset password</a></li>
       <li><a href="../manager/WorkStatus.php">Renovations</a></li>
       <li><a href="StudentMakereport.php">Make report</a></li>
       <li class="dropdown">
 
+         <div class="dropdown-menu"></div>
 
-      <div class="dropdown-menu" aria-labelledby="dropdown-toggle"></div>
-
-
-      <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge"></span></a>
-      <div class="dropdown-menu">
-
-      <ul class="dropdown-menu">
-        <a class="dropdown-item" href="#">report1</a>
-        <a class="dropdown-item" href="#">report1</a>
-        <a class="dropdown-item" href="#">report1</a>
-      </ul>
-
-     </li>
-    <li><a href="Studentprofile.php">Profile</a></li>
-   	</ul>
-      </div>
+           <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+      
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">report1</a></li>
+                <li><a class="dropdown-item" href="#">report1</a></li>
+                <li><a class="dropdown-item" href="#">report1</a></li>
+            </ul>
+      </li>
+     <li><a href="Studentprofile.php">Profile</a></li>  
    	</div>
   </div>
 
