@@ -61,20 +61,14 @@ include 'db_Connection.php';
    	<div class="nav">
       <ul>
    		<li><a href="StudentLogout.php">Log out</a></li>
-<<<<<<< HEAD
       <li><a href="#">Make Complain</a></li>
-      <li><a href="#">Renovations</a></li>
-      <li><a href="Studentreport.php">Make report</a></li>
-=======
    <li><a href="StudentResetPasswordPage.php">Reset password</a></li>
       <li><a href="../manager/WorkStatus.php">Renovations</a></li>
       <li><a href="StudentMakereport.php">Make report</a></li>
->>>>>>> c9c3eae64eaf6977cd279b98dd5890b816549d44
       <li class="dropdown">
 
          <div class="dropdown-menu"></div>
 
-<<<<<<< HEAD
            <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
       
             <ul class="dropdown-menu">
@@ -83,25 +77,7 @@ include 'db_Connection.php';
                 <li><a class="dropdown-item" href="#">report1</a></li>
             </ul>
       </li>
-     <li><a href="Studentprofile.php">Profile</a></li>
-=======
-      <div class="dropdown-menu" aria-labelledby="dropdown-toggle"></div>
-
-
-      <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge"></span></a>
-      <div class="dropdown-menu">
-
-      <ul class="dropdown-menu">
-        <a class="dropdown-item" href="#">report1</a>
-        <a class="dropdown-item" href="#">report1</a>
-        <a class="dropdown-item" href="#">report1</a>
-      </ul>
-
-     </li>
-    <li><a href="Studentprofile.php">Profile</a></li>
->>>>>>> c9c3eae64eaf6977cd279b98dd5890b816549d44
-   	</ul>
-    </div>  
+     <li><a href="Studentprofile.php">Profile</a></li>  
    	</div>
   </div>
 
