@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 
     <title>Work Status</title>
-
 </head>
 <body class="container">
 <style type="text/css">
