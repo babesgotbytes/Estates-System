@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />-->
+<!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 	<title>Home Page</title>
   <style>
-  body{margin:0;}
+  body{margin:0;
+      background-color:#f6f6f6;
+  }
   .header{
     width: 100%;
     height: auto;
@@ -48,16 +50,15 @@
     
  
     </div>
-   	<div class="nav">
+   	<div class="nav" style="font-family: Serif;font-size: 18px;">
       <ul>
    		<li><a href="StoreKeeperLogout.php">Log out</a></li>
       <li><a href="StoreResetPasswordPage.php">reset password</a></li>
       <li><a href="StoreUsedmaterialspage.php">used materials</a></li>
       <li><a href="StoreAssignMaterialspage.php">assign materials</a></li>
       <li><a href="StoreAddMaterialspage.php">add materials</a></li>
-      <li class="dropdown">
-       <a style="color:blue" href="notificationpage.php" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:90px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span>Notifications<span class="badge"></span></a>
-       
+      <li><a  style="color: #f5c6cb" href="notificationpage.php">notification </a>
+
       </li>
       <li><a href="StoreKeeperindex.php">Home</a></li>
      </ul>

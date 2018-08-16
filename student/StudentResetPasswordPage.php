@@ -60,11 +60,11 @@ if(!isset($_SESSION['username'])){
             <a class="navbar-brand" style="color: white" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
 
         </div>
-        <div class="nav">
+        <div class="nav" style="font-family: Serif;font-size: 18px;">
             <ul>
                 <li><a href="StudentLogout.php">Log out</a></li>
                 <!--      <li><a href="#">Make Complain</a></li>-->
-                <li><a style="color: #f5c6cb" href="StudentResetPasswordPage.php">Reset password</a></li>
+                <li><a  style="color: #f5c6cb" href="StudentResetPasswordPage.php">Reset password</a></li>
                 <li><a href="../manager/WorkStatus.php">Renovations</a></li>
                 <li><a href="StudentMakereport.php">Make report</a></li>
 
