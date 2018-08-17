@@ -1,53 +1,78 @@
 <?php
 session_start();
 
-require_once 'notification.php';
-
-if (!isset($_SESSION['username'])) {
+if(!isset($_SESSION['username'])){
 
     header('location: ManagerLoginpage.php');
 
-} else {
+}else{
     ?>
     <!DOCTYPE html>
     <html>
     <head>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-        <link rel="stylesheet" href="css/manager.css">
-        <title>Manager's Page</title>
+
+        <title>Home Page</title>
+        <style>
+            body{margin:0;
+                background-color:#f6f6f6;
+            }
+            .header{
+                width: 100%;
+                height: auto;
+                background-color: #7285A5;
+                padding-top: 24px;
+            }
+            .nav{
+                height:40px;
+                background:#111E6C;
+            }
+            .nav ul{
+                margin: 0;
+                padding: 0;
+            }
+            .nav ul li{ list-style: none; }
+            .nav ul li a{
+                text-decoration: none;
+                float: right;
+                display: block;
+                padding: 10px 20px;
+                color: white;
+            }
+            .nav ul li a:hover{color: #7EF9FF;}
+        </style>
     </head>
-    <body>
+    <body class="container-fluid">
+    <h1> </h1>
     <header>
         <link rel="stylesheet" href="style.css" type="text/css"/>
-        <meta name="viewport" content="width=device-width initial-scale=1">
+    </header>
+    <body>
 
-
-        <div style="float: left; padding:20px 20px 0 30px;font-size: 40px; color:#cccccc;">
-            Welcome <?php echo $_SESSION['username']; ?>
+    <div id="header">
+        <div id="headerContent" >
         </div>
-        <nav>
-            <a href="#" id="menu-icon"></a>
-            <ul style="">
-<!--                <li><a href="Project.php" style="color: #cccccc; font-size: 25px;">View reports</a></li>-->
-                <li><a href="WorkStatus.php" style="color: #cccccc;font-size: 25px;">Renovations</li>
-                <li style="color: #cccccc;"><a href="StoreKeeperSignupPage.php" style="color: #cccccc;font-size: 25px;">SignUp
-                        Storekeeper</a></li>
-                <li><a href="EmployeePage.php" style="color: #cccccc;font-size: 25px;">Assign work</li>
+        <div class="navbar-header">
 
-                <li><a href="ManagerResetPasswordPage.php" style="color: #cccccc;font-size: 25px;">Reset password</li>
+            <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
+
+        </div>
+        <div class="nav" style="font-family: Serif;font-size: 18px;">
+            <ul>
+                <li><a href="ManagerLogout.php">Log out</a></li>
+                <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
+                <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
+                <li><a  href="WorkStatus.php">Renovations</a></li>
+                <li><a href="EmployeePage.php">Assign work</a></li
                 <li class="dropdown">
-
-
-                    <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown" style="font-size: 23px;">
+                    <a href="notification.php" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">
                         Notifications
                         <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span>
-                        <span class="badge"><?php echo count(getNotifications()) ?><span class="caret"></span></span>
+                        <span class="badge">
+                            <?php echo count(getNotifications()) ?><span class="caret"></span></span>
                     </a>
 
                     <ul class="dropdown-menu">
-                        <!--                        <a class="dropdown-item" href="#">report1</a>-->
-                        <!--                        <a class="dropdown-item" href="#">report1</a>-->
-                        <!--                        <a class="dropdown-item" href="#">report1</a>-->
                         <?php
                         foreach (getNotifications() as $notification) { ?>
                             <li><a class="dropdown-item" href="#"
@@ -55,19 +80,22 @@ if (!isset($_SESSION['username'])) {
                                     <?php echo $notification['message'] . " on " . $notification['date']; ?></a></li>
                             <?php
                         }
-                        ?>
+                        ?></ul></li>
 
-                    </ul>
-
-                </li>
-
-                <li style="color: #cccccc;"><a href="ManagerLogout.php"
-                                               style="color: #cccccc;font-size: 25px;">logout</a></li>
+                <li><a style="color: #f5c6cb" href="Managerindexpage.php">Home</a></li>
             </ul>
-        </nav>
+        </div>
+    </div>
+    </div>
 
-    </header>
 
+
+    </body>
+
+
+    </body>
+
+<?php }?>
 
     <script src="../axios/axios.min.js"></script>
     <script src="jQuery/jquery-2.2.4.min.js"></script>
@@ -83,9 +111,4 @@ if (!isset($_SESSION['username'])) {
             })
         }
     </script>
-    </body>
-    </html>
-
-<?php } ?>
-
- 
+</html>
