@@ -1,25 +1,22 @@
 <?php
-//include_once 'db_Connection.php';
-include_once 'Studentindex.php';
-
+include 'db_Connection.php';
 session_start();
-$name=$_SESSION['username'];
 
 if(!isset($_SESSION['username'])){
 
-			header('location: StudentLoginpage.php');
+    header('location: StudentLoginpage.php');
 
-	}
-	else{
-?>
-
+}else{
+    ?>
     <!DOCTYPE html>
     <html>
     <head>
-        <title></title>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <title>Home Page</title>
         <style>
-            body{margin:0;}
+            body{margin:0;
+                background-color:#f6f6f6;
+            }
             .header{
                 width: 100%;
                 height: auto;
@@ -45,39 +42,43 @@ if(!isset($_SESSION['username'])){
             .nav ul li a:hover{color: #7EF9FF;}
         </style>
     </head>
-<h1> </h1>
-<header>
-    <link rel="stylesheet" href="style.css" type="text/css"/>
-</header>
+    <body>
 
-<div id="header">
-    <div id="headerContent" >
+    <h1> </h1>
+    <header>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+    </header>
+    <body>
+
+    <div id="header">
+        <div id="headerContent" >
+        </div>
+        <div class="navbar-header">
+
+            <a class="navbar-brand" style="color: white" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
+
+        </div>
+        <div class="nav" style="font-family: Serif;font-size: 18px;">
+            <ul>
+                <li><a href="StudentLogout.php">Log out</a></li>
+<!--                <li><a href="#">Make Complain</a></li>-->
+                <li><a href="StudentResetPasswordPage.php">Reset password</a></li>
+                <li><a href="../manager/WorkStatus.php">Renovations</a></li>
+                <li><a  style="color: #f5c6cb" href="StudentMakereport.php">Make report</a></li>
+
+                <li><a  href="Studentprofile.php">Profile</a></li>
+
+                <li><a href="Studentindexpage.php">Home</a></li>
+        </div>
     </div>
-    <div class="navbar-header">
 
-        <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
-
-    </div>
-    <div class="nav">
-        <ul>
-            <li><a href="StudentLogout.php">Log out</a></li>
-            <li><a  href="StudentResetPasswordPage.php">Reset password</a></li>
-            <li><a href="../manager/WorkStatus.php">Renovations</a></li>
-            <li><a style="color: #0056b3" href="StudentMakereport.php">Make report</a></li>
-            <li><a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge"></span></a>
+    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
 
-            </li>
-            <li><a href="Studentprofile.php">Profile</a></li>
-        </ul>
-    </div>
-</div>
-</div>
-
-
-</head>
-<body class="container-fluid" style="background-color:#f6f6f6;" id="body-bg">
-	<div class="container" style="margin-top:20px; margin-bottom:20px; margin-left:400px;width:1200px; height:640px";>
+<!---->
+<!--   <body class="container-fluid" style="background-color:#f6f6f6;" id="body-bg">-->
+	<div  style="margin-top:20px; margin-bottom:20px; margin-left:400px;width:1200px; height:640px";>
 
     <br>
         <form  id="appication-form" action="application.php" method="POST">
@@ -164,7 +165,7 @@ if(!isset($_SESSION['username'])){
             <div class="form-group col-md-4">
 
 
-                <button type="submit" class="btn " name="submit" value="Submit" style="margin-top: 25px;background-color: #0056b3; width: 100px;margin-left: 100px;"> Submit</button>
+                <button type="submit" class="btn " name="submit" value="Submit" style="margin-top: 25px;background-color: #0056b3; color:white; width: 100px;margin-left: 100px;"> Submit</button>
 
 
             </div>
@@ -178,6 +179,7 @@ if(!isset($_SESSION['username'])){
      $user = new User;
      echo $user->getAllUsers();
     ?>
+    </body>
 </body>
 <script type="application/javascript">
     $document.ready(function () {
@@ -233,4 +235,4 @@ if(!isset($_SESSION['username'])){
 <!--</script>-->
 
 </html>
-	<?php }?>
+<?php }?>

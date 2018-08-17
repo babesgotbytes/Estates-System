@@ -1,12 +1,14 @@
+
 <?php
-//session_start();
-//
-//if(!isset($_SESSION['username'])){
-//
-//    header('location: ManagerLoginpage.php');
-//
-//}else{
-//    ?>
+include 'db_Connection.php';
+session_start();
+
+if(!isset($_SESSION['username'])){
+
+    header('location: StudentLoginpage.php');
+
+}else{
+    ?>
     <!DOCTYPE html>
     <html>
     <head>
@@ -20,7 +22,7 @@
             .header{
                 width: 100%;
                 height: auto;
-                background-color: #7285A5;
+                background-color: #0056b3;
                 padding-top: 24px;
             }
             .nav{
@@ -42,7 +44,8 @@
             .nav ul li a:hover{color: #7EF9FF;}
         </style>
     </head>
-    <body class="container-fluid">
+    <body>
+
     <h1> </h1>
     <header>
         <link rel="stylesheet" href="style.css" type="text/css"/>
@@ -54,36 +57,31 @@
         </div>
         <div class="navbar-header">
 
-            <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
+            <a class="navbar-brand" style="color: white" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
 
         </div>
         <div class="nav" style="font-family: Serif;font-size: 18px;">
             <ul>
-                <li><a href="ManagerLogout.php">Log out</a></li>
-                <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
-                <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
-                <li><a  href="WorkStatus.php">Renovations</a></li>
-                <li><a href=EmployeePage.php">Assign work</a></li
-                <li class="dropdown">
-                <li> <a  href="notification.php" >Notifications</a></li>
+                <li><a href="StudentLogout.php">Log out</a></li>
+<!--                <li><a href="#">Make Complain</a></li>-->
+                <li><a href="StudentResetPasswordPage.php">Reset password</a></li>
+                <li><a href="../manager/WorkStatus.php">Renovations</a></li>
+                <li><a href="StudentMakereport.php">Make report</a></li>
 
-                <li><a style="color: #f5c6cb" href="Managerindexpage.php">Home</a></li>
-            </ul>
+                <li><a  style="color: #f5c6cb" href="Studentprofile.php">Profile</a></li>
+
+                <li><a href="Studentindexpage.php">Home</a></li>
         </div>
     </div>
-    </div>
 
-
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
     </body>
-
 
     </body>
     </html>
-<!---->
-<?php //}?>
 
-
-
+<?php }?>
 
 

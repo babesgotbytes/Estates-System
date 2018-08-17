@@ -5,7 +5,9 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 	<title>Home Page</title>
   <style>
-  body{margin:0;}
+  body{margin:0;
+      background-color:#f6f6f6;
+  }
   .header{
     width: 100%;
     height: auto;
@@ -46,14 +48,14 @@
     
  
     </div>
-   	<div class="nav">
+   	<div class="nav" style="font-family: Serif;font-size: 18px;">
       <ul>
    		<li><a href="StoreKeeperLogout.php">Log out</a></li>
       <li><a href="StoreResetPasswordPage.php">reset password</a></li>
       <li><a href="StoreUsedmaterialspage.php">used materials</a></li>
       <li><a href="StoreAssignMaterialspage.php">assign materials</a></li>
-      <li><a style="color:blue" href="StoreAddMaterialspage.php">add materials</a></li>
-      <li> <a href="notificationpage.php" >Notifications <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge">7</span></a>
+      <li><a  style="color: #f5c6cb" href="StoreAddMaterialspage.php">add materials</a></li>
+      <li> <a href="notificationpage.php" >Notifications </a>
       
  
      </li>
@@ -66,20 +68,20 @@
 <form action="StoreAddMaterials.php" method="POST">
     
   <!-- material_ID:<input type="text" name="material_ID"><br><br> -->
-  <div class="row" style="margin-left:400px; margin-right: 400px; margin-top: 150px; margin-bottom: 100px;">
+  <div class="row" style="font-family: Serif;font-size: 18px;margin-left:400px; margin-right: 400px; margin-top: 150px; margin-bottom: 100px;">
    <div class="form-group">
   <label>material name</label><br>
   <div class="col-sm-10">
         <input class="form-control" id="exampleInputMaterialName" type="textfield" name="material_name" placeholder="material name" autocomplete="off" required>
        </div>
-</div><br>
+</div><br><br>
    <div class="form-group">
     <label>Quantity</label><br>
   <div class="col-sm-10">
         <input class="form-control" id="exampleInputQuantity" type="textfield" name="quantity" placeholder="Quantity" autocomplete="off" required>
        </div>
-</div>
-  <div class="form-group col-md-4" style="width: 470px;">
+</div><br><br>
+  <div class="form-group col-md-4" style="width: 450px;">
                 <label for="Category-select">Department Name</label>
 
                 <select class="form-control" name="category">
@@ -94,12 +96,12 @@
                 </select>
             </div>
    <br><br>
-  <input class="btn btn-info" type="Submit" name="add" value ="Add" style="margin-right: 100px">
-   <input class="btn btn-info" type="Submit" name="update" value ="Update">
+  <input class="btn" style="margin-left: 60px;background-color: #0056b3;color: white; font-family: Serif;font-size: 18px;margin-right: 100px" type="Submit" name="add" value ="Add">
+   <input class="btn" style="margin-left: 60px;background-color: #0056b3;color: white; font-family: Serif;font-size: 18px;" type="Submit" name="update" value ="Update">
  </div>
   </form>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
 </body>
 	
