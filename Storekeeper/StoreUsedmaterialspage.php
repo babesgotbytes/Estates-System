@@ -4,7 +4,9 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
  	<title>Home Page</title>
   <style>
-  body{margin:0;}
+  body{margin:0;
+      background-color:#f6f6f6;
+  }
   .header{
     width: 100%;
     height: auto;
@@ -45,15 +47,15 @@
     
  
     </div>
-   	<div class="nav">
+   	<div class="nav" style="font-family: Serif;font-size: 18px;">
       <ul>
    		<li><a href="StoreKeeperLogout.php">Log out</a></li>
       <li><a href="StoreResetPasswordPage.php">reset password</a></li>
-      <li><a style="color:blue" href="StoreUsedmaterialspage.php">used materials</a></li>
+      <li><a  style="color: #f5c6cb" href="StoreUsedmaterialspage.php">used materials</a></li>
       <li><a  href="StoreAssignMaterialspage.php">assign materials</a></li>
       <li><a  href="StoreAddMaterialspage.php">add materials</a></li>
       <li class="dropdown">
-      <li> <a  href="notificationpage.php" >Notifications <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge">7</span></a>
+      <li> <a  href="notificationpage.php" >Notifications </a>
      
  
      </li>
@@ -65,7 +67,7 @@
 
 <form action="StoreUsedMaterials.php" method="GET">
   
-  <div class="row" style="margin-left:400px; margin-right: 400px; margin-top: 150px; margin-bottom: 100px;">
+  <div class="row" style="font-family: Serif;font-size: 18px;margin-left:400px; margin-right: 400px; margin-top: 150px; margin-bottom: 100px;">
    <div class="form-group">
     <h4> Please select the dates needed for material's printout</h4><br>
   <label>Date from</label><br>
@@ -79,11 +81,11 @@
         <input class="form-control" id="exampleInputDateto" type="date" name="to" required>
        </div>
 </div><br><br>
-      <input class="btn btn-info" type="Submit" name="assign" value ="Assign">
+      <input class="btn" style="margin-left: 60px;background-color: #0056b3;color: white; font-family: Serif;font-size: 18px;" type="Submit" name="assign" value ="Assign">
 </div>
   </form>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
 </body>
 	

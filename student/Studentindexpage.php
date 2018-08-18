@@ -1,4 +1,6 @@
+
 <?php
+include 'db_Connection.php';
 	session_start();
 
 	if(!isset($_SESSION['username'])){
@@ -11,10 +13,12 @@
 <html>
 <head>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 	<title>Home Page</title>
   <style>
-  body{margin:0;}
+  body{margin:0;
+      background-color:#f6f6f6;
+  }
   .header{
     width: 100%;
     height: auto;
@@ -41,6 +45,7 @@
   </style>
 </head>
 <body>
+
 	<h1> </h1>
 	<header>
  	<link rel="stylesheet" href="style.css" type="text/css"/>
@@ -55,36 +60,22 @@
      <a class="navbar-brand" style="color: white" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
 
     </div>
-   	<div class="nav">
+   	<div class="nav" style="font-family: Serif;font-size: 18px;">
       <ul>
    		<li><a href="StudentLogout.php">Log out</a></li>
+<!--      <li><a href="#">Make Complain</a></li>-->
    <li><a href="StudentResetPasswordPage.php">Reset password</a></li>
       <li><a href="../manager/WorkStatus.php">Renovations</a></li>
       <li><a href="StudentMakereport.php">Make report</a></li>
-      <li class="dropdown">
 
+     <li><a href="Studentprofile.php">Profile</a></li>
 
-      <div class="dropdown-menu" aria-labelledby="dropdown-toggle"></div>
-
-
-      <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge"></span></a>
-      <div class="dropdown-menu">
-
-      <ul class="dropdown-menu">
-        <a class="dropdown-item" href="#">report1</a>
-        <a class="dropdown-item" href="#">report1</a>
-        <a class="dropdown-item" href="#">report1</a>
-      </ul>
-
-     </li>
-    <li><a href="Studentprofile.php">Profile</a></li>
-   	</ul>
-      </div>
+          <li><a style="color: #f5c6cb" href="Studentindexpage.php">Home</a></li>
    	</div>
   </div>
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
 </body>
 

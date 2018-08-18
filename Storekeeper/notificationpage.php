@@ -11,10 +11,15 @@ require_once 'notification.php';
 <!DOCTYPE html>
 <html>
 <head>
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />-->
+<!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 	<title>Home Page</title>
   <style>
-  body{margin:0;}
+  body{margin:0;
+      background-color:#f6f6f6;
+  }
   .header{
     width: 100%;
     height: auto;
@@ -54,13 +59,14 @@ require_once 'notification.php';
     
  
     </div>
-   	<div class="nav">
+   	<div class="nav" style="font-family: Serif;font-size: 18px;">
       <ul>
    		<li><a href="StoreKeeperLogout.php">Log out</a></li>
       <li><a href="StoreResetPasswordPage.php">reset password</a></li>
       <li><a href="StoreUsedmaterialspage.php">used materials</a></li>
       <li><a href="StoreAssignMaterialspage.php">assign materials</a></li>
       <li><a href="StoreAddMaterialspage.php">add materials</a></li>
+<<<<<<< HEAD
           <li class="dropdown">
 
           <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown" style="font-size: 23px;">
@@ -86,12 +92,23 @@ require_once 'notification.php';
 
       </li>
 
+=======
+      <li><a  style="color: #f5c6cb" href="notificationpage.php">notification </a>
+
+      </li>
+>>>>>>> 347c41e9a2e1b9d0da12067225be5a714104dbd1
       <li><a href="StoreKeeperindex.php">Home</a></li>
+     </ul>
+    </div>
+   </nav>
+   
+      
    	</ul>
       </div>
    	</div>
   </div>
 
+<<<<<<< HEAD
 </body>
 <script src="../axios/axios.min.js"></script>
 <script src="jQuery/jquery-2.2.4.min.js"></script>
@@ -128,3 +145,23 @@ require_once 'notification.php';
     }
 </script>
 </html>
+=======
+   <form method="post" id="comment_form">
+    <div class="form-group">
+     <label>Enter Subject</label>
+     <input type="text" name="subject" id="subject" class="form-control">
+    </div>
+    <div class="form-group">
+     <label>Enter Comment</label>
+     <textarea name="comment" id="comment" class="form-control" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+     <input type="submit" name="post" id="post" class="btn btn-info" value="Post" />
+    </div>
+   </form>
+   
+  </div>
+</body>
+</body>
+</html>
+>>>>>>> 347c41e9a2e1b9d0da12067225be5a714104dbd1

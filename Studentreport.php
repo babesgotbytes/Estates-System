@@ -1,87 +1,110 @@
+	
 <?php
 include 'db_Connection.php';
+include_once 'Studentindex.php';
+
 session_start();
+$name=$_SESSION['username'];
 
 if(!isset($_SESSION['username'])){
 
-    header('location: StudentLoginpage.php');
+            header('location: StudentLoginpage.php');
 
-}else{
-    ?>
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-        <title>Home Page</title>
-        <style>
-            body{margin:0;
-                background-color:#f6f6f6;
-            }
-            .header{
-                width: 100%;
-                height: auto;
-                background-color: #0056b3;
-                padding-top: 24px;
-            }
-            .nav{
-                height:40px;
-                background:#111E6C;
-            }
-            .nav ul{
-                margin: 0;
-                padding: 0;
-            }
-            .nav ul li{ list-style: none; }
-            .nav ul li a{
-                text-decoration: none;
-                float: right;
-                display: block;
-                padding: 10px 20px;
-                color: white;
-            }
-            .nav ul li a:hover{color: #7EF9FF;}
-        </style>
-    </head>
-    <body>
+    }
+    else{
+?>
 
+<!DOCTYPE html>
+<html>
+<Head>
+     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4/css/bootstrap.min.css">
+    <title>Home Page</title>
+  <style>
+  body{margin:0;}
+  .header{
+    width: 100%;
+    height: auto;
+    background-color: #7285A5;
+    padding-top: 24px;
+  }
+  .nav{
+     height:40px;
+     background:#111E6C;
+  }
+  .nav ul{
+    margin: 0;
+    padding: 0;
+  }
+  .nav ul li{ list-style: none; }
+  .nav ul li a{
+    text-decoration: none;
+    float: right;
+    display: block;
+    padding: 10px 20px;
+    color: white;
+  }
+  .nav ul li a:hover{color: #7EF9FF;}
+  </style>
+</head>
+<body>
     <h1> </h1>
     <header>
-        <link rel="stylesheet" href="style.css" type="text/css"/>
-    </header>
-    <body>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+ </header>
+ <body>
 
-    <div id="header">
-        <div id="headerContent" >
-        </div>
-        <div class="navbar-header">
-
-            <a class="navbar-brand" style="color: white" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
-
-        </div>
-        <div class="nav" style="font-family: Serif;font-size: 18px;">
-            <ul>
-                <li><a href="StudentLogout.php">Log out</a></li>
-<!--                <li><a href="#">Make Complain</a></li>-->
-                <li><a href="StudentResetPasswordPage.php">Reset password</a></li>
-                <li><a href="../manager/WorkStatus.php">Renovations</a></li>
-                <li><a  style="color: #f5c6cb" href="StudentMakereport.php">Make report</a></li>
-
-                <li><a  href="Studentprofile.php">Profile</a></li>
-
-                <li><a href="Studentindexpage.php">Home</a></li>
-        </div>
+<div id="header">
+   <div id="headerContent" >
     </div>
+     <div class="navbar-header">
+ 
+     <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
+ 
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="StudentLogout.php">Log out</a></li>
+      <li><a href="#">Make Complain</a></li>
+      <li><a href="#">Renovations</a></li>
+      <li><a href="Studentreport.php">Make report</a></li>
+      <li class="dropdown">
 
-    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-    <!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+      <div class="dropdown-menu" aria-labelledby="dropdown-toggle"></div>
 
 
-<!---->
-<!--   <body class="container-fluid" style="background-color:#f6f6f6;" id="body-bg">-->
-	<div  style="margin-top:20px; margin-bottom:20px; margin-left:400px;width:1200px; height:640px";>
+      <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge"></span></a>
+      <div class="dropdown-menu">
 
-    <br>
-        <form  id="appication-form" action="application.php" method="POST">
+      <ul class="dropdown-menu">
+       <li> <a class="dropdown-item" href="#">report1</a></li>
+        <li><a class="dropdown-item" href="#">report1</a></li>
+        <li><a class="dropdown-item" href="#">report1</a></li>
+      </ul>
+ 
+     </li>
+     <li><a href="Studentprofile.php">Profile</a></li>
+    </ul>
+      </div>
+    </div>
+  </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4/js/bootstrap.min.js"></script>
+
+ 
+
+    <br><br><br><br>
+<?php
+      if(isset($_POST['submit'])){
+         
+
+
+
+  }
+  ?>
+        <form  id="application-form" action="application.php" method="POST">
 
         <div class="row">
             <div class="form-group col-md-4">
@@ -95,7 +118,7 @@ if(!isset($_SESSION['username'])){
                     <option value="games_sector">Games Sesctor</option>
                     <option value="anycategory">Any Other</option>
 
-                </select><br>
+                </select><br><br>
 
             </div>
 
@@ -116,7 +139,7 @@ if(!isset($_SESSION['username'])){
 
             <div class="form-group col-md-4">
 
-                <label for="Category-select">CategoryName:</label>
+                <label for="Category-select">Section:</label>
                 <input type="text" class="form-control" name="cName" autocomplete="off" required>
 
 <!--                <select id="Type-select"  class="form-control">-->
@@ -165,7 +188,7 @@ if(!isset($_SESSION['username'])){
             <div class="form-group col-md-4">
 
 
-                <button type="submit" class="btn " name="submit" value="Submit" style="margin-top: 25px;background-color: #0056b3; color:white; width: 100px;margin-left: 100px;"> Submit</button>
+                <button type="submit" class="btn btn-primary" name="submit" value="Submit" style="margin-top: 25px"> Submit</button>
 
 
             </div>
@@ -173,36 +196,100 @@ if(!isset($_SESSION['username'])){
 
 </div>
     </form>
-	<button class='btn btn-outline-success' style='float:right; margin-top:20px;'>Logout</button>
     </div>
-    <?php 
-     $user = new User;
-     echo $user->getAllUsers();
+    <?php
     ?>
-    </body>
 </body>
-<script type="application/javascript">
-    $document.ready(function () {
-        function load_unseen_notification(view='') {
-            $.ajax({url:"notification.php",
-                method:"POST",
-                data:{view:view},
-                datatype:"json",
-                success:function (data) {
-                    $('.dropdown-menu').html(data.notifiction);
-                    if|(data.unseen_notification>0){
-                        $('.count').html(data.unseen_notification);
-                    }
-//                    window.location.href ="http://localhost/Estates-System/manager/Managerindexpage.php";
-                }});
-
-        }
-        load_unseen_notification();
-        $('#application_form').on('submit' ,function (event) {
-            event.preventDefault();
-
-        });
-    });
+<script>
+ 
+$(document).ready(function(){
+ 
+// updating the view with notifications using ajax
+ 
+function load_unseen_notification(view = '')
+ 
+{
+ 
+ $.ajax({
+ 
+  url:"Fetchnotification.php",
+  method:"POST",
+  data:{view:view},
+  dataType:"json",
+  success:function(data)
+ 
+  {
+ 
+   $('.dropdown-menu').html(data.notification);
+ 
+   if(data.unseen_notification > 0)
+   {
+    $('.count').html(data.unseen_notification);
+   }
+ 
+  }
+ 
+ });
+ 
+}
+ 
+load_unseen_notification();
+ 
+// submit form and get new records
+ 
+$('#application-form').on('submit', function(event){
+ event.preventDefault();
+ 
+ if($('#Category-select').val() != '' && $('#Damage-select').val() != '')
+ 
+ {
+ 
+  var form_data = $(this).serialize();
+ 
+  $.ajax({
+ 
+   url:"notification.php",
+   method:"POST",
+   data:form_data,
+   success:function(data)
+ 
+   {
+ 
+    $('#application-form')[0].reset();
+    load_unseen_notification();
+ 
+   }
+ 
+  });
+ 
+ }
+ 
+ else
+ 
+ {
+  alert("Both Fields are Required");
+ }
+ 
+});
+ 
+// load new notifications
+ 
+$(document).on('click', '.dropdown-toggle', function(){
+ 
+ $('.count').html('');
+ 
+ load_unseen_notification('yes');
+ 
+});
+ 
+setInterval(function(){
+ 
+ load_unseen_notification();;
+ 
+}, 5000);
+ 
+});
+ 
 </script>
 
 <!--<script type="application/javascript" src="jQuery/jquery-2.2.4.min.js"></script>-->
@@ -235,4 +322,6 @@ if(!isset($_SESSION['username'])){
 <!--</script>-->
 
 </html>
-<?php }?>
+    <?php }?>
+
+

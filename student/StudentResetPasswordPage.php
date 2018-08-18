@@ -1,22 +1,28 @@
-<?php
-include_once 'StudentLogin.php';
-if (!isset($_SESSION['username'])) {
-    header("Location:StudentLoginpage.php?msg=please login first");
 
-}else
-{
+<?php
+include 'db_Connection.php';
+session_start();
+
+if(!isset($_SESSION['username'])){
+
+    header('location: StudentLoginpage.php');
+
+}else{
     ?>
     <!DOCTYPE html>
     <html>
     <head>
-        <title></title>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+
+        <title>Home Page</title>
         <style>
-            body{margin:0;}
+            body{margin:0;
+                background-color:#f6f6f6;
+            }
             .header{
                 width: 100%;
                 height: auto;
-                background-color: #7285A5;
+                background-color: #0056b3;
                 padding-top: 24px;
             }
             .nav{
@@ -39,39 +45,48 @@ if (!isset($_SESSION['username'])) {
         </style>
     </head>
     <body>
+
     <h1> </h1>
     <header>
         <link rel="stylesheet" href="style.css" type="text/css"/>
     </header>
-    <body class="container-fluid" style="background-color: #f6f6f6;">
+    <body>
 
     <div id="header">
         <div id="headerContent" >
         </div>
         <div class="navbar-header">
 
-            <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
+            <a class="navbar-brand" style="color: white" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
 
         </div>
-        <div class="nav">
+        <div class="nav" style="font-family: Serif;font-size: 18px;">
             <ul>
                 <li><a href="StudentLogout.php">Log out</a></li>
-                <li><a style="color: #0056b3" href="StudentResetPasswordPage.php">Reset password</a></li>
+                <!--      <li><a href="#">Make Complain</a></li>-->
+                <li><a  style="color: #f5c6cb" href="StudentResetPasswordPage.php">Reset password</a></li>
                 <li><a href="../manager/WorkStatus.php">Renovations</a></li>
                 <li><a href="StudentMakereport.php">Make report</a></li>
-                <li><a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">Notifications<span class="label label-pill label-danger count" style="border-radius:10px;"></span><span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge"></span></a>
 
+                <li><a href="Studentprofile.php">Profile</a></li>
 
-                </li>
-                    <li><a href="Studentprofile.php">Profile</a></li>
-            </ul>
+                <li><a  href="Studentindexpage.php">Home</a></li>
         </div>
     </div>
-    </div>
+
+    <!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+    </body>
+
+    </body>
+    </html>
+
+<?php }?>
 
 
-    </head>
-    <div id="main" style="margin-left:400px; margin-right: 400px; margin-top: 50px; margin-bottom: 100px;height: 500px; width: 400px;">
+
+<div id="main" style="margin-left:400px; margin-right: 400px; margin-top: 50px; margin-bottom: 100px;height: 500px; width: 400px;">
 
         <p style="font-family: Serif;font-size: 30px;margin-left: 38px;">Student Reset Password</p><br>
     <div style="box-shadow: 5px 5px 5px 5px  #ccccff;margin-right: 10px;background-color: #f3f3f3">
@@ -117,9 +132,3 @@ if (!isset($_SESSION['username'])) {
     </div>
     </body>
     </html>
-
-    <?php
-}
-
-
-?>

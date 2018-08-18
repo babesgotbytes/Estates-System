@@ -41,8 +41,13 @@
         <input class="form-control" style="margin-left: 40px" id="exampleInputPassword" type="password" name="confirm-password" placeholder="confirm password" required>
        </div>
 </div><br><br>
-	<input class="btn " style="background-color:#0056b3;margin-left: 70px;color: white;width: 400px ;font-family: Serif;font-size: 20px;" type="Submit" name="submit" value ="Sign Up"></br>
+
+	<input class="btn btn-info" type="Submit" name="submit" value ="sign Up"></br>
+    </div>
+
+	<input class="btn " style="background-color:#0056b3;margin-left: 70px;color: white;width: 400px ;font-family: Serif;font-size: 20px;" type="Submit" name="submit" value ="Sign Up"></form>
     </div><br
+
 </form>
         </div>
 </body>

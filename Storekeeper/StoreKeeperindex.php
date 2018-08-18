@@ -11,10 +11,12 @@
 <html>
 <head>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+ 
 	<title>Home Page</title>
   <style>
-  body{margin:0;}
+  body{margin:0;
+      background-color:#f6f6f6;
+  }
   .header{
     width: 100%;
     height: auto;
@@ -55,27 +57,29 @@
      <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
  
     </div>
-   	<div class="nav">
+   	<div class="nav" style="font-family: Serif;font-size: 18px;">
       <ul>
    		<li><a href="StoreKeeperLogout.php">Log out</a></li>
       <li><a href="StoreResetPasswordPage.php">reset password</a></li>
       <li><a href="StoreUsedmaterialspage.php">used materials</a></li>
       <li><a  href="StoreAssignMaterialspage.php">assign materials</a></li>
-      <li><a href="StoreAddMaterialspage.php">add materials</a></li>
-      <li> <a href="notificationpage.php" >Notifications <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span><span class="badge">7</span></a>
-     
+      <li><a href="StoreAddMaterialspage.php">add materials</a></li
+          <li class="dropdown">
+          <li> <a  href="notificationpage.php" >Notifications</a>
+
+
+          </li>
  
-     </li>
-      <li><a style="color:blue" href="StoreKeeperindex.php">Home</a></li>
+           <li><a style="color: #f5c6cb" href="StoreKeeperindex.php">Home</a></li>
    	</ul>
       </div>
    	</div>
   </div>
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
 
 </body>
+
 	
 </body>
 </html>
