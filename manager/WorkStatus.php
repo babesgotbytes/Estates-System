@@ -1,3 +1,73 @@
+<?php
+include "db_Connection.php";
+class WorkStatus extends Db_Connect {
+
+        public function __construct()
+        {
+
+        }
+
+
+    public function workStatus(){
+
+            $status = "Inprogress";
+        $getRecords = "SELECT * FROM project.workstatus where work_status= ? ";
+
+        $results=$this->connect()->prepare($getRecords);
+        $results->execute([$status]);
+        if($results->rowCount()<1){
+
+            ?>
+<h2>No Records</h2>
+
+<?php
+
+
+        }
+
+        else{
+
+           ?>
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>Job Description</th>
+                    <th> Date</th>
+                    <th>Done By</th>
+                    <th> Employee ID</th>
+
+                </tr>
+                    <?php
+                        while($rows = $results->fetch()) {
+
+                            $no = $rows['Id'];
+                            $job = $rows['jobDescription'];
+                            $day = $rows['Day'];
+                            $emp = $rows['Done_by'];
+                            $emp_no = $rows['empID'];
+
+
+                            ?>
+                            <tr>
+                                <td><?php echo $no ;?></td>
+                                <td><?php echo $job;?></td>
+                                <td><?php echo $day;?></td>
+                                <td><?php echo $emp;?></td>
+                                <td><?php echo $emp_no;?></td>
+
+                            </tr>
+
+
+                          
+                            <?php
+                        }
+        }
+    }
+
+}
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -24,93 +94,14 @@
     }
     tr:n*th-child(even) {background-color: #f2f2f2;}
 </style>
-<table>
-    <tr>
-        <th>No.</th>
-        <th>CategoryName</th>
-        <th>PropertyName</th>
-        <th>Damage</th>
-        <th>Work status</th>
-        <th>Report_date</th>
-        <th>Done_by</th>
-<!--        <th>Duration</th>-->
-    </tr>
-
 <?php
 
+$getstatus = new WorkStatus();
+$getstatus->workStatus();
 
-		$conn =  mysqli_connect("localhost", "root", "", "project");
-		if($conn-> connect_error){
-            die("Connection failed:". $conn-> connect_error);
-        }
-                    $sql = "SELECT categoryName, propertyName,damage,status,Day FROM PROJECT.app WHERE ";
-                    $result = $conn->query($sql);
-
-
-
-                        if ($result->num_rows > 0 ) {
-$i = 1;
-while ($row = $result->fetch_assoc()) { ?>
-    <tr>
-        <td> <?php echo $i; ?></td>
-        <td> <?php echo $row['categoryName']; ?></td>
-        <td><?php echo $row['propertyName']; ?></td>
-        <td> <?php echo $row['damage']; ?></td>
-        <td> <?php echo $row['status']; ?></td>
-        <td> <?php echo $row['Day']; ?></td>
-
-        <?php
-        $quer= "SELECT empName FROM PROJECT.employees";
-        $data = $conn->query($quer);
-        if ($data->num_rows > 0 ) {
-        while ($row = $data->fetch_assoc()) { ?>
-
-        <td> <?php echo $row['empName']; ?></td>
-        <?php }
-        }
-
-        ?>
-
-
-        <?php
-       $i++;
-        }
-
-        }
 ?>
-
-
-    </tr>
 
 </table>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

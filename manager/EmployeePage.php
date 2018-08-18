@@ -163,6 +163,28 @@
                     $sql6 = "UPDATE employees SET jobAssigned ='" . $job . "' WHERE empID = '" . $employee . "'";
 
                     if (mysqli_query($conn4, $sql6)) {
+
+                        include "db_Connection.php";
+
+                        $statuses="Inprogress";
+
+                        $db = new Db_Connect();
+
+                        $getEmployee ="Select 	empName from project.employees where empID = ?";
+                        $rungetemployee = $db->connect()->prepare($getEmployee);
+                        $rungetemployee->execute([$employee]);
+                            while($gett=$rungetemployee->fetch()) {
+
+                                $name = $gett['empName'];
+
+
+                                $createWorkStatus = "INSERT INTO project.workstatus(jobDescription,Work_status,Done_by,empID,Day) VALUES 
+                    ('$job','$statuses','$name','$employee',NOW())";
+
+                                $run = $db->connect()->exec($createWorkStatus);
+
+                            }
+
                         header('location:EmployeePage.php?msg=job assigned');
 
                     } else {

@@ -39,7 +39,7 @@ include_once "db_Connection.php";
          //$sql="INSERT INTO PROJECT.notification(message) VALUES('$this->Message')";
         // $this->connect()->exec($sql);
             //query the last record in the app table then extract the id from the record
-         header("Location:Studentprofile.php?msg=submitted successfully");
+         header("Location:StudentMakereport.php?msg=submitted successfully");
          //var_damp($this->category,$this->categoryname,$this->propertyname,$this->damage);
 
      }
