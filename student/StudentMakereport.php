@@ -59,6 +59,7 @@ if(!isset($_SESSION['username'])){
 
         </div>
         <div class="nav" style="font-family: Serif;font-size: 18px;">
+
             <ul>
                 <li><a href="StudentLogout.php">Log out</a></li>
 <!--                <li><a href="#">Make Complain</a></li>-->

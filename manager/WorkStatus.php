@@ -22,7 +22,7 @@
         background-color: #000000;
         color:white;
     }
-    tr:n*th-child(even) {background-color: #f2f2f2;}
+    tr:*th-child(even) {background-color: #f2f2f2;}
 </style>
 <table>
     <tr>

@@ -61,9 +61,9 @@
             <ul>
                 <li><a href="ManagerLogout.php">Log out</a></li>
                 <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
-                <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
+                <li><a href="StoreKeeperSignupPage.php">a></Register storekeeper</a></li>
                 <li><a  href="WorkStatus.php">Renovations</a></li>
-                <li><a href=EmployeePage.php">Assign work</a></li
+                <li><a href=EmployeePage.php">Assign work</li
                 <li class="dropdown">
                 <li> <a  href="notification.php" >Notifications</a></li>
 

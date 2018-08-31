@@ -53,11 +53,11 @@
    	<div class="nav" style="font-family: Serif;font-size: 18px;">
       <ul>
    		<li><a href="StoreKeeperLogout.php">Log out</a></li>
-      <li><a href="StoreResetPasswordPage.php">reset password</a></li>
-      <li><a href="StoreUsedmaterialspage.php">used materials</a></li>
-      <li><a href="StoreAssignMaterialspage.php">assign materials</a></li>
-      <li><a href="StoreAddMaterialspage.php">add materials</a></li>
-      <li><a  style="color: #f5c6cb" href="notificationpage.php">notification </a>
+      <li><a href="StoreResetPasswordPage.php">Reset password</a></li>
+      <li><a href="StoreUsedmaterialspage.php">Used materials</a></li>
+      <li><a href="StoreAssignMaterialspage.php">Assign materials</a></li>
+      <li><a href="StoreAddMaterialspage.php">Add materials</a></li>
+      <li><a  style="color: #f5c6cb" href="notificationpage.php">Notification </a>
 
       </li>
       <li><a href="StoreKeeperindex.php">Home</a></li>
