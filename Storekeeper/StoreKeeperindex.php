@@ -54,16 +54,17 @@
    	</div>
      <div class="navbar-header">
  
-     <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
+<!--     <a class="navbar-brand" style="color:white;" href="#"> Welcome --><?php //echo $_SESSION['username'];?><!-- </a>-->
  
     </div>
    	<div class="nav" style="font-family: Serif;font-size: 18px;">
       <ul>
    		<li><a href="StoreKeeperLogout.php">Log out</a></li>
-      <li><a href="StoreResetPasswordPage.php">reset password</a></li>
-      <li><a href="StoreUsedmaterialspage.php">used materials</a></li>
-      <li><a  href="StoreAssignMaterialspage.php">assign materials</a></li>
-      <li><a href="StoreAddMaterialspage.php">add materials</a></li
+      <li><a href="StoreResetPasswordPage.php">Reset password</a></li>
+      <li><a href="StoreUsedmaterialspage.php">Used materials</a></li>
+          <li><a  href="StoreAssignMaterialspage.php">Assign materials</a></li>
+          <li><a   href="StoreAvailableMaterialspage.php">Available materials</a></li>
+      <li><a href="StoreAddMaterialspage.php">Add materials</a></li
           <li class="dropdown">
           <li> <a  href="notificationpage.php" >Notifications</a>
 

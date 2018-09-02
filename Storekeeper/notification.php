@@ -54,7 +54,7 @@ class notify extends Db_Connect{
 
                }
 
-        }
+        }}
     }
 
 ?>

@@ -1,5 +1,4 @@
-
-\<?php
+<?php
 session_start();
 
 if(!isset($_SESSION['username'])){
@@ -68,12 +67,10 @@ if(!isset($_SESSION['username'])){
                         Notifications
                         <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span>
                         <span class="badge">
-<!--                            --><?php //echo count(getNotifications()) ?><!--<span class="caret"></span></span>-->
-<!--                    </a>-->
-<!---->
-<!--                    <ul class="dropdown-menu">-->
-<!--                        --><?php
-//                        foreach (getNotifications() as $notification) { ?>
+        <?php echo count(getNotifications()) ?>
+
+        <?php
+ foreach (getNotifications() as $notification) { ?>
                             <li><a class="dropdown-item" href="#"
                                    onclick="markNotificationAsRead('<?php echo $notification["id"] ?>')">
                                     <?php echo $notification['message'] . " on " . $notification['date']; ?></a></li>
@@ -87,7 +84,7 @@ if(!isset($_SESSION['username'])){
     </div>
     </header>
 <body>
-<!---->
+
 </body>
 
 
@@ -109,3 +106,4 @@ if(!isset($_SESSION['username'])){
         }
     </script>
 </html>
+

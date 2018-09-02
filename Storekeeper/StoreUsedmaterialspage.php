@@ -51,8 +51,9 @@
       <ul>
    		<li><a href="StoreKeeperLogout.php">Log out</a></li>
       <li><a href="StoreResetPasswordPage.php">Reset password</a></li>
-      <li><a  style="color: #f5c6cb" href="StoreUsedmaterialspage.php">Used materials</a></li>
+      <li><a style="color: #f5c6cb" href="StoreUsedmaterialspage.php">Used materials</a></li>
       <li><a  href="StoreAssignMaterialspage.php">Assign materials</a></li>
+      <li><a   href="StoreAvailableMaterialspage.php">Available materials</a></li>
       <li><a  href="StoreAddMaterialspage.php">Add materials</a></li>
       <li class="dropdown">
       <li> <a  href="notificationpage.php" >Notifications </a>

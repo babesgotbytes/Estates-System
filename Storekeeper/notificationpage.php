@@ -56,8 +56,9 @@
       <li><a href="StoreResetPasswordPage.php">Reset password</a></li>
       <li><a href="StoreUsedmaterialspage.php">Used materials</a></li>
       <li><a href="StoreAssignMaterialspage.php">Assign materials</a></li>
+          <li><a href="StoreAvailableMaterialspage.php">Available materials</a></li>
       <li><a href="StoreAddMaterialspage.php">Add materials</a></li>
-      <li><a  style="color: #f5c6cb" href="notificationpage.php">Notification </a>
+      <li><a  style="color: #f5c6cb" href="notificationpage.php">Notifications </a>
 
       </li>
       <li><a href="StoreKeeperindex.php">Home</a></li>
