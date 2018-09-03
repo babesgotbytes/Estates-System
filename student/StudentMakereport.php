@@ -194,7 +194,7 @@ if(!isset($_SESSION['username'])){
                     if|(data.unseen_notification>0){
                         $('.count').html(data.unseen_notification);
                     }
-
+//                    window.location.href ="http://localhost/Estates-System/manager/Managerindexpage.php";
                 }});
 
         }

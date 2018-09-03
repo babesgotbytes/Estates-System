@@ -1,59 +1,27 @@
 <?php
-session_start();
-include("db_Connection.php");
+include "db_Connection.php";
+class Notify extends Db_Connect {
 
-class notify extends Db_Connect{
+    public function getAllNotifications(){
 
-      private $category;
-      private $property;
-      private $damage;
+        $status= "Inprogress";
+        $getNotifications= "SELECT * FROM project.workstatus WHERE Work_status=?";
+        $results = $this->connect()->prepare($getNotifications);
+        $results->execute([$status]);
+        $rows=$results->rowCount();
+        if($rows<1){
+            echo "No works available currently";
 
-      public function __construct($category,$property,$damage){
-        $this->category=$category;
-        $this->property=$property;
-        $this->damage=$damage;
-          }
-        public function getReport(){
+        }else{
+            $number=1;
+            while($row=$results->fetch()){
 
+                    $job_desc = $row['jobDescription'];
+                    $emp=$row['Done_by'];
 
-             if(isset($_POST["damage"])){        
+                    echo $number." Please Assign  <b>".$emp."</b> Materials for repairing <b>".$job_desc."</b><br>";
 
-
-                //SQL query to search if report exists
-            $query ="SELECT * FROM PROJECT.report WHERE category= ? AND property= ? AND damage=?";
-
-            //connect to db
-            $run_query=$this->connect()->prepare($query);
-
-            //execute query
-            $run_query->execute([$this->category,$this->property,$this->damage]);
-
-            //get if there is a report in db
-            if($run_query->rowCount()<1){
-
-
-                    //if not found echo out some error js
-                    echo "<script>alert('report already made')</script>";
-                    echo "<script>window.open('Studentreport.php','_self')</script>";
-
-            }else{
-
-                    //if a user is found 
-                    if($row = $run_query->fetch(PDO::FETCH_ASSOC)){
-
-                            $_SESSION['category']=$row['category'];
-                            $_SESSION['property']=$row['property'];
-                            $_SESSION['report_id']=$row['report_id'];
-                            $_SESSION['damage']=$row['damage'];
-
-
-
-
-
-                    }
-
-               }
-
+<<<<<<< HEAD
         }}
     }
 
@@ -234,30 +202,27 @@ class notify extends Db_Connect{
 
 
 
-
-
-
-
-<script type="application/javascript">
-    $document.ready(function () {
-        function load_unseen_notification(view='') {
-            $.ajax({url:"notification.php",
-                method:"POST",
-                data:{view:view},
-                datatype:"json",
-                success:function (data) {
-                    $('.dropdown-menu').html(data.notifiction);
-                    if|(data.unseen_notification>0){
-                        $('.count').html(data.unseen_notification);
-                    }
-
-                }});
-
+=======
+                    $number++;
+            }
         }
-        load_unseen_notification();
-        $('#application_form').on('submit' ,function (event) {
-            event.preventDefault();
+>>>>>>> 1bef0c72aa9667b0443a80e741124273e6ef1225
 
-        });
-    });
-</script>
+    }
+
+    public function notificationCount()
+    {
+        $status= "Inprogress";
+        $getNotifications= "SELECT * FROM project.workstatus WHERE Work_status=?";
+        $results = $this->connect()->prepare($getNotifications);
+        $results->execute([$status]);
+        $rows=$results->rowCount();
+
+        echo $rows;
+    }
+
+}
+
+
+
+?>

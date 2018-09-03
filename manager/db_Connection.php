@@ -11,7 +11,7 @@ class Db_Connect{
 //Doesn't require Constructor
 
 //connection method which is protected meaning it will be visible to classes that extend  to the method
-    protected function connect(){
+    public function connect(){
 
     	//name of the server....currently its my localhost
         $this->serverName="127.0.0.1";

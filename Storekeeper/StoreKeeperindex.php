@@ -34,9 +34,10 @@
   .nav ul li{ list-style: none; }
   .nav ul li a{
     text-decoration: none;
-    float: right;
+    float: left;
     display: block;
-    padding: 10px 20px;
+    padding-right: 98px;
+      padding-top: 10px;
     color: white;
   }
   .nav ul li a:hover{color: #7EF9FF;}
@@ -47,18 +48,23 @@
 	<header>
  	<link rel="stylesheet" href="style.css" type="text/css"/>
  </header>
- <body>
+
 
 <div id="header">
    <div id="headerContent" >
    	</div>
      <div class="navbar-header">
  
+<<<<<<< HEAD
 <!--     <a class="navbar-brand" style="color:white;" href="#"> Welcome --><?php //echo $_SESSION['username'];?><!-- </a>-->
+=======
+<!--     <a class="navbar-brand" href="#"> Welcome --><?php //echo $_SESSION['username'];?><!-- </a>-->
+>>>>>>> 1bef0c72aa9667b0443a80e741124273e6ef1225
  
     </div>
    	<div class="nav" style="font-family: Serif;font-size: 18px;">
       <ul>
+<<<<<<< HEAD
    		<li><a href="StoreKeeperLogout.php">Log out</a></li>
       <li><a href="StoreResetPasswordPage.php">Reset password</a></li>
       <li><a href="StoreUsedmaterialspage.php">Used materials</a></li>
@@ -67,22 +73,42 @@
       <li><a href="StoreAddMaterialspage.php">Add materials</a></li
           <li class="dropdown">
           <li> <a  href="notificationpage.php" >Notifications</a>
+=======
+          <li><a style="color: #f5c6cb;" href="StoreKeeperindex.php">Home</a></li>
+
+          <li> <a  href="notificationpage.php" >
+
+                  <span class="badge">
+                  <?php
+                  require_once "notification.php";
+                  $not=new Notify();
+                  echo ($not->notificationCount());
+                  ?>
+                </span>
+                     Notifications</a>
+>>>>>>> 1bef0c72aa9667b0443a80e741124273e6ef1225
 
 
           </li>
+          <li><a href="StoreAddMaterialspage.php">add materials</a></li>
+          <li><a  href="StoreAssignMaterialspage.php">assign materials</a></li>
+          <li><a href="StoreUsedmaterialspage.php">used materials</a></li>
+          <li><a href="StoreResetPasswordPage.php">reset password</a></li>
+          <li><a href="StoreKeeperLogout.php">Log out</a></li>
+
  
-           <li><a style="color: #f5c6cb" href="StoreKeeperindex.php">Home</a></li>
+
    	</ul>
       </div>
    	</div>
-  </div>
+
 
   
 
 </body>
 
 	
-</body>
+
 </html>
 
 <?php }?>
