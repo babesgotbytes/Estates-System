@@ -5,8 +5,6 @@ require "../pdf/generatepdf/fpdf.php";
 require_once "db_Connection.php";
  class ScheduleReport extends FPDF{
 
-
-
      function Header()
      {
          $this->Image('../pics/logo.jpg',10,6,20);

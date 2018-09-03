@@ -16,12 +16,12 @@ class Notify extends Db_Connect {
             $number=1;
             while($row=$results->fetch()){
 
-                    $job_desc = $row['jobDescription'];
-                    $emp=$row['Done_by'];
+                $job_desc = $row['jobDescription'];
+                $emp=$row['Done_by'];
 
-                    echo $number." Please Assign  <b>".$emp."</b> Materials for repairing <b>".$job_desc."</b><br>";
+                echo $number." Please Assign  <b>".$emp."</b> Materials for repairing <b>".$job_desc."</b><br>";
 
-                    $number++;
+                $number++;
             }
         }
 

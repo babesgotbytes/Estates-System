@@ -57,16 +57,17 @@ if(!isset($_SESSION['username'])){
         </div>
         <div class="navbar-header">
 
-            <a class="navbar-brand" style="color: white" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
+<!--            <a class="navbar-brand" style="color: white" href="#"> Welcome --><?php //echo $_SESSION['username'];?><!-- </a>-->
 
         </div>
         <div class="nav" style="font-family: Serif;font-size: 18px;">
             <ul>
                 <li><a href="StoreKeeperLogout.php">Log out</a></li>
-                <li><a style="color: #f5c6cb" href="StoreResetPasswordPage.php">reset password</a></li>
-                <li><a   href="StoreUsedmaterialspage.php">used materials</a></li>
-                <li><a  href="StoreAssignMaterialspage.php">assign materials</a></li>
-                <li><a  href="StoreAddMaterialspage.php">add materials</a></li>
+                <li><a style="color: #f5c6cb" href="StoreResetPasswordPage.php">Reset password</a></li>
+                <li><a   href="StoreUsedmaterialspage.php">Used materials</a></li>
+                <li><a  href="StoreAssignMaterialspage.php">Assign materials</a></li>
+                <li><a   href="StoreAvailableMaterialspage.php">Available materials</a></li>
+                <li><a  href="StoreAddMaterialspage.php">Add materials</a></li>
                 <li> <a  href="notificationpage.php" >Notifications </a>
                 <li><a href="StoreKeeperindex.php">Home</a></li>
                 </li>
