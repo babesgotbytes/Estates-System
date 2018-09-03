@@ -64,7 +64,7 @@ if(!isset($_SESSION['username'])){
                 <li><a href="StudentLogout.php">Log out</a></li>
 <!--                <li><a href="#">Make Complain</a></li>-->
                 <li><a href="StudentResetPasswordPage.php">Reset password</a></li>
-                <li><a href="../manager/WorkStatus.php">Renovations</a></li>
+                <li><a href="StudentMakeCompainPage.php">Make Compain</a></li>
                 <li><a  style="color: #f5c6cb" href="StudentMakereport.php">Make report</a></li>
 
                 <li><a  href="Studentprofile.php">Profile</a></li>
