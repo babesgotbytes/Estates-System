@@ -134,7 +134,8 @@
                     <td> <?php echo $row['emp_status']; ?></td>
 
                     <td> <input type="checkbox" <?php echo $row['emp_status']=='ASSIGNED'? 'checked': ''; ?>
-                                onclick="updateStatus(<?php echo "'" .$row['empID']."'";?> ,<?php echo "'" .$row['emp_status']."'";?>)" ></td>
+                                onclick="updateStatus(<?php echo "'" .$row['empID']."'";?> ,
+                                <?php echo "'" .$row['emp_status']."'";?>)" ></td>
                 </tr>
 
         <?php

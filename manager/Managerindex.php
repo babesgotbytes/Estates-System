@@ -63,15 +63,9 @@ if(!isset($_SESSION['username'])){
             <ul>
                 <li><a href="ManagerLogout.php">Log out</a></li>
                 <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
-                <li><a href="StoreKeeperSignupPage.php">a></Register storekeeper</a></li>
+                <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
                 <li><a  href="WorkStatus.php">Renovations</a></li>
-<<<<<<< HEAD
-                <li><a href=EmployeePage.php">Assign work</li
-                <li class="dropdown">
-                <li> <a  href="notification.php" >Notifications</a></li>
-=======
                 <li><a style="color: #f5c6cb" href="Managerindex.php">Home</a></li>
->>>>>>> 1bef0c72aa9667b0443a80e741124273e6ef1225
 
                 <li><a href="EmployeePage.php">Assign work</a></li>
             </ul>

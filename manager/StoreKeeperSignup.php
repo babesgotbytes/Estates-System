@@ -133,11 +133,11 @@ if(isset($_POST['submit'])){
 	 	function getTheCurrentDate(){
 
 	//get my time zone
+	 	$zone = new DateTimeZone('Africa/Nairobi'); 
 
+       $date = new DateTime('now',$zone);
 
-       $date = date('Y-m-d');
-
-        $currentDate=$date;
+        $currentDate=$date->format('l, F jS, Y, g:i A');
 
 	return $currentDate;
 }

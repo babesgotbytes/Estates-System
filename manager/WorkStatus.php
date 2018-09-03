@@ -190,24 +190,8 @@ class WorkStatus extends Db_Connect {
         background-color: #0056b3;
         color:white;
     }
-<<<<<<< HEAD
-    tr:*th-child(even) {background-color: #f2f2f2;}
-</style>
-<table>
-    <tr>
-        <th>No.</th>
-        <th>CategoryName</th>
-        <th>PropertyName</th>
-        <th>Damage</th>
-        <th>Work status</th>
-        <th>Report_date</th>
-        <th>Done_by</th>
-<!--        <th>Duration</th>-->
-    </tr>
-=======
     td{
         background-color: whitesmoke;
->>>>>>> 1bef0c72aa9667b0443a80e741124273e6ef1225
 
     }
     tr:nth-child(even) {background-color: #ccccff;}
