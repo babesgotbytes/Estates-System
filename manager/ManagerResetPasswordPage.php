@@ -86,7 +86,7 @@ if (!isset($_SESSION['username'])) {
                 <li><a  href="WorkStatus.php">Renovations</a></li>
                 <li><a href="EmployeePage.php">Assign work</a></li>
                 <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
-                <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
+                <li><a href="StoreKeepersignupPage.php">Register storekeeper</a></li>
                 <li><a href="ManagerLogout.php">Log out</a></li>
 
 
