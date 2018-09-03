@@ -1,4 +1,14 @@
 
+<?php
+session_start();
+
+if(!isset($_SESSION['username'])){
+
+    header('location: ManagerLoginpage.php');
+
+}else{
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -33,3 +43,4 @@
 
 </body>
 </html>
+<?php }?>

@@ -22,6 +22,7 @@ if (!isset($_SESSION['username'])) {
             height: auto;
             background-color: #7285A5;
             padding-top: 24px;
+            padding-right: 50px;
         }
         .nav{
             height:40px;

@@ -41,7 +41,7 @@ if(!isset($_SESSION['username'])){
                 padding: 10px 20px;
                 color: powderblue;
             }
-            .nav ul li a:hover{color: #000000;}
+            .nav ul li a:hover{color: skyblue;}
             #not ul li a{
                 color:black;
 

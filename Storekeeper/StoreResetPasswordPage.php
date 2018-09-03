@@ -14,7 +14,7 @@ if(!isset($_SESSION['username'])){
     <head>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 
-        <title>Home Page</title>
+        <title>Reset password Page</title>
         <style>
             body{margin:0;
                 background-color:#f6f6f6;
