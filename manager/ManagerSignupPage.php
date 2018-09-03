@@ -25,6 +25,11 @@
         <input class="form-control" id="exampleInputUsername" type="textfield" name="email" placeholder="email" autocomplete="off" required>
        </div>
 </div><br>
+        <label>Static ID:</label><br>
+        <div class="col-sm-10">
+        <input class="form-control" id="exampleInputUsername" type="password" name="satic" placeholder="STATIC ID" autocomplete="off" required>
+    </div>
+    </div><br>
 	 <div class="form-group">
 		<label>Password:</label><br>
 	<div class="col-sm-10">
@@ -37,7 +42,7 @@
         <input class="form-control" id="exampleInputPassword" type="password" name="confirm-password" placeholder="confirm password" required>
        </div>
 </div><br><br>
-	<input class="btn btn-info" type="Submit" name="submit" value ="sign Up"></br>
+	<input class="btn btn-info" type="Submit" name="submit" value ="sign Up"></form>
     </div>
 </form>
 </body>

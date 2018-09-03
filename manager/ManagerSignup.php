@@ -9,14 +9,16 @@ class NewAccount extends Db_Connect{
 	private $pwd;
 	private $c_pwd;
 	private $time;
+	private $id;
 
-	public function __construct($username,$email,$pwd,$c_pwd,$time){
+	public function __construct($username,$email,$pwd,$c_pwd,$time,$id){
 
 		$this->username=$username;
 		$this->email=$email;
 		$this->pwd=$pwd;
 		$this->c_pwd=$c_pwd;
 		$this->time=$time;
+		$this->id=$id;
 	
 
 
@@ -40,6 +42,23 @@ class NewAccount extends Db_Connect{
 	 	}
 
 	}
+
+	private function staticIDAvailable($id)
+    {
+
+        $query="SELECT * FROM PROJECT.manager WHERE staticID=?";
+        $pre=$this->connect()->prepare($query);
+        $pre->execute([$id]);
+        $rows=$pre->rowCount();
+
+        if ($rows<1) {
+
+            return true;
+        }else{
+            return false;
+        }
+
+    }
 
 	private function verifyPassword($pass1,$pass2)
 	{
@@ -71,7 +90,7 @@ class NewAccount extends Db_Connect{
 
 	public function createNewAccount($hashed_pwd)
 	{
-			$errors = new NewAccount($this->username,$this->email,$this->pwd,$this->c_pwd,$this->time);
+			$errors = new NewAccount($this->username,$this->email,$this->pwd,$this->c_pwd,$this->time,$this->id);
 
 			if($errors->verifyEmail($this->email)==true){
 
@@ -93,17 +112,37 @@ class NewAccount extends Db_Connect{
 					exit();
 
 					}else
+					    if($errors->staticIDAvailable($this->id)){
+
+                            echo "<script>alert('Static ID provided is invalid')</script>";
+                            echo "<script>window.open('ManagerSignupPage.php','_self')</script>";
+                            exit();
+                        }
+
+					else
 
 					{
-					    $insert="INSERT INTO PROJECT.manager(name,email,pwd,day) VALUES ('$this->username','$this->email','$hashed_pwd','$this->time')";
+//
+//					    $insert="INSERT INTO PROJECT.manager(name,email,pwd,day) VALUES ('$this->username','$this->email','$hashed_pwd','$this->time')";
+//
+//					 			//calls connect method in dtabbase connection class and execute the query
+//								$insert_results=$this->connect()->exec($insert);
+                            $update_user = "UPDATE PROJECT.manager SET name=?, email=?, pwd=?, day=? WHERE staticID=?";
+                            $run_update = $this->connect()->prepare($update_user);
 
-					 			//calls connect method in dtabbase connection class and execute the query
-								$insert_results=$this->connect()->exec($insert);
+                         if($run_update->execute([$this->username,$this->email,$hashed_pwd,$this->time,$this->id])) {
 
 
-								//notify success in account creation...Java Script
-					 			echo"<script>alert('Account Created Sucessfully')</script>";
-								echo"<script>window.open('ManagerLoginpage.php','_self')</script>;";
+                             //notify success in account creation...Java Script
+                             echo "<script>alert('Account Created Sucessfully')</script>";
+                             echo "<script>window.open('ManagerLoginpage.php','_self')</script>;";
+                         }else
+                         {
+                             echo "<script>alert('Unable to create account')</script>";
+                             echo "<script>window.open('ManagerSignupPage.php','_self')</script>";
+                             exit();
+
+                         }
 
 					}
 
@@ -121,9 +160,10 @@ if(isset($_POST['submit'])){
  	$inemail=$_POST['email'];
  	$inpwd=$_POST['password'];
  	$inc_pwd=$_POST['confirm-password'];
+ 	$id = $_POST['satic'];
  	 	//$regno=$_POST['regno'];
 
-      if(($inusername=="")||($inemail=="")||($inpwd=="")|| ($inc_pwd=="")){
+      if(($inusername=="")||($inemail=="")||($inpwd=="")|| ($inc_pwd=="") || ($id=="")){
 
 
           echo "<script>alert('All fields are required')</script>";
@@ -142,7 +182,7 @@ if(isset($_POST['submit'])){
 
  //create the class object and pass in the constructer values in their order
  	//$username,$email,$pwd,$c_pwd,$hashed_pwd,$hashed_c_pwd,$time,$regno
- 	$myAccount = new NewAccount($inusername,$inemail,$inpwd,$inc_pwd,$timeCreated);
+ 	$myAccount = new NewAccount($inusername,$inemail,$inpwd,$inc_pwd,$timeCreated,$id);
 
 // //call to the method that create user and pass in values from the html form
  	$myAccount->createNewAccount($hashedPwd);
