@@ -125,7 +125,7 @@ if(isset($_POST['forgotpwd'])){
 
 	$inemail = $_POST['email'];
 
-	$forgot = new ConfirmMail($inemail);
+	$forgot = new Confirmemail($inemail);
 	$forgot ->sendConfirmMail($inemail);
 
 }
