@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da00df05-07f9-42c0-9b83-cd99ebd417a6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manager/EmployeePage.php" afterPath="$PROJECT_DIR$/manager/EmployeePage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manager/ManagerResetPasswordPage.php" afterPath="$PROJECT_DIR$/manager/ManagerResetPasswordPage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manager/Managerindexpage.php" afterPath="$PROJECT_DIR$/manager/Managerindexpage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manager/StoreKeeperSignupPage.php" afterPath="$PROJECT_DIR$/manager/StoreKeeperSignupPage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manager/WorkStatus.php" afterPath="$PROJECT_DIR$/manager/WorkStatus.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manager/notification.php" afterPath="$PROJECT_DIR$/manager/notification.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/project.sql" afterPath="$PROJECT_DIR$/database/project.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -280,12 +275,12 @@
       <workItem from="1535936281340" duration="5858000" />
       <workItem from="1535950856621" duration="8456000" />
       <workItem from="1535985285244" duration="6043000" />
-      <workItem from="1536003257495" duration="8359000" />
+      <workItem from="1536003257495" duration="8703000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41760000" />
+    <option name="totallyTimeSpent" value="42104000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="0" />
