@@ -130,7 +130,7 @@ else{
                 }
 
                 .nav ul li a:hover {
-                    color: #000000;
+                    color: #7EF9FF;
                 }
 
                 #not ul li a {
@@ -148,7 +148,7 @@ else{
                 </div>
                 <div class="navbar-header">
 
-                    <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username']; ?> </a>
+<!--                    <a class="navbar-brand" href="#"> Welcome --><?php //echo $_SESSION['username']; ?><!-- </a>-->
 
                 </div>
                 <div class="nav" style="font-family: Serif;font-size: 18px;">
@@ -179,8 +179,8 @@ else{
                                 }
                                 ?></ul>
                         </li>
-                        <li><a style="color: #f5c6cb" href="Managerindexpage.php">Home</a></li>
-                        <li><a href="WorkStatus.php">Renovations</a></li>
+<!--                        <li><a  href="Managerindexpage.php">Home</a></li>-->
+                        <li><a  style="color: #f5c6cb" href="WorkStatus.php">Renovations</a></li>
                         <li><a href="EmployeePage.php">Assign work</a></li>
                         <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
                         <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
