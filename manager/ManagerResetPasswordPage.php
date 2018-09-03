@@ -127,7 +127,7 @@ if (!isset($_SESSION['username'])) {
             <div class="form-group">
                 <label style="margin-left: 80px;font-family: Serif;font-size: 16px">Enter new password</label><br>
                 <div class="col-sm-10">
-                    <input class="form-control" style="margin-left: 40px;" id="exampleInputPassword" type="password" Name="password" placeholder="new password" required>
+                    <input class="form-control" style="margin-left: 40px;" id="exampleInputPassword" type="password" name="password" placeholder="new password" required>
                 </div>
             </div>
             <div class="form-group">
