@@ -31,7 +31,7 @@
             </div><br>
             <div class="form-group">
                 <label style="margin-left: 50px;font-family: Serif;font-size: 18px;">Password</label><br>
-                <div class="col-sm-20">
+                <div class="col-sm-10">
                     <input class="form-control" style="margin-left: 40px;" id="exampleInputPassword" type="password" name="password" placeholder="password" required>
                 </div>
             </div><br>
