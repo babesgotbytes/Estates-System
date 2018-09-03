@@ -8,7 +8,8 @@ if(!isset($_SESSION['username'])){
 
 }else{
     ?>
-    <!DOCTYPE html>
+
+<!DOCTYPE html>
     <html>
     <head>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
@@ -35,20 +36,18 @@ if(!isset($_SESSION['username'])){
             .nav ul li{ list-style: none; }
             .nav ul li a{
                 text-decoration: none;
-                float: right;
+                float: left;
                 display: block;
                 padding: 10px 20px;
                 color: white;
             }
-            .nav ul li a:hover{color: #7EF9FF;}
+            .nav ul li a:hover{color: #000000;}
         </style>
     </head>
     <body class="container-fluid">
-    <h1> </h1>
+
     <header>
-        <link rel="stylesheet" href="style.css" type="text/css"/>
-    </header>
-    <body>
+<!--        <link rel="stylesheet" href="style.css" type="text/css"/>-->
 
     <div id="header">
         <div id="headerContent" >
@@ -64,16 +63,22 @@ if(!isset($_SESSION['username'])){
                 <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
                 <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
                 <li><a  href="WorkStatus.php">Renovations</a></li>
-                <li><a href="EmployeePage.php">Assign work</a></li
-                <li class="dropdown">
-                    <a href="notification.php" class="dropdown-toggle" id="dropdown" data-toggle="dropdown">
+                <li><a style="color: #f5c6cb" href="Managerindexpage.php">Home</a></li>
+
+                <li><a href="EmployeePage.php">Assign work</a></li>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown"><span class="label label-pill label-danger count"></span>
                         Notifications
-                        <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span>
+                        <span class="glyphicon glyphicon-bell"></span>
                         <span class="badge">
-                            <?php echo count(getNotifications()) ?><span class="caret"></span></span>
+                            <?php
+                            include_once ("notification.php");
+                            echo count(getNotifications());
+                            ?>
+<!--                            <span class="caret"></span></span>-->
                     </a>
 
-                    <ul class="dropdown-menu">
+<!--                    <ul class="dropdown-menu">-->
                         <?php
                         foreach (getNotifications() as $notification) { ?>
                             <li><a class="dropdown-item" href="#"
@@ -81,20 +86,22 @@ if(!isset($_SESSION['username'])){
                                     <?php echo $notification['message'] . " on " . $notification['date']; ?></a></li>
                             <?php
                         }
-                        ?></ul></li>
+                        ?>
+<!--            </ul>-->
 
-                <li><a style="color: #f5c6cb" href="Managerindexpage.php">Home</a></li>
+                </div>
+
             </ul>
         </div>
     </div>
     </div>
 
-
-
-    </body>
-
+    </header>
 
     </body>
+
+
+
 
 <?php }?>
 
@@ -112,4 +119,10 @@ if(!isset($_SESSION['username'])){
             })
         }
     </script>
+<script type="application/javascript">
+    <?php
+    header("refresh:20;url=Managerindexpage.php");
+
+    ?>
+</script>
 </html>

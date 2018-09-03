@@ -1,5 +1,3 @@
-
-
 <?php
 session_start();
 
@@ -55,7 +53,7 @@ require_once 'notification.php';
             float: left;
             display: block;
             padding-right: 98px;
-           /*padding-top: px;*/
+            /*padding-top: px;*/
             color: white;
         }
         .nav ul li a:hover{color: #7EF9FF;}
@@ -78,27 +76,33 @@ require_once 'notification.php';
     </div>
     <div class="nav" style="font-family: Serif;font-size: 18px;">
         <ul>
-            <li><a href="StoreKeeperindex.php">Home</a></li>
+            <li><a href="Managerindexpage.php">Home</a></li>
 
-            <li> <a style="color: #f5c6cb;"  href="notificationpage.php" >
-
-                  <span class="badge">
-                  <?php
-                  require_once "notification.php";
-                  $not=new Notify();
-                  echo ($not->notificationCount());
-                  ?>
-                </span>
+            <li> <a style="color: #f5c6cb;"  href="Notificationpage.php" >
                     Notifications</>
 
 
-            </li>
-            <li><a href="StoreAddMaterialspage.php">add materials</a></li>
-            <li><a  href="StoreAssignMaterialspage.php">assign materials</a></li>
-            <li><a href="StoreUsedmaterialspage.php">used materials</a></li>
-            <li><a href="StoreResetPasswordPage.php">reset password</a></li>
-            <li><a href="StoreKeeperLogout.php">Log out</a></li>
+                </a>-->
 
+                      <ul>
+                                            <?php
+                                          foreach (getNotifications() as $notification) { ?>
+                                              <li
+                                                  onclick="markNotificationAsRead('<?php echo $notification["id"] ?>') " style="margin-top: 80px;">
+                                                  <?php echo $notification['message'] . " on " . $notification['date']; ?></></li>
+                                              <?php
+                                          }
+                      ?>
+                                  </ul>
+
+
+
+            </li>
+            <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
+            <li><a  href="WorkStatus.php">Renovations</a></li>
+            <li><a href="EmployeePage.php">Assign work</a></li>
+            <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
+            <li><a href="ManagerLogout.php">Log out</a></li>
 
 
         </ul>
@@ -116,11 +120,10 @@ require_once 'notification.php';
 <?php
 //include "notification.php";
 
-$notify = new Notify();
-$notify->getAllNotifications();
+getNotifications();
 
 ?>
-   
+
 
 </body>
 </html>

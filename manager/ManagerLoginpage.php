@@ -37,7 +37,7 @@
             </br>
             </b
             r>
-            <input class="btn "  style="margin-left: 40px;background-color: #0056b3;font-family: Serif;font-size: 18px; width: 320px;" type="Submit" name="login" value ="Sign In"></br>
+            <input class="btn "  style="margin-left: 40px;background-color: #0056b3;font-family: Serif;font-size: 18px; width: 320px;  " type="Submit" name="login" value ="Sign In"></br>
 
         </form>
 
