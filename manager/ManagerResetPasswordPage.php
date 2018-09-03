@@ -131,7 +131,7 @@ if (!isset($_SESSION['username'])) {
                 </div>
             </div>
             <div class="form-group">
-                <label style="margin-left: 80px;font-family: Serif;font-size: 24px">Re-enter new password:</label><br>
+                <label style="margin-left: 80px;font-family: Serif;font-size: 16px">Re-enter new password:</label><br>
                 <div class="col-sm-10">
                     <input class="form-control" style="margin-left: 50px" id="exampleInputPassword" type="password" name="con_pass" placeholder="confirm password" required>
                 </div>
