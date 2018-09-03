@@ -28,7 +28,7 @@ if(!isset($_SESSION['username'])){
             padding-top: 24px;
         }
         .nav{
-            height:40px;
+            height:50px;
             background:#111E6C;
         }
         .nav ul{
