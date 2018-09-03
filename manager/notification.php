@@ -11,6 +11,7 @@ function getNotifications()
     }
     $sql = "SELECT * from notification where notify_status='0' ";
     $result = mysqli_query($connect, $sql);
+
     $data=[];
     if (mysqli_num_rows($result) > 0) {
         $index =0;
@@ -24,26 +25,33 @@ function getNotifications()
         }
     }
 
+
+
 //    mysqli_close($connect);
     return ($data);
+
 }
 
-function markAsRead(){
-     if (isset($_REQUEST['id'])){
+function markAsRead()
+{
+    if (isset($_REQUEST['id'])) {
         $id = $_REQUEST['id'];
-         $connect = mysqli_connect("localhost", "root", "", "project");
-         if(!$connect){
-             die("connection failed");
-         }
-         $sql = "update notification set notify_status='1' WHERE  id = '". $id ."'";
-         $result =mysqli_query($connect,$sql);
-         if(mysqli_num_rows($result) > 0){
-             echo "record updated";
-         }else{
-             echo  "failed";
-         }
-     }
+        $connect = mysqli_connect("localhost", "root", "", "project");
+        if (!$connect) {
+            die("connection failed");
+        } else {
+            $sql = "update notification set notify_status='1' WHERE  id = '" . $id . "'";
+            $result = mysqli_query($connect, $sql);
 
+            if (mysqli_num_rows($result) > 0) {
+                echo "record updated";
+            } else {
+                echo "failed";
+            }
+
+
+        }
+    }
 }
 
 markAsRead();

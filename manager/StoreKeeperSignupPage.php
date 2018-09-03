@@ -87,6 +87,7 @@ if(!isset($_SESSION['username'])){
 <!--                <li><a style="color: #f5c6cb" href="Managerindexpage.php">Home</a></li>-->
                 <li><a  href="WorkStatus.php">Renovations</a></li>
                 <li><a href="EmployeePage.php">Assign work</a></li>
+                <li><a href="printworkstatuspage.php">Print workRecords</a></li>
                 <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
                 <li><a style="color: #f5c6cb" href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
                 <li><a href="ManagerLogout.php">Log out</a></li>
@@ -111,6 +112,7 @@ if(!isset($_SESSION['username'])){
                 </div>
             </div>
             <br>
+            <br>
             <!--            <div class="form-group">-->
             <!--                <label style="margin-left: 50px;font-family: Serif;font-size: 18px;">Registration-Number or Work-Id</label><br>-->
             <!--                <div class="col-sm-10">-->
@@ -119,6 +121,7 @@ if(!isset($_SESSION['username'])){
             <!--            </div><br>-->
             <div class="form-group">
                 <label style="margin-left: 50px;font-family: Serif;font-size: 18px;">Email</label><br>
+                <br>
                 <div class="col-sm-10">
                     <input class="form-control" style="margin-left: 40px" id="exampleInputUsername" type="textfield"
                            name="email" placeholder="email" autocomplete="off" required>

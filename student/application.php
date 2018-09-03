@@ -31,10 +31,10 @@ include_once "db_Connection.php";
         $submitapp = new Application($this->category,$this->categoryname,$this->propertyname,$this->damage,$this->message);
         // $Message=" 'The' .$propertyname .'of' .$categoryname. 'in the' .$category.' is'. $damage";
 
-        $sql ="INSERT INTO project.app(category,categoryName,propertyName,damage) VALUES ('$this->category','$this->categoryname','$this->propertyname','$this->damage')";
+        $sql ="INSERT INTO project.app(category,categoryName,propertyName,damage,day) VALUES ('$this->category','$this->categoryname','$this->propertyname','$this->damage',now())";
          $this->connect()->exec($sql);
 
-         $msg = "INSERT INTO project.notification(message) VALUE ('$this->message')";
+         $msg = "INSERT INTO project.notification(message,day) VALUE ('$this->message',now())";
          $this->connect()->exec($msg);
          //$sql="INSERT INTO PROJECT.notification(message) VALUES('$this->Message')";
         // $this->connect()->exec($sql);

@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -9,15 +8,13 @@ if(!isset($_SESSION['username'])){
 }else{
 ?>
 
-<!doctype html>
-<html lang="en">
+
+
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Employee addition</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <title>Home Page</title>
     <style>
         body{margin:0;
             background-color:#f6f6f6;
@@ -52,6 +49,7 @@ if(!isset($_SESSION['username'])){
     </style>
 </head>
 <body class="container-fluid">
+
 <header>
     <!--        <link rel="stylesheet" href="style.css" type="text/css"/>-->
 
@@ -92,9 +90,11 @@ if(!isset($_SESSION['username'])){
                 <li><a  href="WorkStatus.php">Renovations</a></li>
                 <li><a href="EmployeePage.php">Assign work</a></li>
                 <li><a href="printworkstatuspage.php">Print workRecords</a></li>
+
                 <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
                 <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
                 <li><a href="ManagerLogout.php">Log out</a></li>
+
 
 
 
@@ -103,29 +103,28 @@ if(!isset($_SESSION['username'])){
     </div>
 
 </header>
+<form action="printworkstatus.php" method="GET">
 
-<form action="AddEmployee1.php" method="POST">
-
-    <div class="row" style="margin-top: 70px;margin-left: 30px;">
-        <p style="font-family: 'sans-serif';font-size: 25px;">Addition of a new Employee:</p><br>
-
-
-        <div class="col-md-4">
-
-            <label style="font-family: 'sans-serif';font-size: 18px">EmpName:</label>
-            <input type="text" name="Name" class="form-control" autocomplete="off" required>
-            <label style="font-family: 'sans-serif';font-size: 18px">PhoneNo:</label>
-            <input type="text" name="Phone" class="form-control" autocomplete="off" required>
-            <label style="font-family: 'sans-serif';font-size: 18px">EmpEmail:</label>
-            <input type="email" name="Email" class="form-control" autocomplete="off" required>
-            <br><br>
-            <button type="submit" class="btn btn-primary" name="submit" value="Submit"
-                    style="margin-top: 25px;background-color: #0056b3;width: 200px;margin-left: 60px"> Submit
-            </button>
-
+    <div class="row" style="font-family: Serif;font-size: 18px;margin-left:400px; margin-right: 400px; margin-top: 150px; margin-bottom: 100px;">
+        <div class="form-group">
+            <!--            <h4> Please select the dates needed for material's printout</h4><br>-->
+            <!--            <label>Date from</label><br>-->
+            <!--            <div class="col-sm-10">-->
+            <!--                <input class="form-control" id="exampleInputDatefrom" type="date" name="from" required>-->
+            <!--            </div>-->
+            <!--        </div><br>-->
+            <!--        <div class="form-group">-->
+            <!--            <label>Date to </label><br>-->
+            <!--            <div class="col-sm-10">-->
+            <!--                <input class="form-control" id="exampleInputDateto" type="date" name="to" required>-->
+            <!--            </div>-->
+            <!--        </div><br><br>-->
+            <h4> Please Click On the Button to produce a printout</h4>
+            <input class="btn" style="margin-left: 60px;background-color: #0056b3;color: white; font-family: Serif;font-size: 18px;" type="Submit" name="assign" value ="Print WorkRecords">
         </div>
-    </div>
 </form>
+
+</body>
 
 </body>
 <?php
@@ -151,5 +150,10 @@ if(!isset($_SESSION['username'])){
 
     ?>
 </script>
+
 </html>
-<?php }?>
+
+
+
+
+
