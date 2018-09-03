@@ -36,7 +36,7 @@
                 </div>
             </div><br>
             <div class="form-group">
-                <label style="margin-left: 50px;font-family: Serif;font-size: 16px;">Confirm password</label><br>
+                <label style="margin-left: 50px;font-family: Serif;font-size: 18px;">Confirm password</label><br>
                 <div class="col-sm-10">
                     <input class="form-control" style="margin-left: 40px" id="exampleInputPassword" type="password" name="confirm-password" placeholder="confirm password" required>
                 </div>
