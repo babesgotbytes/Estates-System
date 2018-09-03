@@ -1,3 +1,16 @@
+
+<?php
+session_start();
+
+if(!isset($_SESSION['username'])){
+
+    header('location: ManagerLoginpage.php');
+
+}else{
+?>
+
+
+
 <!DOCTYPE html>
 
 
@@ -29,9 +42,13 @@
             float: left;
             display: block;
             padding: 10px 20px;
-            color: white;
+            color: blue;
         }
-        .nav ul li a:hover{color: #7EF9FF;}
+        .nav ul li a:hover{color: #000000;}
+        #not ul li a{
+            color:black;
+
+        }
         table{
             border-collapse: collapse;
             width: 50%;
@@ -47,55 +64,58 @@
             color:white;
         }
         tr:nth-child(even) {background-color: #f2f2f2;}
+
     </style>
 </head>
 
 <body class="container-fluid">
-<header>```````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+<header>
+    <!--        <link rel="stylesheet" href="style.css" type="text/css"/>-->
 
-<div id="header">
-    <div id="headerContent" >
-    </div>
-    <div class="navbar-header">
+    <div id="header">
+        <div id="headerContent" >
+        </div>
+        <div class="navbar-header">
 
-<!--        <a class="navbar-brand" href="#"> Welcome --><?php //echo $_SESSION['username'];?><!-- </a>-->
+            <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
 
-    </div>
-    <div class="nav" style="font-family: Serif;font-size: 18px;">
-        <ul>
-            <li><a style="color: #f5c6cb" href="Managerindexpage.php">Home</a></li>
-            <li><a href="ManagerLogout.php">Log out</a></li>
-            <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
-            <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
-            <li><a  href="WorkStatus.php">Renovations</a></li>
-            <li><a href="EmployeePage.php">Assign work</a></li
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius: 10px"></span>
-                    Notifications
-                    <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span>
-                    <span class="badge">
+        </div>
+        <div class="nav" style="font-family: Serif;font-size: 18px;">
+            <ul>
+                <li><a style="color: #f5c6cb" href="Managerindexpage.php">Home</a></li>
+                <li><a  href="WorkStatus.php">Renovations</a></li>
+                <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
+                <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
+                <li><a href="ManagerLogout.php">Log out</a></li>
+
+                <li><a href="EmployeePage.php">Assign work</a></li>
+                <li class="dropdown" id="nott">
+                    <a href="#" class="dropdown-toggle" id="dropdown" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius: 10px"></span>
+                        Notifications
+                        <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span>
+                        <span class="badge">
                             <?php
                             include_once ("notification.php");
                             echo count(getNotifications());
                             ?>
-                        <span class="caret"></span></span>
-                </a>
+                            <span class="caret"></span></span>
+                    </a>
 
-                <ul class="dropdown-menu">
-                    <?php
-                    foreach (getNotifications() as $notification) { ?>
-                        <li><a class="dropdown-item" href="#"
-                               onclick="markNotificationAsRead('<?php echo $notification["id"] ?>')">
-                                <?php echo $notification['message'] . " on " . $notification['date']; ?></a></li>
+                    <ul class="dropdown-menu">
                         <?php
+                        foreach (getNotifications() as $notification) { ?>
+                            <li><a class="dropdown-item" href="#"
+                                   onclick="markNotificationAsRead('<?php echo $notification["id"] ?>')">
+                                    <?php echo $notification['message'] . " on " . $notification['date']; ?></a></li>
+                            <?php
                         }
-                    ?></ul></li>
+                        ?></ul></li>
 
 
-        </ul>
+            </ul>
+        </div>
     </div>
-</div>
-</div>
+
 </header>
 
 	<div class="row" style="">
@@ -294,6 +314,7 @@
 	
 </script> -->
 </body>
+<?php }?>
 <script src="../student/axios/axios.min.js"></script>
 <script>
     function updateStatus(id, status) {
@@ -306,7 +327,8 @@
             console.log(err)
         })
     }
-
+</script>
+    <script src="../axios/axios.min.js"></script>
 <script src="jQuery/jquery-2.2.4.min.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
 
@@ -320,6 +342,11 @@
         })
     }
 </script>
+<script type="application/javascript">
+    <?php
+    header("refresh:5;url=Managerindexpage.php");
+
+    ?>
 </script>
 
 	
