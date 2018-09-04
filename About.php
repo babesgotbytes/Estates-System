@@ -10,30 +10,30 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="container-fluid">
-	<header>
+<header>
     <div style="float: left; padding:20px 20px 0 30px;font-size: 40px; color:#cccccc;">
-            The Estates
+        The Estates
     </div>
     <nav>
         <a href="#" id="menu-icon"></a>
         <ul style="">
-            <li><a href="#" class="current" style="color: #cccccc;font-size: 25px;">Home</a></li>
-            <li style="color: #cccccc;"><a href="#" style="color: #cccccc;font-size: 25px;">About</a></li>
-            <li style="color: #cccccc;"><a href="#" style="color: #cccccc;font-size: 25px;">Services</a></li>
-            <li style="color: #cccccc;"><a href="#" style="color: #cccccc;font-size: 25px;">Contact</a></li>
+            <li><a href="Project.php" style="color: #cccccc;font-size: 25px">Home</a></li>
+            <li style="color: #cccccc;"><a href="About.php" style="color: #cccccc;font-size: 25px">About</a></li>
+            <li style="color: #cccccc;"><a href="Services.html" style="color: #cccccc;font-size: 25px">Services</a></li>
+            <li style="color: #cccccc;"><a href="#" style="color: #cccccc;font-size: 25px">Contact</a></li>
             <li>
                 <div class="dropdown">
-    <a class=" dropdown-toggle" style="color: #cccccc;font-size: 25px;" href="" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Login
-    </a>
-    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2" style="background-color: #000000;">
-      <li >  <a class="dropdown-item" href="student/StudentLoginpage.php" style="color: #cccccc;background-color: #191919;">student</a></li>
-       <li> <a class="dropdown-item" href="manager/ManagerLoginpage.php" style="color: #cccccc;background-color: #191919;">manager</a></li>
-     <li> <a class="dropdown-item" href="storekeeper/StoreKeeperLoginpage.php" style="color: #cccccc;background-color: #191919;">storekeeper</a></li>
-    </ul>
-</div>
-</li>
- </ul>
+                    <a class=" dropdown-toggle" style="color: #cccccc;font-size: 25px" href="" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Login
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2" style="background-color: #000000;">
+                        <li >  <a class="dropdown-item" href="student/StudentLoginpage.php" style="color: #cccccc;background-color: #191919;">student</a></li>
+                        <li> <a class="dropdown-item" href="manager/ManagerLoginpage.php" style="color: #cccccc;background-color: #191919;">manager</a></li>
+                        <li> <a class="dropdown-item" href="storekeeper/StoreKeeperLoginpage.php" style="color: #cccccc;background-color: #191919;">storekeeper</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
     </nav>
 
 </header>
