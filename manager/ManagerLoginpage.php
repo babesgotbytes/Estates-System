@@ -42,7 +42,7 @@
         </form>
 
         <br><br><br>
-<!--        <em style="color: #000000;font-size: 18px;margin-left: 30px">New to Estates?</em><a href="ManagerSignupPage.php" ><i style="color: #0056b3;font-family: Serif;font-size: 16px;">Sign Up</i></a>-->
+        <em style="color: #000000;font-size: 18px;margin-left: 30px">New to Estates?</em><a href="ManagerSignupPage.php" ><i style="color: #0056b3;font-family: Serif;font-size: 16px;">Sign Up</i></a>
         <br>
     </div>
 </div>

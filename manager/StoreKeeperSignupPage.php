@@ -112,7 +112,6 @@ if(!isset($_SESSION['username'])){
                 </div>
             </div>
             <br>
-            <br>
             <!--            <div class="form-group">-->
             <!--                <label style="margin-left: 50px;font-family: Serif;font-size: 18px;">Registration-Number or Work-Id</label><br>-->
             <!--                <div class="col-sm-10">-->

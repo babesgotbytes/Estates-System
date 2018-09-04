@@ -109,7 +109,7 @@ if(!isset($_SESSION['username'])){
 <!--                <li><a  href="Managerindexpage.php">Home</a></li>-->
                 <li><a  href="WorkStatus.php">Renovations</a></li>
 
-                <li><a href="EmployeePage.php">Assign work</a></li>
+<!--                <li><a href="EmployeePage.php">Assign work</a></li>-->
                 <li><a href="printworkstatuspage.php">Print workRecords</a></li>
 
                 <li><a style="color: #f5c6cb" href="EmployeePage.php">Assign work</a></li>
@@ -125,11 +125,8 @@ if(!isset($_SESSION['username'])){
 </header>
 
 	<div class="row" style="">
-<<<<<<< HEAD
 	<h3 style="font-family: sans-serif; margin-left: 10%;">Estate Department Employees:</h3>
-=======
-	<h2 style="font-family:sans-serif;margin-left: 10%; color:#2b669a;margin-top: 60px">Estate Department Employees:</h2>
->>>>>>> a0666f124f6a7d9a84619bba3fd45ed4369b20cb
+
         <br><br><br>
 	<table  class="table table-stripped table-bordered table-condensed table-sm table-hover" id="tab">
 
