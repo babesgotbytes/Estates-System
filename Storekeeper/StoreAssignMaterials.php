@@ -19,7 +19,7 @@ class Repairs extends Db_Connect{
 
 	private function getEmployee($emp){
 
-			$search= "SELECT * FROM project.employees WHERE Emp_id = ?";
+			$search= "SELECT * FROM project.employees WHERE empID = ?";
 			$run = $this->connect()->prepare($search);
 
 			$run->execute([$emp]);
