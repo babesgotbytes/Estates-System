@@ -58,7 +58,7 @@ if(!isset($_SESSION['username'])){
         </div>
         <div class="navbar-header">
 
-            <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
+<!--            <a class="navbar-brand" href="#"> Welcome --><?php //echo $_SESSION['username'];?><!-- </a>-->
 
         </div>
         <div class="nav" style="font-family: Serif;font-size: 18px;">
@@ -86,7 +86,7 @@ if(!isset($_SESSION['username'])){
                             <?php
                         }
                         ?></ul></li>
-                <li><a style="color: #f5c6cb" href="Managerindexpage.php">Home</a></li>
+<!--                <li><a style="color: #f5c6cb" href="Managerindexpage.php">Home</a></li>-->
                 <li><a  href="WorkStatus.php">Renovations</a></li>
                 <li><a href="EmployeePage.php">Assign work</a></li>
                 <li><a href="printworkstatuspage.php">Print workRecords</a></li>
@@ -101,6 +101,8 @@ if(!isset($_SESSION['username'])){
     </div>
 
     </header>
+
+    <b>welcome bitchges</b>
 
     </body>
 

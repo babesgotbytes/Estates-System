@@ -44,7 +44,7 @@ if(!isset($_SESSION['username'])){
             padding: 10px 20px;
             color: powderblue;
         }
-        .nav ul li a:hover{color: #000000;}
+        .nav ul li a:hover{color: #7EF9FF;}
         #not ul li a{
             color:black;
 
@@ -77,7 +77,7 @@ if(!isset($_SESSION['username'])){
         </div>
         <div class="navbar-header">
 
-            <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
+<!--            <a class="navbar-brand" href="#"> Welcome --><?php //echo $_SESSION['username'];?><!-- </a>-->
 
         </div>
         <div class="nav" style="font-family: Serif;font-size: 18px;">
@@ -106,10 +106,14 @@ if(!isset($_SESSION['username'])){
                             <?php
                         }
                         ?></ul></li>
-                <li><a style="color: #f5c6cb" href="Managerindexpage.php">Home</a></li>
+<!--                <li><a  href="Managerindexpage.php">Home</a></li>-->
                 <li><a  href="WorkStatus.php">Renovations</a></li>
+<<<<<<< HEAD
                 <li><a href="EmployeePage.php">Assign work</a></li>
                 <li><a href="printworkstatuspage.php">Print workRecords</a></li>
+=======
+                <li><a style="color: #f5c6cb" href="EmployeePage.php">Assign work</a></li>
+>>>>>>> 5ce60e89afd34e358b081b323bcdc1c1152f7a7c
                 <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
                 <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
                 <li><a href="ManagerLogout.php">Log out</a></li>
