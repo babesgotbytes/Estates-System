@@ -122,7 +122,7 @@ if(!isset($_SESSION['username'])){
 </header>
 
 	<div class="row" style="">
-	<h2 style="font-family: 'Bookman Old Style';margin-left: 10%;">Estate Department Employees:</h2>
+	<h2 style="font-family:sans-serif;margin-left: 10%; color:#2b669a;margin-top: 60px">Estate Department Employees:</h2>
         <br><br><br>
 	<table  class="table table-stripped table-bordered table-condensed table-sm table-hover" id="tab">
 
