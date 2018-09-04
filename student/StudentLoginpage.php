@@ -9,7 +9,7 @@
 <!--        <div style="height: 80px; width: 80px; margin-bottom: 10px; margin-left: 80px;>-->
 <!--        <img src="logo.jpg"/>-->
 <!--        </div>-->
-            <p style="color: #000000; margin-left: 70px; font-size: 28px">Student LoginPage</p><br><br>
+            <p style="color: #000000; margin-left: 70px; font-size: 28px">Student/Staff LoginPage</p><br><br>
     <div style="box-shadow: 5px 5px 5px 5px  #ccccff;margin-right: 10px;background-color: #f3f3f3">
         <br><br>
 	<form method="POST" action="StudentLogin.php">

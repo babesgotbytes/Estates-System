@@ -7,7 +7,7 @@
 </head>
 <body class="container-fluid" style="background-color: #f6f6f6; color:black" >
 
-		<p style="font-size: 30px;margin-left: 430px;margin-top: 60px">Student Registration</p><br><br>
+		<p style="font-size: 30px;margin-left: 430px;margin-top: 60px">Student/Staff Registration</p><br><br>
         <div style="box-shadow: 5px 5px 5px 5px #ccccff;margin-left: 320px; margin-right:500px; background-color: #f3f3f3">
 <form id="signup_form" method="POST" action="StudentSignup.php">
 	<div class="row"><br>

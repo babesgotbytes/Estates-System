@@ -56,6 +56,19 @@ class NewAccount extends Db_Connect{
 
 	}
 
+    private function verifyRegno($regno)
+    {
+        $pattern="/^[a-z0-9-_]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i";
+
+        if(!preg_match($pattern, $regno)){
+
+            return true;
+        }else{
+
+            return false;
+        }
+
+    }
 	private function verifyEmail($email)
 	{
 			$pattern="/^[a-z0-9-_]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i";
@@ -69,6 +82,7 @@ class NewAccount extends Db_Connect{
 			}
 
 	}
+
 
 	public function createNewAccount($hashed_pwd)
 	{
@@ -87,7 +101,16 @@ class NewAccount extends Db_Connect{
 					exit();
 
 				}else
-					if($errors->userNameTaken($this->username)==true){
+
+                        if($errors->verifyRegno($this->regno)==true){
+
+                        echo "<script>alert('Enter the correct regno/workid')</script>";
+                        echo "<script>window.open('StudentSignupPage.php','_self')</script>";
+                        exit();
+
+                        }else
+
+				     	if($errors->userNameTaken($this->username)==true){
 
 					echo "<script>alert('User Name is Already Taken')</script>";
 					echo "<script>window.open('StudentSignupPage.php','_self')</script>";

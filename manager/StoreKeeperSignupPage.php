@@ -112,6 +112,7 @@ if(!isset($_SESSION['username'])){
                 </div>
             </div>
             <br>
+            <br>
             <!--            <div class="form-group">-->
             <!--                <label style="margin-left: 50px;font-family: Serif;font-size: 18px;">Registration-Number or Work-Id</label><br>-->
             <!--                <div class="col-sm-10">-->
@@ -120,7 +121,7 @@ if(!isset($_SESSION['username'])){
             <!--            </div><br>-->
             <div class="form-group">
                 <label style="margin-left: 50px;font-family: Serif;font-size: 18px;">Email</label><br>
-                <br>
+
                 <div class="col-sm-10">
                     <input class="form-control" style="margin-left: 40px" id="exampleInputUsername" type="textfield"
                            name="email" placeholder="email" autocomplete="off" required>

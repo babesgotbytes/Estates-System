@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 04, 2018 at 12:03 AM
+-- Generation Time: Sep 04, 2018 at 02:44 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -60,7 +60,9 @@ INSERT INTO `app` (`id`, `category`, `categoryName`, `propertyName`, `damage`, `
 (14, 'hostel', 'newhostel', 'window', 'spoilt', 'Unknown', 'No', '2018-09-03 01:00:56'),
 (15, 'office', 'ujkujm', 'hjmyujmyhn', 'leaking', 'Unknown', 'No', '2018-09-03 06:45:18'),
 (16, 'games_sector', 'uj89uiok', 'gyujhk', 'cracked', 'Unknown', 'No', '2018-09-03 06:46:27'),
-(17, 'hostel', 'taton-nb 24/2', 'door', 'broken', 'Unknown', 'No', '2018-09-03 18:33:53');
+(17, 'hostel', 'taton-nb 24/2', 'door', 'broken', 'Unknown', 'No', '2018-09-03 18:33:53'),
+(18, 'anycategory', 'mine', 'urs', 'leaking', 'Unknown', 'No', '2018-09-04 03:18:57'),
+(19, 'office', 'guyy', 'bbby', 'stolen', 'Unknown', 'No', '2018-09-04 03:49:06');
 
 -- --------------------------------------------------------
 
@@ -82,13 +84,13 @@ CREATE TABLE `employees` (
 --
 
 INSERT INTO `employees` (`empID`, `empName`, `phone`, `emp_status`, `email`, `jobAssigned`) VALUES
-(12, 'Lameck', '07457889', 'ASSIGNED', 'lameck@gmail.com', 'T1 Whiteboard repair'),
-(13, 'Felix', '07238990', 'ASSIGNED', 'felix@gmail.com', 'asertugijl dsdftgyuhjkl stolen'),
-(14, 'Joshua', '0712345678', 'ASSIGNED', 'joshua@gmail.com', 'uj89uiok gyujhk cracked'),
-(15, 'Ogendo', '0714456789', 'ASSIGNED', 'ogendo@gmail.com', 'uj89uiok gyujhk cracked'),
-(16, 'Michael odhis', '070126687000', 'ASSIGNED', 'odhis@gmail.com', 'asertugijl dsdftgyuhjkl stolen'),
-(17, 'josephine', '0702646220', 'ASSIGNED', 'jose@gmail.com', 'asertugijl dsdftgyuhjkl stolen'),
-(18, 'kevin', '12340002', 'PENDING', 'kevin@gmail.com', '');
+(12, 'Lameck', '07457889', 'ASSIGNED', 'lameck@gmail.com', 'asertugijl dsdftgyuhjkl stolen'),
+(13, 'Felix', '07238990', 'PENDING', 'felix@gmail.com', 'asertugijl dsdftgyuhjkl stolen'),
+(14, 'Joshua', '0712345678', 'PENDING', 'joshua@gmail.com', 'guyy bbby stolen'),
+(15, 'Ogendo', '0714456789', 'PENDING', 'ogendo@gmail.com', 'newhostel window spoilt'),
+(16, 'Michael odhis', '070126687000', 'PENDING', 'odhis@gmail.com', 'asertugijl dsdftgyuhjkl stolen'),
+(17, 'josephine', '0702646220', 'PENDING', 'jose@gmail.com', 'asertugijl dsdftgyuhjkl stolen'),
+(18, 'kevin', '12340002', 'PENDING', 'kevin@gmail.com', 'asertugijl dsdftgyuhjkl stolen');
 
 -- --------------------------------------------------------
 
@@ -110,6 +112,26 @@ CREATE TABLE `manager` (
 
 INSERT INTO `manager` (`id`, `name`, `email`, `pwd`, `day`) VALUES
 (3, 'johny', 'johny@gmail.com', '$2y$10$7RfnB7zxQ6g5ZOoYZxVKnOryIB8B1PJ79rs4hy2iKfU.PTQfKsrFC', '2018-07-30');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `materials`
+--
+
+CREATE TABLE `materials` (
+  `material_ID` int(11) NOT NULL,
+  `material_name` varchar(70) NOT NULL,
+  `Quantity` int(11) NOT NULL,
+  `Dept_name` varchar(120) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `materials`
+--
+
+INSERT INTO `materials` (`material_ID`, `material_name`, `Quantity`, `Dept_name`) VALUES
+(0, 'spana', 133, 'signwriting,glazing,painting & decoration');
 
 -- --------------------------------------------------------
 
@@ -143,9 +165,25 @@ INSERT INTO `notification` (`Id`, `message`, `notify_status`, `day`) VALUES
 (12, 'The chair of sience is replace', '1', '2018-08-15 20:07:46'),
 (13, 'The  ftgyhjkl of xcfvgbhnjmk is broken', '1', '2018-09-03 20:51:34'),
 (14, 'The window of newhostel is spoilt', '1', '2018-09-03 21:11:17'),
-(15, 'The hjmyujmyhn of ujkujm is leaking', '0', '2018-09-03 06:45:18'),
+(15, 'The hjmyujmyhn of ujkujm is leaking', '1', '2018-09-04 11:08:48'),
 (16, 'The gyujhk of uj89uiok is cracked', '1', '2018-09-03 20:52:18'),
-(17, 'The door of taton-nb 24/2 is broken', '0', '2018-09-03 18:33:53');
+(17, 'The door of taton-nb 24/2 is broken', '1', '2018-09-04 04:31:18'),
+(18, 'The urs of mine is leaking', '1', '2018-09-04 03:40:43'),
+(19, 'The bbby of guyy is stolen', '1', '2018-09-04 03:49:24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `repairs`
+--
+
+CREATE TABLE `repairs` (
+  `Dept_name` varchar(100) NOT NULL,
+  `material_name` varchar(100) NOT NULL,
+  `Quantity` double NOT NULL,
+  `emp_assign` int(12) NOT NULL,
+  `repair_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -232,7 +270,35 @@ INSERT INTO `student` (`id`, `name`, `regNo`, `email`, `pwd`, `day`) VALUES
 (7, 'elvis', 'elvis', 'elvis@gmail.com', '$2y$10$rC8QWWTGcwUXzhyf8rSPauyk5H9bJNfeZjrEjx', '0000-00-00'),
 (8, 'lil', 's13', 'lil@gmail.com', '$2y$10$kVZ773JUn5LURV96tIRu4.dCXa.JM7deTuP8S3', '0000-00-00'),
 (9, 'ondiek', 's13/09725/15', 'ondiek@gmail.com', '$2y$10$wm4r4mbcFDqe/iZqvR2sp.nLp7LEgQRSR.vC1nP4dcgBKkdNPfXKG', '2018-07-30'),
-(10, 'awino', 'S1234', 'ondiekbrendah@gmail.com', '$2y$10$8byZZvPFqjc4jxBbL4ffMeWm8CEzSuivsJ43DSnyNBZj10kfP3.Oa', '2018-08-06');
+(10, 'awino', 'S1234', 'ondiekbrendah@gmail.com', '$2y$10$8byZZvPFqjc4jxBbL4ffMeWm8CEzSuivsJ43DSnyNBZj10kfP3.Oa', '2018-08-06'),
+(11, 'khalid', 'dddfjfofj', 'joseee@gmail.com', '$2y$10$8Czdn2CidlV2M1Wd3mWGSuXdplj1sfuUal5crjFubavBA5F.QaRA2', '2018-09-04');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `usr_nm` varchar(15) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `pwd` varchar(100) NOT NULL,
+  `day` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `usr_nm`, `email`, `pwd`, `day`) VALUES
+(1, 'asd', 'vb@gmail.com', '$2y$10$JKyquWfmxGf/GT1kMU5U2u9Fm8i6B.CenouZm81JKqjhMg.29Uipa', '2018-06-25'),
+(2, 'bnm', 'bnm@gmail.com', '$2y$10$Z/iW/VILf1t7j/GcQah7LuFEw2wp9.3mqEIQM087hmrjpsipR48fu', '2018-06-25'),
+(3, 'ty', 'ty@gmail.com', '$2y$10$xOLi3ZoR95H.p7hNWOeLTeS/jviwE387HkosDQfQhyX.T63B5xbzO', '0000-00-00'),
+(4, 'jo', 'jo@gmail.com', '$2y$10$hxSKLVxCiYmzF91vKJbuRO7gCzYdGk1o8m.ufxSddnPP7fgakvx8y', '0000-00-00'),
+(5, 'hj', 'hj@gmail.com', '$2y$10$mTUDpJhdshKUGFhIiwmGSesPDKR7Esq4nQefm1c07bEWcccy7WBxy', '0000-00-00'),
+(6, 'jos', 'jos@gmail.com', '$2y$10$duJknSa1SQCjsXmI2Xim0OznRhv5HYdEVVuwlFHoMzgejf7I4b9pS', '0000-00-00'),
+(7, 'cla', 'cla@gmail.com', '$2y$10$vkj0JcUvaviSManUAnXagOnbpt4Z4CDqoKBfsYJozABjqEf01OFmy', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -254,10 +320,10 @@ CREATE TABLE `workstatus` (
 --
 
 INSERT INTO `workstatus` (`Id`, `jobDescription`, `Work_status`, `Done_by`, `empID`, `Day`) VALUES
-(41, 'T1 Whiteboard repair', 'Inprogress', '12', '12', '2018-08-17 20:31:34'),
+(41, 'T1 Whiteboard repair', 'Complete', '12', '12', '2018-08-17 20:31:34'),
 (42, 'sueu maringo office window broken', 'Inprogress', 'Felix', '13', '2018-08-17 20:59:11'),
 (43, 'dtfyguhijklp szdxcvgbhjmn,. broken', 'Inprogress', 'Felix', '13', '2018-08-29 18:12:55'),
-(44, 'asertugijl dsdftgyuhjkl stolen', 'Inprogress', 'Lameck', '12', '2018-08-29 18:19:10'),
+(44, 'asertugijl dsdftgyuhjkl stolen', 'Complete', 'Lameck', '12', '2018-08-29 18:19:10'),
 (45, 'Ft1 floor cracked', 'Inprogress', 'Michael odhis', '16', '2018-08-31 12:54:24'),
 (46, 'sience chair replace', 'Inprogress', 'Ogendo', '15', '2018-08-31 12:55:48'),
 (47, 'sience chair replace', 'Inprogress', 'Ogendo', '15', '2018-08-31 14:52:35'),
@@ -312,6 +378,12 @@ ALTER TABLE `student`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `workstatus`
 --
 ALTER TABLE `workstatus`
@@ -325,7 +397,7 @@ ALTER TABLE `workstatus`
 -- AUTO_INCREMENT for table `app`
 --
 ALTER TABLE `app`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `employees`
@@ -343,7 +415,7 @@ ALTER TABLE `manager`
 -- AUTO_INCREMENT for table `notification`
 --
 ALTER TABLE `notification`
-  MODIFY `Id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `Id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `storekeeper`
@@ -361,7 +433,13 @@ ALTER TABLE `storekeeper_notice`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `workstatus`

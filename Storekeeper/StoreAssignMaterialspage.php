@@ -93,7 +93,7 @@ if(!isset($_SESSION['username'])){
         <input class="form-control" id="exampleInputQuantity" type="textfield" name="Quantity" placeholder="Quantity" autocomplete="off" required>
        </div>
 </div>
-    <div class="form-group col-md-4" style="width: 450px;">
+    <div class="form-group col-md-4" style="width: 570px;">
                 <label for="Category-select">Department Name</label>
 
                 <select id="Category-select"  class="form-control" name="category">
@@ -107,6 +107,10 @@ if(!isset($_SESSION['username'])){
 
                 </select>
             </div>
+      <br>
+      <br>
+      <br>
+      <br>
      <div class="form-group">
     <label>Employee Assigned Materials</label><br>
 <div class="col-sm-10">

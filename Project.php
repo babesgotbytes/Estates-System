@@ -131,15 +131,15 @@
 <article style="">
     <img src="pics/management.jpg" width="960px" height="470px"/>
 </article>
-<aside style="width: 500px;margin-left: 50px">
+<aside style="width: 600px;margin-left: 50px">
     <h2 style="color: #b2b2ff;">The management schedule</h2>
     <ul class="estate">
-        <li style="color: #cccccc;"><h3>Working days: Monday </h3></li>
-        <li style="color: #cccccc;"><h4>Working hours: 8:00am - 5:00pm</h4></li>
-        <li style="color: #cccccc;"><h4>Working hours: 8:00am - 5:00pm</h4></li>
-        <li style="color: #cccccc;"><h4>Working hours: 8:00am - 5:00pm</h4></li>
-        <li style="color: #cccccc;"><h4>Working hours: 8:00am - 5:00pm</h4></li>
-        <li style="color: #cccccc;"><h4>Working hours: 8:00am - 5:00pm</h4></li>
+        <li style="color: #cccccc;"><h3>Working days: Monday - saturday </h3></li>
+        <li style="color: #cccccc;"><h4>Working hours: Monday 8:00am - 5:00pm</h4></li>
+        <li style="color: #cccccc;"><h4>Working hours:Tuesday 8:00am - 5:00pm</h4></li>
+        <li style="color: #cccccc;"><h4>Working hours: Wednesday 8:00am - 5:00pm</h4></li>
+        <li style="color: #cccccc;"><h4>Working hours: Thursday 8:00am - 5:00pm</h4></li>
+        <li style="color: #cccccc;"><h4>Working hours: Friday 8:00am - 5:00pm</h4></li>
          <li style="color: #cccccc;"><h3>Closed on sundays and public holidays</h3></li>
 
     </ul>
