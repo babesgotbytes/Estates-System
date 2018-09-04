@@ -1,14 +1,4 @@
 
-<?php
-session_start();
-
-if(!isset($_SESSION['username'])){
-
-    header('location: ManagerLoginpage.php');
-
-}else{
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -60,7 +50,7 @@ if(!isset($_SESSION['username'])){
         </div>
         <div class="navbar-header">
 
-            <a class="navbar-brand" href="#"> Welcome <?php echo $_SESSION['username'];?> </a>
+<!--            <a class="navbar-brand" href="#"> Welcome --><?php //echo $_SESSION['username'];?><!-- </a>-->
 
         </div>
         <div class="nav" style="font-family: Serif;font-size: 18px;">
@@ -128,9 +118,7 @@ if(!isset($_SESSION['username'])){
 </form>
 
 </body>
-<?php
-}
-?>
+
 <script src="../axios/axios.min.js"></script>
 <script src="jQuery/jquery-2.2.4.min.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
@@ -152,4 +140,3 @@ if(!isset($_SESSION['username'])){
     ?>
 </script>
 </html>
-<?php }?>

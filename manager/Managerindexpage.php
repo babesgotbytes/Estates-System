@@ -30,7 +30,7 @@ if(!isset($_SESSION['username'])){
                 background:#111E6C;
             }
             .nav ul{
-                margin: 0;
+                margin-left: 80px;
                 padding: 0;
             }
             .nav ul li{ list-style: none; }

@@ -1,5 +1,5 @@
 <?php
-include "db_Connection.php";
+require_once "db_Connection.php";
 class Notify extends Db_Connect {
 
     public function getAllNotifications(){
@@ -19,7 +19,7 @@ class Notify extends Db_Connect {
                 $job_desc = $row['jobDescription'];
                 $emp=$row['Done_by'];
 
-                echo $number." Please Assign  <b>".$emp."</b> Materials for repairing <b>".$job_desc."</b><br>";
+                echo $number." Please Allocate  <b>".$emp."</b> Materials for repairing <b>".$job_desc."</b><br>";
 
                 $number++;
             }

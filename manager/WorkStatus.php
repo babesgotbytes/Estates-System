@@ -39,6 +39,8 @@ if ($results->rowCount() < 1){
 else{
 
     ?>
+    <h3 style="font-family: sans-serif; margin-left: 10%;">Estate Department Work Records</h3>
+
     <table class="table table-stripped table-borderd table-condensed table-sm table-hover">
         <tr class="thead-dark">
             <th>No.</th>
