@@ -111,8 +111,6 @@ if(!isset($_SESSION['username'])){
 
                 <li><a href="EmployeePage.php">Assign work</a></li>
                 <li><a href="printworkstatuspage.php">Print workRecords</a></li>
-
-                <li><a style="color: #f5c6cb" href="EmployeePage.php">Assign work</a></li>
                 <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
                 <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
                 <li><a href="ManagerLogout.php">Log out</a></li>
@@ -196,7 +194,9 @@ if(!isset($_SESSION['username'])){
         $result2 =  $conn2-> query($sql2);
 
         if($result2->num_rows>0){
+            echo " <option value=\"\" disabled selected>--Please choose--</option>";
         while($row2 = $result2-> fetch_assoc()) {
+
 
             echo "<option value='".$row2['categoryName']." ".$row2['propertyName']." ".$row2['damage']."'>
              ".$row2['categoryName']." ".$row2['propertyName']." ".$row2['damage']."</option>";
@@ -221,6 +221,7 @@ if(!isset($_SESSION['username'])){
             $result3 =  $conn3-> query($sql3);
 
             if($result3->num_rows>0){
+                echo " <option value=\"\" disabled selected>--Please choose--</option>";
                 while($row3 = $result3-> fetch_assoc()) {
 
                     echo "<option value='".$row3['empID']."'>

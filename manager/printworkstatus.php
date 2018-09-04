@@ -35,7 +35,7 @@ class ScheduleReport extends FPDF{
         $this->SetFont('Times','B',12);
 
         $this->Cell(15,10,'No.',1,0,'C');
-        $this->Cell(65,10,'Job Descriptionj',1,0,'C');
+        $this->Cell(65,10,'Job Description',1,0,'C');
         $this->Cell(45,10,'Date',1,0,'C');
         $this->Cell(50,10,'Done by',1,0,'C');
         $this->Cell(30,10,'Emp Id',1,0,'C');
