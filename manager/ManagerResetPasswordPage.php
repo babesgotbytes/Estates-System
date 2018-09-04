@@ -22,6 +22,7 @@ if (!isset($_SESSION['username'])) {
             height: auto;
             background-color: #7285A5;
             padding-top: 24px;
+            padding-right: 50px;
         }
         .nav{
             height:40px;
@@ -86,7 +87,7 @@ if (!isset($_SESSION['username'])) {
                 <li><a  href="WorkStatus.php">Renovations</a></li>
                 <li><a href="EmployeePage.php">Assign work</a></li>
                 <li><a href="printworkstatuspage.php">Print workRecords</a></li>
-                <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
+<!--                <li><a href="ManagerResetPasswordPage.php">reset password</a></li>-->
 
                 <li><a style="color: #f5c6cb"  href="ManagerResetPasswordPage.php">reset password</a></li>
 

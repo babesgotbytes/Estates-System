@@ -42,7 +42,8 @@ class ForgotPass extends Db_Connect{
         }else
         {
             $subject="RESET PASSWORD";
-            $message= "To reset your password<a href='http://127.0.0.1/Estates-System/student/StudentResetpwd.php'>Click here </a> and reset. Dont Reply'"    ;
+            $message= "To reset your password
+        <a href='http://127.0.0.1/Estates-System/student/StudentResetpwd.php'>Click here </a> and reset. Dont Reply'"    ;
 
             $token = "qwertyuiopasdfghjklzxcvbnm0123456789";
             $token=str_shuffle($token);
@@ -65,32 +66,43 @@ class ForgotPass extends Db_Connect{
                 $runupdateToken->execute([$token, $this->email]);
 
 
-                require_once "../PHPMailer/PHPMailerAutoload.php";
+
                 try {
+                    require_once "../PHPMailer/PHPMailerAutoload.php";
+
                     $mail = new PHPMailer(); //create a new object
-                    $mail->IsSMTP(); //enable SMTP
+
+                    $mail->Debugoutput = 'html';
+                    $mail->isSMTP(); //enable SMTP
                     $mail->SMTPDebug = 4; //debugging: 0 errors and messages, 0 messages only. Made 0 for production
-                    $mail->SMTPAuth = true; //authentication enabled
-                    // $mail->SMTPSecure = "ssl"; //secure transfer enabled required for gmail. Do not uncommet this due to gmail security options.
+                    $mail->SMTPAuth = true;
+                    $mail->SMTPSecure = "ssl";
                     $mail->Host = "smtp.gmail.com";
                     $mail->Port = 25; //or try 587
-                    $mail->IsHTML(true);
-                    $mail->AddAddress($this->email);
+                    $mail->isHTML(true);
                     $mail->Username = "elvismutende@gmail.com";
                     $mail->Password = "@elvis$95";
-                    $mail->SetFrom('elvismutende@gmail.com', 'Estates Departement');
-                    $mail->AddReplyTo("elvismutende@gmail.com", "Estates Department");
-                    $mail->Subject = $subject;
-                    $mail->MsgHTML($message);
-                    $mail->Send();
+                    $mail->setFrom("elvismutende@gmail.com", 'Estate Systems');
+                    $mail->addAddress($this->email, 'User');
+                    $mail->Subject= $subject;
+                    $mail->msgHTML($message);
 
-                    header("location:Studentforgotpwdpage.php?msg= mail send");
+                    if
+                    (!$mail->Send()) {
 
+                        echo 'Message could not be sent. Mailer Error: '. $mail->ErrorInfo;
+                    }
+                    else{
+
+                        header("location:Studentforgotpwdpage.php?msg=email sent ");
+                        echo "visist" . $this->email . "to reset your email";
+                    }
                 } catch (Exception $e) {
-                    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+                    echo 'Message could not be sent. Mailer Error: '. $e->ErrorInfo;
                 }
 
             }
+
         }
 
     }

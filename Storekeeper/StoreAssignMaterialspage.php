@@ -1,10 +1,21 @@
 
+<?php
+include 'db_Connection.php';
+session_start();
+
+if(!isset($_SESSION['username'])){
+
+    header('location: StoreKeeperLoginpage.php');
+
+}else{?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
  <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-	<title>Home Page</title>
+	<title>Assign materials Page</title>
   <style>
   body{margin:0;
       background-color:#f6f6f6;
@@ -114,7 +125,7 @@
 </body>
 </html>
 
- 
 
+<?php }?>
 
 

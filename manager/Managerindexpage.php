@@ -41,7 +41,7 @@ if(!isset($_SESSION['username'])){
                 padding: 10px 20px;
                 color: powderblue;
             }
-            .nav ul li a:hover{color: #000000;}
+            .nav ul li a:hover{color: skyblue;}
             #not ul li a{
                 color:black;
 
@@ -102,7 +102,7 @@ if(!isset($_SESSION['username'])){
 
     </header>
 
-    <b>welcome bitchges</b>
+    <p style="font-family:sans-serif; font-size: 60px; margin-left: 10px"  > Welcome <?php echo $_SESSION['username'];?></p>
 
     </body>
 

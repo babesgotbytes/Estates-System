@@ -1,9 +1,21 @@
 
+<?php
+include 'db_Connection.php';
+session_start();
+
+if(!isset($_SESSION['username'])){
+
+    header('location: StoreKeeperLoginpage.php');
+
+}else{
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-	<title>Home Page</title>
+	<title>add materials</title>
   <style>
   body{margin:0;
       background-color:#f6f6f6;
@@ -109,7 +121,7 @@
 </body>
 </html>
 
- 
+<?php }?>
 
 
 
