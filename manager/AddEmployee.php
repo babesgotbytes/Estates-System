@@ -13,19 +13,19 @@
 <form action="AddEmployee1.php" method="POST">
 
 <div class="row" style="margin-top: 70px;margin-left: 30px;">
-    <h3 style="font-family: 'Berlin Sans FB Demi';">Addition of a new Employee:</h3><br>
+    <p style="font-family: 'sans-serif';font-size: 25px;">Addition of a new Employee:</p><br>
 
 
     <div class="col-md-4">
 
-<label style="font-family: 'Arial Narrow';font-size: 18px">EmpName:</label>
+<label style="font-family: 'sans-serif';font-size: 18px">EmpName:</label>
 <input type="text"   name="Name" class="form-control"autocomplete="off" required>
-<label style="font-family: 'Arial Narrow';font-size: 18px">PhoneNo:</label>
+<label style="font-family: 'sans-serif';font-size: 18px">PhoneNo:</label>
 <input type="text" name="Phone" class="form-control" autocomplete="off" required>
-<label style="font-family: 'Arial Narrow';font-size: 18px">EmpEmail:</label>
+<label style="font-family: 'sans-serif';font-size: 18px">EmpEmail:</label>
 <input type="email"   name="Email" class="form-control"  autocomplete="off" required>
     <br><br>
-    <button type="submit" class="btn btn-primary" name="submit" value="Submit" style="margin-top: 25px"> Submit</button>
+    <button type="submit" class="btn btn-primary" name="submit" value="Submit" style="margin-top: 25px;background-color: #0056b3;width: 200px;margin-left: 60px"> Submit</button>
 
 </div>
 </div>

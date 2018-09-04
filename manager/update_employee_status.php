@@ -8,6 +8,7 @@
 
     if($status == 'PENDING'){
         $status = 'ASSIGNED';
+
     }else if($status == 'ASSIGNED'){
         $status = 'PENDING';
     }

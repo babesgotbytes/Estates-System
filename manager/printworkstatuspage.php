@@ -8,12 +8,13 @@ if(!isset($_SESSION['username'])){
 }else{
 ?>
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-<!--    <link rel="stylesheet" href="css/main.css">-->
+    <title>Home Page</title>
     <style>
         body{margin:0;
             background-color:#f6f6f6;
@@ -47,7 +48,8 @@ if(!isset($_SESSION['username'])){
         }
     </style>
 </head>
-<body class="container-fluid" style="background-color: #f6f6f6; color:black">
+<body class="container-fluid">
+
 <header>
     <!--        <link rel="stylesheet" href="style.css" type="text/css"/>-->
 
@@ -88,9 +90,11 @@ if(!isset($_SESSION['username'])){
                 <li><a  href="WorkStatus.php">Renovations</a></li>
                 <li><a href="EmployeePage.php">Assign work</a></li>
                 <li><a href="printworkstatuspage.php">Print workRecords</a></li>
+
                 <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
                 <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
                 <li><a href="ManagerLogout.php">Log out</a></li>
+
 
 
 
@@ -99,58 +103,29 @@ if(!isset($_SESSION['username'])){
     </div>
 
 </header>
+<form action="printworkstatus.php" method="GET">
 
-<p style="font-size: 30px;margin-left: 430px;margin-top: 100px">StoreKeeper Registration</p><br><br>
-<div style="box-shadow: 5px 5px 5px 5px #ccccff;margin-left: 320px; margin-right:500px; background-color: #f3f3f3">
-    <form id="signup_form" method="POST" action="StoreKeeperSignup.php">
-        <div class="row"><br>
-            <div class="form-group">
-                <label style="margin-left: 50px;font-family: Serif;font-size: 18px;">Name</label><br>
-                <div class="col-sm-10">
-                    <input class="form-control" style="margin-left: 40px" id="exampleInputUsername" type="textfield"
-                           name="username" placeholder="name" autocomplete="off" required>
-                </div>
-            </div>
-            <br>
-            <br>
-            <!--            <div class="form-group">-->
-            <!--                <label style="margin-left: 50px;font-family: Serif;font-size: 18px;">Registration-Number or Work-Id</label><br>-->
-            <!--                <div class="col-sm-10">-->
-            <!--                    <input class="form-control" style="margin-left: 40px" id="exampleInputUsername" type="textfield" name="ID" placeholder="RegNo or Work-Id" autocomplete="off" required>-->
-            <!--                </div>-->
-            <!--            </div><br>-->
-            <div class="form-group">
-                <label style="margin-left: 50px;font-family: Serif;font-size: 18px;">Email</label><br>
-                <br>
-                <div class="col-sm-10">
-                    <input class="form-control" style="margin-left: 40px" id="exampleInputUsername" type="textfield"
-                           name="email" placeholder="email" autocomplete="off" required>
-                </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <label style="margin-left: 50px;font-family: Serif;font-size: 18px;">Password</label><br>
-                <div class="col-sm-10">
-                    <input class="form-control" style="margin-left: 40px;" id="exampleInputPassword" type="password"
-                           name="password" placeholder="password" required>
-                </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <label style="margin-left: 50px;font-family: Serif;font-size: 18px;">Confirm password</label><br>
-                <div class="col-sm-10">
-                    <input class="form-control" style="margin-left: 40px" id="exampleInputPassword" type="password"
-                           name="confirm-password" placeholder="confirm password" required>
-                </div>
-            </div>
-            <br><br>
-            <input class="btn "
-                   style="background-color:#0056b3;margin-left: 70px;color: white;width: 400px ;font-family: Serif;font-size: 20px;"
-                   type="Submit" name="submit" value="Sign Up"></br>
+    <div class="row" style="font-family: Serif;font-size: 18px;margin-left:400px; margin-right: 400px; margin-top: 150px; margin-bottom: 100px;">
+        <div class="form-group">
+            <!--            <h4> Please select the dates needed for material's printout</h4><br>-->
+            <!--            <label>Date from</label><br>-->
+            <!--            <div class="col-sm-10">-->
+            <!--                <input class="form-control" id="exampleInputDatefrom" type="date" name="from" required>-->
+            <!--            </div>-->
+            <!--        </div><br>-->
+            <!--        <div class="form-group">-->
+            <!--            <label>Date to </label><br>-->
+            <!--            <div class="col-sm-10">-->
+            <!--                <input class="form-control" id="exampleInputDateto" type="date" name="to" required>-->
+            <!--            </div>-->
+            <!--        </div><br><br>-->
+            <h4> Please Click On the Button to produce a printout</h4>
+            <input class="btn" style="margin-left: 60px;background-color: #0056b3;color: white; font-family: Serif;font-size: 18px;" type="Submit" name="assign" value ="Print WorkRecords">
         </div>
-        <br
-    </form>
-</div>
+</form>
+
+</body>
+
 </body>
 <?php
 }
@@ -175,4 +150,10 @@ if(!isset($_SESSION['username'])){
 
     ?>
 </script>
+
 </html>
+
+
+
+
+

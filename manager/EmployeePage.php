@@ -52,7 +52,7 @@ if(!isset($_SESSION['username'])){
         table{
             border-collapse: collapse;
             width: 50%;
-            color: #d96459;
+            color: #000000;
             font-family:SansSerif
             font-size: 25px;
             text-align: left;
@@ -60,7 +60,7 @@ if(!isset($_SESSION['username'])){
 
         }
         th{
-            background-color: #000000;
+            background-color: #0056b3;
             color:white;
         }
         tr:nth-child(even) {background-color: #f2f2f2;}
@@ -109,6 +109,7 @@ if(!isset($_SESSION['username'])){
                 <li><a style="color: #f5c6cb" href="Managerindexpage.php">Home</a></li>
                 <li><a  href="WorkStatus.php">Renovations</a></li>
                 <li><a href="EmployeePage.php">Assign work</a></li>
+                <li><a href="printworkstatuspage.php">Print workRecords</a></li>
                 <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
                 <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
                 <li><a href="ManagerLogout.php">Log out</a></li>
@@ -177,8 +178,11 @@ if(!isset($_SESSION['username'])){
     </div>
 
     <br><br><br><br>
+<a href="AddEmployee.php" style="font-family: 'sans-serif';font-size: 25px; float: right;">Add Employee</a>
+
     <form action="EmployeePage.php" method="POST">
-        <select  class="form-control" name="jobs" id="" style="width: 200px">
+        <p style="color: #2b669a;font-family:sans-serif;font-size: 20px;">Assign Work To a free Employee(PENDING)</p>
+        <select  class="form-control" name="jobs" id="" style="width: 400px">
         <?php
 
         $conn2 =  mysqli_connect("localhost", "root", "", "project");
@@ -203,7 +207,7 @@ if(!isset($_SESSION['username'])){
         <br><br>
 
 
-        <select class="form-control" name="employee" id="" style="width: 200px">
+        <select class="form-control" name="employee" id="" style="width: 400px">
             <?php
 
             $conn3 =  mysqli_connect("localhost", "root", "", "project");
@@ -217,7 +221,10 @@ if(!isset($_SESSION['username'])){
                 while($row3 = $result3-> fetch_assoc()) {
 
                     echo "<option value='".$row3['empID']."'>
-             ".$row3['empID']." ".$row3['empName']."</option>";
+             ".$row3['empID']." ".$row3['empName']."
+             
+             
+             </option>";
                 }
             }
             ?>
@@ -226,7 +233,7 @@ if(!isset($_SESSION['username'])){
         </select>
 
         <br>
-        <input  class="btn btn-info" type="submit" name="submit" value="submit">
+        <input  class="btn btn-info" type="submit" name="submit" value="Submit" style="width:150px;margin-left: 90px;">
 
 
     </form>
@@ -263,28 +270,38 @@ if(!isset($_SESSION['username'])){
 
                     if (mysqli_query($conn4, $sql6)) {
 
-                        include "db_Connection.php";
+                        //include "db_Connection.php";
 
                         $statuses="Inprogress";
 
-                        $db = new Db_Connect();
+                      //  $db = new Db_Connect();
 
                         $getEmployee ="Select 	empName from project.employees where empID = ?";
-                        $rungetemployee = $db->connect()->prepare($getEmployee);
-                        $rungetemployee->execute([$employee]);
-                            while($gett=$rungetemployee->fetch()) {
+
+                        if($rslt=mysqli_query($conn4,$getEmployee)){
+
+//                            $rungetemployee = $db->connect()->prepare($getEmployee);
+//                            $rungetemployee->execute([$employee]);
+                            while($gett=mysqli_fetch_assoc($rslt)) {
 
                                 $name = $gett['empName'];
 
 
                                 $createWorkStatus = "INSERT INTO project.workstatus(jobDescription,Work_status,Done_by,empID,Day) VALUES 
-                    ('$job','$statuses','$name','$employee',NOW())";
+                            ('$job','$statuses','$name','$employee',NOW())";
 
                                 $run = $db->connect()->exec($createWorkStatus);
 
+                                if($run){
+                                    $delete = "DELETE FROM project.app where ";
+
+                                }
                             }
 
-                        header('location:EmployeePage.php?msg=job assigned');
+                            header('location:EmployeePage.php?msg=job assigned');
+
+
+                        }
 
                     } else {
 
@@ -295,6 +312,10 @@ if(!isset($_SESSION['username'])){
 
                 }
 
+               // $now = date('Y-m-d');
+
+
+
             }
         }
 
@@ -302,7 +323,6 @@ if(!isset($_SESSION['username'])){
 
 
 
-<a href="AddEmployee.php" style="font-family: 'Arial Black';font-size: 18px; float: right;">Add Employee</a>
 
 <!-- <script type="text/javascript">
 	$('#tab').ready( function(){

@@ -89,6 +89,7 @@ if(!isset($_SESSION['username'])){
                 <li><a style="color: #f5c6cb" href="Managerindexpage.php">Home</a></li>
                 <li><a  href="WorkStatus.php">Renovations</a></li>
                 <li><a href="EmployeePage.php">Assign work</a></li>
+                <li><a href="printworkstatuspage.php">Print workRecords</a></li>
                 <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
                 <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
                 <li><a href="ManagerLogout.php">Log out</a></li>
