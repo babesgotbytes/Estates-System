@@ -68,9 +68,20 @@ if(!isset($_SESSION['username'])){
                 <li><a  href="StoreAssignMaterialspage.php">Assign materials</a></li>
                 <li><a   href="StoreAvailableMaterialspage.php">Available materials</a></li>
                 <li><a  href="StoreAddMaterialspage.php">Add materials</a></li>
-                <li> <a  href="notificationpage.php" >Notifications </a>
-                <li><a style="color: #f5c6cb" href="StoreKeeperindex.php">Home</a></li>
+                <li> <a  href="notificationpage.php" >
+
+                     <span class="badge">
+                  <?php
+                  require_once "notification.php";
+                  $not=new Notify();
+                  echo ($not->notificationCount());
+                  ?>
+                </span>
+                        Notifications</>
+
                 </li>
+                <li><a style="color: #f5c6cb" href="StoreKeeperindex.php">Home</a></li>
+
 
 
             </ul>
