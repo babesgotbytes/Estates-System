@@ -85,12 +85,11 @@ if (!isset($_SESSION['username'])) {
 <!--                <li><a style="color: wheat" href="Managerindexpage.php">Home</a></li>-->
                 <li><a  href="WorkStatus.php">Renovations</a></li>
                 <li><a href="EmployeePage.php">Assign work</a></li>
-<<<<<<< HEAD
                 <li><a href="printworkstatuspage.php">Print workRecords</a></li>
                 <li><a href="ManagerResetPasswordPage.php">reset password</a></li>
-=======
+
                 <li><a style="color: #f5c6cb"  href="ManagerResetPasswordPage.php">reset password</a></li>
->>>>>>> 5ce60e89afd34e358b081b323bcdc1c1152f7a7c
+
                 <li><a href="StoreKeeperSignupPage.php">Register storekeeper</a></li>
                 <li><a href="ManagerLogout.php">Log out</a></li>
 
